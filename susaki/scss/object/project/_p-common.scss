@@ -1,0 +1,37 @@
+.p-common {
+    &__titlearea {
+        @include flex(center);
+        height: 200px;
+        background-color: #418AC9;
+        @media screen and ( max-width:768px ) {
+            height: auto;
+        }
+        &--title {
+            @include width(1230);
+            padding: 30px 0;
+            img {
+                @media screen and ( max-width:768px ) {
+                    width: 80%;
+                    max-width: max-content;
+                }
+            }
+        }
+    }
+    &__breadcrumbs {
+        @include width(1230);
+        margin-top: 10px;
+        font-size: 13px;
+        span {
+            color: #418AC9;
+        }
+        &--delimiter {
+            display: inline-block;
+            margin: 0 10px;
+            width: 9px;
+            height: 13px;
+            font-size: 0;
+            background: url(../images/common/icon-02.svg) center/9px 13px;
+            vertical-align: middle;
+        }
+    }
+}

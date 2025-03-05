@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<?php get_template_part("php-recruit/_recruit-head"); ?>
+</head>
+
+<body>
+	<div class="p-top">
+
+		<!-- ヘッダー -->
+		<?php get_template_part("php-recruit/_recruit-header"); ?>
+
+		<!-- メインビジュアル -->
+		<section class="p-top-mv">
+			<div class="p-top-mv__main">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec01-img01.jpg'); ?>" alt="つなげ、自分の未来に" class="u-display-only-pc">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec01-img02.jpg'); ?>" alt="つなげ、自分の未来に" class="u-display-only-sp">
+			</div>
+			<ul class="p-top-mv__list">
+				<?php for ($i = 3; $i <= 8; $i++) :
+					$num = $i - 2 ?>
+					<li class="p-top-mv__item0<?php echo $num ?>">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec01-img0' . $i . '.jpg'); ?>" alt="トップ - メインビュー" .$i>
+					</li>
+				<?php endfor; ?>
+			</ul>
+		</section>
+
+		<!-- メッセージ -->
+		<section class="p-top-msg">
+			<div class="c-inner">
+				<h2 class="p-top-msg__title c-fade-in">MESSAGE</h2>
+				<p class="p-top-msg__txt01 c-fade-in">見えるところも見えないところも<br>キッツはバルブで支えます</p>
+				<p class="p-top-msg__txt02 c-fade-in">
+					キッツグループは、水や空気、石油、ガスなどの流体をコントロールする「バルブ」の製造・販売を通して、<br class="u-display-only-pc">私たちの暮らしや産業に欠かすことのできないライフラインを支え、今日のゆたかな社会に貢献しています。
+					<br>お客様の期待を超える商品・サービスでそのフィールドと可能性を世界に広げ、<br class="u-display-only-pc">明日のゆたかな社会を創造していきたいと考えています。
+				</p>
+				<div class="p-top-msg__btn c-btn c-btn--blue c-fade-in">
+					<a href="<?php echo esc_url(home_url() . '/recruit/message'); ?>" class="u-href-100">担当者メッセージ</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 会社を知る/仕事を知る/働く環境を知る -->
+		<section class="p-top-know">
+			<ul class="p-top-know__list c-inner">
+				<li class="p-top-know__item01 p-top-know__item--company c-fade-in">
+					<div class="p-top-know__content">
+						<h2 class="p-top-know__title">会社を知る</h2>
+						<p class="p-top-know__txt01">「バルブ」のリーディングカンパニー</p>
+						<p class="p-top-know__txt02">
+							水、石油、蒸気、ガスなどの流体をコントロールするための必需品であるバルブ。キッツは、バルブの総合メーカーとして国内のみならず世界でも有数の規模を誇っています。KITZがどんな会社なのか、何を目的としているのかといった、会社全体のイメージを知ってください。
+						</p>
+						<div class="p-top-know__btn c-btn c-btn--blue">
+							<a href="<?php echo esc_url(home_url() . '/recruit/company'); ?>" class="u-href-100">詳しく見る</a>
+						</div>
+					</div>
+					<div class="p-top-know__img">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec03-img01.png'); ?>" alt="会社を知る">
+						<div class="p-top-know__icon">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec03-ico01.png'); ?>" alt="会社を知る">
+						</div>
+					</div>
+				</li>
+				<li class="p-top-know__item02 p-top-know__item--job c-fade-in">
+					<div class="p-top-know__content">
+						<h2 class="p-top-know__title  p-top-know__title--green">仕事を知る</h2>
+						<p class="p-top-know__txt01">素材から考え、ニーズに応える、<br>それがキッツの強さ</p>
+						<p class="p-top-know__txt02">
+							当社がバルブのトップブランドとして国内外から支持される理由は、自社内に鋳造設備を持ち、素材から、鋳造、加工、組立、検査、出荷までを一貫して行う生産体制にあります。お客様のニーズに応えるための開発・製造・営業各部署の仕事内容を紹介します。
+						</p>
+						<div class="p-top-know__btn c-btn c-btn--green">
+							<a href="<?php echo esc_url(home_url() . '/recruit/work'); ?>" class="u-href-100">詳しく見る</a>
+						</div>
+					</div>
+					<div class="p-top-know__img">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec03-img02.png'); ?>" alt="仕事を知る">
+						<div class="p-top-know__icon p-top-know__icon--job">
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec03-ico02.png'); ?>" alt="会社を知る">
+						</div>
+					</div>
+				</li>
+				<li class="p-top-know__item03 p-top-know__item--env c-fade-in">
+					<div class="p-top-know__content">
+						<h2 class="p-top-know__title  p-top-know__title--orange">働く環境を知る</h2>
+						<p class="p-top-know__txt01">東京から近く便利な首都圏勤務と<br>登山やスキーで自然の魅力たっぷりな工場勤務</p>
+						<p class="p-top-know__txt02">
+							キッツの本社は千葉県、工場は山梨県（北杜市長坂町）と長野県（伊那市・茅野市）にあります。便利な首都圏内の本社勤務だけでなく、入社を機に自然豊かな山梨県や長野県に生活拠点を移した先輩社員も多くいます。
+						</p>
+					</div>
+					<?php
+					$array_know = [
+						["長坂工場", "（山梨県）", "nagasaka"],
+						["伊那工場", "（長野県）", "ita"],
+						["茅野工場", "（長野県）", "chino"],
+					]; ?>
+					<div class="p-top-know__link">
+						<div class="p-top-know__link-upper">
+							<a href="<?php echo esc_url(home_url() . '/recruit/environment/headquarters'); ?>" class="u-href-100">
+								<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec03-img03.jpg'); ?>" alt="本社を知る">
+								本社と<br />全国営業拠点
+								<span class="c-circle c-circle--orange">→</span>
+							</a>
+						</div>
+						<div class="p-top-know__link-down">
+							<?php foreach ($array_know as $item) : ?>
+								<a href="<?php echo esc_url(home_url() . '/recruit/environment/' . $item[2]); ?>" class="u-href-100"><?php echo $item[0]; ?><br><span class="u-fs-pc-18 u-fs-sp-12"><?php echo $item[1]; ?></span>
+									<span class="p-top-know__link-down-circle c-circle c-circle--medium c-circle--orange">→</span>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</section>
+
+		<!-- 人を知る -->
+		<section class="c-fade-in p-top-person">
+
+			<?php $array_top_person = [
+				["2015", "製造職", "バルブ事業統括本部
+				<br class='u-display-only-sp'>プロダクトマネジメントセンター<br>開発部 Q Tグループ",],
+				["2013", "技術職", "バルブ事業統括本部
+				<br class='u-display-only-sp'>生産技術センター<br>技術研究グループ",],
+				["2011", "営業職", "プロジェクト統括部<br>調節弁営業所",]
+			]; ?>
+			<div class="c-inner">
+
+				<h2 class="p-top-person__title">人を知る</h2>
+				<div class="p-top-person__upper">
+					<p class="p-top-person__upper-txt01">未来の会社のために、<br>いまはないものをつくっていく</p>
+					<p class="p-top-person__upper-txt02">
+						製造職、技術職、営業職の実際に働く先輩社員たちや、産休・育休取得者などのリアルなKITZで働く社員の声を集めました。仕事のやりがいや、考え方をまとめたプロジェクトストーリー、KITZへの入社を<span class="u-ls-sp-30">決めた理由などを業種別にインタビューしています。</span>
+					</p>
+				</div>
+
+				<div class="p-top-person__img">
+					<a href="<?php echo esc_url(home_url() . '/recruit/person/project'); ?>" class="u-href-100">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec04-mv01.png'); ?>" alt="プロジェクトストーリー" class="u-display-only-pc">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/top/top-sec04-mv02.png'); ?>" alt="プロジェクトストーリー" class="u-display-only-sp">
+					</a>
+				</div>
+
+				<div class="p-top-person__main">
+					<h3 class="p-top-person__main-title">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/common/cmn-bg-title01.gif'); ?>" alt="社員が語るキッツ">
+					</h3>
+					<div class="p-top-person__list"><?php get_template_part("php-recruit/_person-list"); ?></div>
+				</div>
+
+				<div class="p-top-person__btn c-btn c-btn--pink">
+					<a href="<?php echo esc_url(home_url() . '/recruit/person/interview'); ?>" class="u-href-100">詳しく見る</a>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- フッター -->
+		<?php get_template_part("php-recruit/_recruit-footer"); ?>
+	</div>
+
+	<?php wp_footer(); ?>
+</body>
+
+</html>

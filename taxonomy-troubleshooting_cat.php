@@ -1,0 +1,122 @@
+<?php get_header(); ?>
+<main class="p-main">
+  <section class="p-page-mv">
+    <div class="p-page-mv__inner">
+      <h1 class="p-page-mv__ttl p-page-mv__ttl--faq">Trouble Shooting</h1>
+    </div>
+  </section><!-- /.p-page-mv -->
+  <div class="p-page-valve">
+    <div class="c-breadcrumb">
+      <ul class="c-breadcrumb__list">
+        <li class="c-breadcrumb__item"><a title="Home" href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+        <li class="c-breadcrumb__item"><a title="Trouble Shooting" href="<?php echo esc_url(home_url('/')); ?>troubleshooting/">Trouble Shooting</a></li>
+        <li class="c-breadcrumb__item"><?php single_term_title(); ?></li>
+      </ul>
+    </div>
+    <div class="p-faq">
+      <div class="p-faq__inner">
+        <div class="p-faq__cat">
+          <dl>
+            <dt class="is-open">Detailed Search</dt>
+            <dd>
+              <?php
+              $troubleshooting_dialect = get_terms('troubleshooting_dialect');
+              if ($troubleshooting_dialect) :
+              ?>
+                <div>
+                  <p>Search by Product</p>
+                  <ul>
+                    <?php foreach ($troubleshooting_dialect as $dialect) : ?>
+                      <li><a href="<?php echo get_term_link($dialect); ?>?id=cat-ttl"><?php echo esc_html($dialect->name); ?></a></li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              <?php endif; ?>
+              <?php
+              $troubleshooting_cat = get_terms('troubleshooting_cat');
+              if ($troubleshooting_cat) :
+              ?>
+                <div>
+                  <p>Search by Phenomenon</p>
+                  <ul>
+                    <?php foreach ($troubleshooting_cat as $category) : ?>
+                      <?php if ($term === $category->slug) : ?>
+                        <li class="is-current"><a href="<?php echo get_term_link($category); ?>?id=cat-ttl"><?php echo esc_html($category->name); ?></a></li>
+                      <?php else : ?>
+                        <li><a href="<?php echo get_term_link($category); ?>?id=cat-ttl"><?php echo esc_html($category->name); ?></a></li>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              <?php endif; ?>
+
+              <div class="c-search">
+                <div class="c-search__inner">
+                  <p>Search by Keyword</p>
+                  <form action="<?php echo esc_url(home_url('/')); ?>troubleshooting/" method="get">
+                    <div>
+                      <input type="search" name="s" placeholder="Please enter a keyword" value="<?php echo $_GET['s']; ?>">
+                      <small>※If there are two or more search keywords, separate them with single-byte spaces. (Search results are AND searches.)</small>
+                      <small>※If you enter one letter in the alphabet or a product symbol, you may not be able to achieve your desired content.</small>
+                      <input type="hidden" name="id" value="cat-ttl">
+                    </div>
+                    <button>Search</button>
+                  </form>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div><!-- /.p-faq__cat -->
+
+        <?php if (have_posts()) : ?>
+          <article>
+            <h2 id="cat-ttl"><?php single_term_title(); ?> Questions</h2>
+            <section>
+              <?php while (have_posts()) : the_post(); ?>
+                <dl class="p-faq__list">
+                  <?php
+                  $post_dialect = get_the_terms($post->ID, 'troubleshooting_dialect');
+                  if ($post_dialect) :
+                  ?>
+                    <div>
+                      <p>Applicable product</p>
+                      <ul>
+                        <?php foreach ($post_dialect as $dialect) : ?>
+                          <li><?php echo esc_html($dialect->name); ?></li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </div>
+                  <?php endif; ?>
+                  <dt><?php the_title(); ?><span></span></dt>
+                  <dd>
+                    <div>
+                      <div>
+                        <?php the_content(); ?>
+
+                        <?php if (have_rows('attached')) : ?>
+                          <?php
+                          while (have_rows('attached')) : the_row();
+                            $image = get_sub_field('image');
+                          ?>
+                            <p><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="aligncenter"></p>
+                          <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <?php if (have_rows('external')) : ?>
+                          <p>
+                            <?php while (have_rows('external')) : the_row(); ?>
+                              <a href="<?php the_sub_field('href'); ?>" target="_blank" rel="noopener"><?php the_sub_field('text'); ?></a><br>
+                            <?php endwhile; ?>
+                          </p>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+              <?php endwhile; ?>
+            </section>
+          <?php endif; ?>
+          </article>
+      </div><!-- /.p-faq__inner -->
+    </div><!-- /.p-faq -->
+    <?php get_footer(); ?>

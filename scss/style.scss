@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*!
+Coding style from FLOCSS
+https://github.com/hiloki/flocss
+ */
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/_function";
+@import "foundation/_setting";
+@import "foundation/_mixin";
+@import "foundation/_reset";
+@import "foundation/_base";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+.l- {
+  @import "layout/_header";
+  @import "layout/navi";
+  @import "layout/main";
+  @import "layout/footer";
+  @import "layout/recruit";
+  @import "layout/bnr";
+  @import "layout/contact";
+}
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+.c- {
+  @import "object/component/_title";
+  @import "object/component/text";
+  @import "object/component/_button";
+  @import "object/component/list";
+  @import "object/component/table";
+  @import "object/component/form";
+  @import "object/component/breadcrumb";
+}
+
+// cookie
+@import "object/component/cookie";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+
+.p- {
+  @import "object/project/_top";
+  @import "object/project/_page";
+  @import "object/project/_company";
+  @import "object/project/who";
+  @import "object/project/product";
+  @import "object/project/business";
+  @import "object/project/post";
+  @import "object/project/sustainability";
+  @import "object/project/procurement";
+  @import "object/project/training";
+  @import "object/project/calculator";
+  @import "object/project/reference";
+}
+
+// module_layout
+@import "object/project/module_layout";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+
+.u- {
+  @import "object/utility/_font";
+  @import "object/utility/_talign";
+  @import "object/utility/_display";
+  @import "object/utility/_margin";
+}
+
+@import "wp.scss";
+
+@media screen and (min-width: 769px) {
+  .page-id-4249 .p-page-ir__m-vision__wrap__box__img img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-id-4249 .p-page-ir__m-vision__wrap__box__img02 img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

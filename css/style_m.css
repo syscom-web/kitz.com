@@ -1,0 +1,48 @@
+.p-cookie_policy {
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 10px 180px;
+  margin: 0 auto;
+  position: relative;
+  pointer-events: none;
+}
+
+.p-cookie_policy h2 {
+  position: relative;
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #004DA1;
+}
+.p-cookie_policy h2:after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 2px;
+  background: #418AC9;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+}
+
+.p-cookie_policy p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.p-cookie_policy p:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+
+.p-koukoku {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 10px 180px;
+  margin: 0 auto;
+  position: relative;
+}

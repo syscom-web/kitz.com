@@ -1,0 +1,69 @@
+<!-- 新卒採用情報トップ -->
+<div class="c-recruit-top">
+	<?php
+	global $post;
+	$slug = $post->post_name;
+	$item = array();
+	if ($slug == "contact") {
+		$item["add-class"] = "is-contact";
+		$item["txt-strong"] = "CONTACT";
+		$item["txt"] = "お問い合わせ";
+		$item["mv"] = "recruit-top-sec01-mv06.png";
+		$item["icon"] = "recruit-top-sec01-ico06.png";
+	} else if ($slug == "person") {
+		$item["add-class"] = "is-person";
+		$item["txt-strong"] = "PERSON";
+		$item["txt"] = "人を知る";
+		$item["mv"] = "recruit-top-sec01-mv05.png";
+		$item["icon"] = "recruit-top-sec01-ico05.png";
+	} else if ($slug == "message") {
+		$item["add-class"] = "is-message";
+		$item["txt-strong"] = "MESSAGE";
+		$item["txt"] = "人事担当役員メッセージ";
+		$item["mv"] = "recruit-top-sec01-mv04.png";
+		$item["icon"] = "recruit-top-sec01-ico04.png";
+	} else if ($slug == "career") {
+		$item["add-class"] = "is-career";
+		$item["txt-strong"] = "INFORMATION";
+		$item["txt"] = "キャリア採用情報";
+		$item["mv"] = "recruit-top-sec01-mv03.png";
+		$item["icon"] = "recruit-top-sec01-ico03.png";
+	} else if ($slug == "work") {
+		$item["add-class"] = "is-work";
+		$item["txt-strong"] = "WORK";
+		$item["txt"] = "仕事を知る";
+		$item["mv"] = "recruit-top-sec01-mv02.jpg";
+		$item["icon"] = "recruit-top-sec01-ico02.png";
+	} else {
+		$item["add-class"] = "";
+		$item["txt-strong"] = "INFORMATION";
+		$item["txt"] = "新卒採用情報";
+		$item["mv"] = "recruit-top-sec01-mv01.jpg";
+		$item["icon"] = "recruit-top-sec01-ico01.png";
+	}
+	?>
+	<div class="c-recruit-top__bg <?php echo $item["add-class"]; ?>"></div>
+	<div class="c-inner c-recruit-top__inner">
+
+		<div class="c-recruit-top__mv">
+			<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/recruit-top/' . $item["mv"]); ?>" alt="<?php echo $item["txt"]; ?>">
+		</div>
+
+		<p class="c-recruit-top__txt">
+			<span class="c-recruit-top__txt--strong <?php echo $item["add-class"]; ?>"><?php echo $item["txt-strong"]; ?></span><?php echo $item["txt"]; ?>
+		</p>
+
+		<div class="c-recruit-top__ico <?php echo $item["add-class"]; ?>">
+			<img src="<?php echo esc_url(get_template_directory_uri() . '/images/recruit/recruit-top/' . $item["icon"]); ?>" alt="<?php echo $item["txt"]; ?>アイコン">
+		</div>
+
+		<div class="c-recruit-top__breadcrumb">
+			<?php
+			if (function_exists('bcn_display')) {
+				bcn_display();
+			}
+			?>
+		</div>
+
+	</div>
+</div>
