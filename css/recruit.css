@@ -3823,97 +3823,97 @@ button, input, select, textarea {
 
 .p-number-achi-graph__item:nth-child(1) {
   top: 31%;
-  left: 67%;
+  left: 68.3%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(1) {
-    top: 38%;
-    left: 76%;
+    top: 35.5%;
+    left: 75%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(2) {
   top: 77%;
-  left: 68%;
+  left: 68.5%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(2) {
-    top: 76%;
-    left: 77%;
+    top: 77%;
+    left: 75%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(3) {
-  top: 87%;
-  left: 34%;
+  top: 90.3%;
+  left: 42%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(3) {
-    top: 92%;
-    left: 34%;
+    top: 86%;
+    left: 73%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(4) {
-  top: 74%;
-  left: 22%;
+  top: 82%;
+  left: 14.3%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(4) {
-    top: 79%;
-    left: 19%;
+    top: 85.2%;
+    left: 6%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(5) {
-  top: 61%;
-  left: 21%;
+  top: 67%;
+  left: 7.2%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(5) {
-    top: 66%;
-    left: 14%;
+    top: 72%;
+    left: 2.8%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(6) {
-  top: 49%;
-  left: 19%;
+  top: 51%;
+  left: 4%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(6) {
     top: 55.5%;
-    left: 11%;
+    left: 3%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(7) {
-  top: 37%;
-  left: 18%;
+  top: 36%;
+  left: 8%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(7) {
     top: 39.5%;
-    left: 9%;
+    left: 3%;
   }
 }
 
 .p-number-achi-graph__item:nth-child(8) {
-  top: 24%;
-  left: 15%;
+  top: 20.5%;
+  left: 6.6%;
 }
 
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(8) {
-    top: 26%;
-    left: 9%;
+    top: 26.5%;
+    left: 2.5%;
   }
 }
 
@@ -3925,7 +3925,7 @@ button, input, select, textarea {
 @media (max-width: 767px) {
   .p-number-achi-graph__item:nth-child(9) {
     top: 24%;
-    left: 29%;
+    left: 28%;
   }
 }
 

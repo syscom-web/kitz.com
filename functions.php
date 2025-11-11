@@ -361,7 +361,7 @@ function autoback_my_mail($Mail_raw, $values, $Data)
   } elseif ($Data->get('area') == 'middle-east') {
     $Mail_raw->to = 'mena_ibd@kitz.co.jp';
   } elseif ($Data->get('area') == 'other') {
-    $Mail_raw->to = 'ibd_plan_manage@kitz.co.jp';
+    $Mail_raw->to = 'isd_plan_manage@kitz.co.jp';
   } elseif ($Data->get('area') == 'kitz-vietnam') {
     $Mail_raw->to = 'info@kitzvietnam.com';
   }
@@ -372,9 +372,9 @@ add_filter('mwform_admin_mail_mw-wp-form-6149', 'autoback_my_mail', 10, 3);
 function my_mail($Mail_raw, $values, $Data)
 {
   if ($Data->get('area') == 'kitz-vietnam') {
-     // 件名を変更
+    // 件名を変更
     $Mail_raw->subject = ' [ KITZ Corporation of Vietnam Co.,Ltd. ] Thank you for your inquiry.';
-     // 本文を変更
+    // 本文を変更
     $Mail_raw->body = 'Dear {Name}' . "\n";
     $Mail_raw->body .= "\n";
     $Mail_raw->body .= 'Thank you for your inquiry.' . "\n";
@@ -677,7 +677,7 @@ function custom_layout()
               if (get_sub_field('btn_target') == "blank") {
                 echo '<p class="btn ' . get_sub_field('btn_target') . ' ' . $anchorClass . '"><a href="' . get_sub_field('btn_link') . '" target="_' . get_sub_field('btn_target') . '" class="c-btn--type01 link--external">' . get_sub_field('btn_text') . '</a></p>';
               } else {
-              echo '<p class="btn ' . get_sub_field('btn_target') . ' ' . $anchorClass . '"><a href="' . get_sub_field('btn_link') . '" target="_' . get_sub_field('btn_target') . '" class="c-btn--type01">' . get_sub_field('btn_text') . '</a></p>';
+                echo '<p class="btn ' . get_sub_field('btn_target') . ' ' . $anchorClass . '"><a href="' . get_sub_field('btn_link') . '" target="_' . get_sub_field('btn_target') . '" class="c-btn--type01">' . get_sub_field('btn_text') . '</a></p>';
               }
             }
             echo '</li>';

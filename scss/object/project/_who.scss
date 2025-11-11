@@ -702,4 +702,105 @@
 			}
 		}
 	}
+
+    .u-who {
+      margin-bottom: 0 !important;
+    }
+
+    .u-who ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+
+      li {
+        margin-bottom: 0;
+        width: 450px;
+        height: 50px;
+        position: relative;
+
+        &:first-child {
+
+          &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            background: url('../images/who/toyo-logo.svg') no-repeat;
+            background-size: cover;
+            width: 43px;
+            height: 32.53px;
+            left: 41px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            content: "";
+            background: url("../images/common/icon-external_blue.svg") no-repeat left center/contain;
+            display: inline-block;
+            width: 13px;
+            height: 9px;
+            position: relative;
+            display: inline-block;
+            margin-left: 0.5em;
+            right: -410px;
+            border: none !important;
+            margin-left: 0 !important;
+            top: -30px;
+            transform: translateY(-50%) rotate(0) !important;
+          }
+
+          a {
+            padding-left: 120px;
+            height: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+
+            &.u-outside {
+
+              &::after {
+                display: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+
+      .u-who {
+
+        li {
+          width: 100% !important;
+
+          &::before {
+            left: 20px !important;
+          }
+
+          &::after {
+            right: -92% !important;
+          }
+
+          a {
+            font-size: 1.6rem !important;
+          }
+
+          &:first-child {
+            a {
+              padding-left: 20vw !important;
+            }
+          }
+
+          &:last-child {
+            a {
+              padding-right: 10vw !important;
+              padding-left: 20vw !important;
+              line-height: 1.2 !important;
+            }
+          }
+        }
+      }
+    }
 }
