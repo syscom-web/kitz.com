@@ -67,6 +67,7 @@ https://github.com/hiloki/flocss
   @import "object/project/training";
   @import "object/project/calculator";
   @import "object/project/reference";
+  @import "object/project/sealing";
 }
 
 // module_layout
@@ -98,5 +99,14 @@ https://github.com/hiloki/flocss
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.addBlue {
+  color: #004da1 !important;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #004da1;
   }
 }

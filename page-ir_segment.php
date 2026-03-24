@@ -43,7 +43,7 @@ if (have_posts()) :
               </div>
               <div class="p-page-ir__eir-graph__body">
                 <div class="p-page-ir__eir-graph__item__title">
-                  <h3>Brass Bar Manufacturing Business</h3>
+                  <h3>Metal Solutions Business</h3>
                 </div>
                 <div class="qir" data-qir-area="area_highlight_027"></div>
               </div>

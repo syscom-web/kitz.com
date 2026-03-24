@@ -255,13 +255,15 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/about_sustainability/external-initiatives/">Participation in external initiatives</a></li>
                                             </ul>
                                             <ul data-child="sustainability02">
+                                                <li>
+                                                    <a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/intellectual/">Basic Policy for Technology and Intellectual Property Strategies</a>
+                                                </li>
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/materials-molding/">Materials and molding technologies</a></li>
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/sealing/">Sealing technology</a></li>
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/water-purification/">Separation and water purification technology</a></li>
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/valve/">Techniques to Understand valve Conditions and Predict Failures</a></li>
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/clean/">Clean-room technology for semiconductor manufacturing processes</a></li>
                                                 <li data-parent="sustainability02-01"><a href="<?php echo esc_url(home_url('/')); ?>sustainability/qa/">Quality Improvement (Quality Assurance)</a></li>
-                                                <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/products/intellectual/">Intellectual Property Strategy</a></li>
                                             </ul>
                                             <ul data-child="sustainability03">
                                                 <li><a href="<?php echo esc_url(home_url('/')); ?>sustainability/environment/env_plan/">KITZ Group Environmental Policy・Long-term environmental vision</a></li>
