@@ -12,6 +12,10 @@
     height: 100%;
     z-index: -2;
   }
+
+  &-history-fig {
+    margin: 10px auto 0;
+  }
 }
 /* 会社概要 */
 &company-about {
@@ -1331,13 +1335,20 @@
         @include mq(tab) {
           flex-direction: column;
         }
-        p {
-          @include fz(16);
+        div {
           width: 48%;
-          line-height: 1.8;
+
           @include mq(tab) {
-            order: 2;
             width: 100%;
+          }
+
+          > p {
+            @include fz(16);
+            line-height: 1.8;
+            @include mq(tab) {
+              order: 2;
+              width: 100%;
+            }
           }
         }
         figure {

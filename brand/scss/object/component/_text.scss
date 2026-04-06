@@ -1,0 +1,39 @@
+.p-brand-txt {
+  color: $white;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 2;
+  font-family: $notoSansJp;
+
+  @include sp {
+    font-size: clamp(14px, vw-sp(16), 16px);
+  }
+
+  &.u-color_black {
+    color: $black;
+  }
+
+  &.u-color_blue {
+    color: $blue;
+  }
+
+  &.u-weight_normal {
+    font-weight: normal;
+  }
+
+  &.u-weight_bold {
+    font-weight: $outfit_bold;
+  }
+
+  &.u-weight_semiBold {
+    font-weight: $outfit_semiBold;
+  }
+
+  &.u-mt30 {
+    margin-top: rem(30);
+
+    @include sp {
+      margin-top: vw-sp(30);
+    }
+  }
+}

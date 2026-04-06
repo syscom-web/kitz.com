@@ -423,7 +423,8 @@ label {
 }
 .l-header__logo {
   position: relative;
-  width: 123px;
+  width: 250px;
+  margin-top: 30px;
 }
 .l-header__logo a {
   display: block;
@@ -438,12 +439,13 @@ label {
 }
 @media screen and (max-width: 1080px) {
   .l-header__logo {
-    width: 110px;
+    width: 200px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 767px) {
   .l-header__logo {
-    width: 10rem;
+    width: 17rem;
   }
 }
 .l-header__inner {
@@ -10317,6 +10319,9 @@ label {
   height: 100%;
   z-index: -2;
 }
+.p-company-history-fig {
+  margin: 10px auto 0;
+}
 .p- {
   /* 会社概要 */
 }
@@ -12155,14 +12160,21 @@ label {
             flex-direction: column;
   }
 }
-.p-company-history__intro__inner > div p {
+.p-company-history__intro__inner > div div {
+  width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .p-company-history__intro__inner > div div {
+    width: 100%;
+  }
+}
+.p-company-history__intro__inner > div div > p {
   font-size: 16px;
   font-size: 1.6rem;
-  width: 48%;
   line-height: 1.8;
 }
 @media screen and (max-width: 767px) {
-  .p-company-history__intro__inner > div p {
+  .p-company-history__intro__inner > div div > p {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
