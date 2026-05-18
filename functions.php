@@ -79,7 +79,8 @@ function wpautop_filter($content)
 
   $arr_types = array('page'); //自動整形タグを無効にする投稿タイプを指定
   $post_type = get_post_type($post->ID);
-  if (in_array($post_type, $arr_types)) $remove_filter = true;
+  if (in_array($post_type, $arr_types))
+    $remove_filter = true;
 
   if ($remove_filter) {
     remove_filter('the_content', 'wpautop');
@@ -173,10 +174,10 @@ function custum_post_type()
     'news',
     array(
       'labels' =>
-      array(
-        'name' => __('ニュース'),
-        'singular_name' => __('ニュース')
-      ),
+        array(
+          'name' => __('ニュース'),
+          'singular_name' => __('ニュース')
+        ),
       'supports' => array('title', 'editor', 'thumbnail'),
       'public' => true,
       'menu_position' => 5,
@@ -322,6 +323,8 @@ add_filter('mwform_choices_mw-wp-form-4942', 'add_valveplace2', 10, 2);
 //フォーム送信先分岐
 function autoback_my_mail($Mail_raw, $values, $Data)
 {
+  $kitz_vietnam_recipients = 'h-sakamoto@kitzvietnam.com, k-kinsho@kitzvietnam.com, hoangdm@kitzvietnam.com, s-higuchi@kitzvietnam.com, m-naito@kitzvietnam.com, y-kashiwazaki@kitzvietnam.com';
+
   if ($Data->get('area') == 'korea') {
     $Mail_raw->to = 'kkrsales@kitzkorea.com';
   } elseif ($Data->get('area') == 'canada') {
@@ -343,7 +346,7 @@ function autoback_my_mail($Mail_raw, $values, $Data)
   } elseif ($Data->get('area') == 'thailand') {
     $Mail_raw->to = 'sales@kitz-kvt.com';
   } elseif ($Data->get('area') == 'vietnam') {
-    $Mail_raw->to = 'kvv-sales@kitz-kvv.com';
+    $Mail_raw->to = $kitz_vietnam_recipients;
   } elseif ($Data->get('area') == 'singapore') {
     $Mail_raw->to = 'sales@kitz-kvs.com.sg';
   } elseif ($Data->get('area') == 'malaysia') {
@@ -363,7 +366,7 @@ function autoback_my_mail($Mail_raw, $values, $Data)
   } elseif ($Data->get('area') == 'other') {
     $Mail_raw->to = 'isd_plan_manage@kitz.co.jp';
   } elseif ($Data->get('area') == 'kitz-vietnam') {
-    $Mail_raw->to = 'info@kitzvietnam.com';
+    $Mail_raw->to = $kitz_vietnam_recipients;
   }
   return $Mail_raw;
 }
@@ -427,7 +430,7 @@ function mwform_validation_check_at_sign($validation_rules)
             $defaults = array(
               'message' => __('テキストを入力してください。', 'mw-wp-form'),
             );
-            $options  = array_merge($defaults, $options);
+            $options = array_merge($defaults, $options);
             return $options['message'];
           }
         }
@@ -435,12 +438,14 @@ function mwform_validation_check_at_sign($validation_rules)
 
       public function admin($key, $value)
       {
-?>
+        ?>
         <label>
-          <input type="checkbox" <?php checked($value[$this->getName()], 1); ?> name="<?php echo MWF_Config::NAME; ?>[validation][<?php echo $key; ?>][<?php echo esc_attr($this->getName()); ?>]" value="1" />
+          <input type="checkbox" <?php checked($value[$this->getName()], 1); ?>
+            name="<?php echo MWF_Config::NAME; ?>[validation][<?php echo $key; ?>][<?php echo esc_attr($this->getName()); ?>]"
+            value="1" />
           <?php esc_html_e('スペースのみ入力でエラー', 'mw-wp-form'); ?>
         </label>
-<?php
+        <?php
       }
     }
   }
@@ -558,7 +563,7 @@ add_filter('walker_nav_menu_start_el', 'description_in_nav_menu', 10, 4);
 /* 不要なページを無効化します。(404扱い)*/
 function custom_handle_404()
 { // 検索ページ、作成者ページ、添付ファイルページを無効化
-  if ( /*is_search() || */is_author() || is_attachment()) {
+  if ( /*is_search() || */ is_author() || is_attachment()) {
     global $wp_query;
     $wp_query->set_404();
     status_header(404);
@@ -602,17 +607,19 @@ function knockout_author_query()
 add_action('init', 'knockout_author_query');
 
 /* ----------------------------------------------------------------------------
-　モジュールレイアウト作成
+モジュールレイアウト作成
 ---------------------------------------------------------------------------- */
 function custom_layout()
 {
-  if (have_rows('module')) :
-    while (have_rows('module')) : the_row(); // コラム毎
+  if (have_rows('module')):
+    while (have_rows('module')):
+      the_row(); // コラム毎
 
-      if (get_row_layout() == 'photo_text_module') :
+      if (get_row_layout() == 'photo_text_module'):
         echo '<ul class="photo_text_module">';
-        if (have_rows('li')) :
-          while (have_rows('li')) : the_row(); // li
+        if (have_rows('li')):
+          while (have_rows('li')):
+            the_row(); // li
             echo '<li class="' . get_sub_field('width') . ' ' . get_sub_field('zoom') . '">';
             echo '<p class="photo">';
 
@@ -633,7 +640,7 @@ function custom_layout()
         echo '</ul>';
       endif;
 
-      if (get_row_layout() == 'photo_text_row_module') : // 画像テキスト横並びモジュール
+      if (get_row_layout() == 'photo_text_row_module'):  // 画像テキスト横並びモジュール
         echo '<div class="photo_text_row_module ' . get_sub_field('zoom') . ' ' . get_sub_field('photo_position') . ' ' . get_sub_field('module_width') . '">';
         echo '<p class="photo ' . get_sub_field('width') . '">';
 
@@ -648,10 +655,11 @@ function custom_layout()
         echo '</div>';
       endif;
 
-      if (get_row_layout() == 'photo_text_md_module') : // 画像テキストモジュール（小見出し付）
+      if (get_row_layout() == 'photo_text_md_module'):  // 画像テキストモジュール（小見出し付）
         echo '<ul class="photo_text_md_module">';
-        if (have_rows('li')) :
-          while (have_rows('li')) : the_row(); // li
+        if (have_rows('li')):
+          while (have_rows('li')):
+            the_row(); // li
             echo '<li class="' . get_sub_field('width') . ' ' . get_sub_field('zoom') . '">';
             echo '<p class="title">' . get_sub_field('title') . '</p>';
 
@@ -686,10 +694,11 @@ function custom_layout()
         echo '</ul>';
       endif;
 
-      if (get_row_layout() == 'explan_module') : // 小見出しテキストモジュール
+      if (get_row_layout() == 'explan_module'):  // 小見出しテキストモジュール
         echo '<div class="explan_module">';
-        if (have_rows('dl')) :
-          while (have_rows('dl')) : the_row(); // dl
+        if (have_rows('dl')):
+          while (have_rows('dl')):
+            the_row(); // dl
             echo '<dl class="' . get_sub_field('width') . '">';
             echo '<dt>' . get_sub_field('title') . '</dt>';
             echo '<dd>' . get_sub_field('text') . '</dd>';
@@ -699,26 +708,26 @@ function custom_layout()
         echo '</div>';
       endif;
 
-      if (get_row_layout() == 'common_title_style01') : // 大見出し
+      if (get_row_layout() == 'common_title_style01'):  // 大見出し
         echo '<div class="common_title_style01">';
         echo '<p class="sub">' . get_sub_field('sub') . '</p>';
         echo '<h2 class="title">' . get_sub_field('title') . '</h2>';
         echo '</div>';
       endif;
 
-      if (get_row_layout() == 'common_title_style02') : // 中見出し
+      if (get_row_layout() == 'common_title_style02'):  // 中見出し
         echo '<h3 class="common_title_style02">' . get_sub_field('title') . '</h3>';
       endif;
 
-      if (get_row_layout() == 'common_title_style03') : // 小見出し
+      if (get_row_layout() == 'common_title_style03'):  // 小見出し
         echo '<h4 class="common_title_style03">' . get_sub_field('title') . '</h4>';
       endif;
 
-      if (get_row_layout() == 'common_title_style04') : // 極小見出し
+      if (get_row_layout() == 'common_title_style04'):  // 極小見出し
         echo '<h5 class="common_title_style04">' . get_sub_field('title') . '</h5>';
       endif;
 
-      if (get_row_layout() == 'btn_style01') : // リンクボタン
+      if (get_row_layout() == 'btn_style01'):  // リンクボタン
         if (get_sub_field('pdf')) {
           echo '<p class="btn_style01 pdf"><a href="' . get_sub_field('pdf') . '" target="_blank" class="c-btn--type01 link--pdf">' . get_sub_field('text') . '</a></p>';
         } else {
@@ -730,14 +739,15 @@ function custom_layout()
         }
       endif;
 
-      if (get_row_layout() == 'link_module') : // リンクリスト
+      if (get_row_layout() == 'link_module'):  // リンクリスト
         echo '<ul class="link_module ';
         if (get_sub_field('direction') == 'column') {
           echo 'column';
         }
         echo '">';
-        if (have_rows('li')) :
-          while (have_rows('li')) : the_row(); // dl
+        if (have_rows('li')):
+          while (have_rows('li')):
+            the_row(); // dl
             echo '<li>';
             if (get_sub_field('pdf')) {
               echo '<a href="' . get_sub_field('pdf') . '" class="pdf" target="_blank">' . get_sub_field('text') . '<img src="' . esc_url(get_template_directory_uri()) . '/images/common/icon-pdf.svg"></a>';
@@ -752,14 +762,15 @@ function custom_layout()
         echo '</ul>';
       endif;
 
-      if (get_row_layout() == 'text_module') : // テキストモジュール
+      if (get_row_layout() == 'text_module'):  // テキストモジュール
         echo '<div class="text_module ' . get_sub_field('position') . ' ' . get_sub_field('size') . '">' . get_sub_field('text') . '</div>';
       endif;
 
-      if (get_row_layout() == 'productlist_module') :
+      if (get_row_layout() == 'productlist_module'):
         echo '<ul class="productlist_module">';
-        if (have_rows('li')) :
-          while (have_rows('li')) : the_row();
+        if (have_rows('li')):
+          while (have_rows('li')):
+            the_row();
             echo '<li>';
             if (get_sub_field('link')) {
               echo '<a href="' . get_sub_field('link') . '" target="' . get_sub_field('target') . '">';
@@ -785,23 +796,24 @@ function custom_layout()
         echo '</ul>';
       endif;
 
-      if (get_row_layout() == 'anchorid') : // アンカーリンク用目印ID
+      if (get_row_layout() == 'anchorid'):  // アンカーリンク用目印ID
         echo '<a id="' . get_sub_field('id') . '" name="' . get_sub_field('id') . '"></a>';
       endif;
 
-      if (get_row_layout() == 'inc_module') : // モジュールをインクルード
+      if (get_row_layout() == 'inc_module'):  // モジュールをインクルード
         $filename = 'inc/' . get_sub_field('module_name');
         get_template_part($filename);
       endif;
 
-      if (get_row_layout() == 'line_module') : // 水平線モジュール
+      if (get_row_layout() == 'line_module'):  // 水平線モジュール
         echo '<div class="line_module"></div>';
       endif;
 
-      if (get_row_layout() == 'recommend_module') : // 関連動画
-        if (have_rows('li')) :
+      if (get_row_layout() == 'recommend_module'):  // 関連動画
+        if (have_rows('li')):
           echo '<ul id="recommend_movie">';
-          while (have_rows('li')) : the_row(); // li
+          while (have_rows('li')):
+            the_row(); // li
             echo '<li>';
             echo '<a href="https://www.youtube.com/watch?v=' . get_sub_field('youtubeid') . '"' . ' data-lity="data-lity">';
             echo '<p class="photo"><img src="https://i.ytimg.com/vi/' . get_sub_field('youtubeid') . '/hqdefault.jpg"></p>';
