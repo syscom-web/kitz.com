@@ -49,7 +49,7 @@
           <ul class="l-footer-sitemap__inner__nav__list footer-sp__link">
             <li class="l-footer-sitemap__inner__nav__item"><a href="<?php echo esc_url(home_url('/')); ?>product/">Valve Products</a></li>
             <li class="l-footer-sitemap__inner__nav__item"><a href="<?php echo esc_url(home_url('/')); ?>fluid-control/">Fluid Control Products</a></li>
-            <li class="l-footer-sitemap__inner__nav__item"><a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/index.php" target="_blank" class="link__external">Valve Search</a></li>
+            <li class="l-footer-sitemap__inner__nav__item"><a href="https://www.kitz-valvesearch.com/valve-search/en/top" target="_blank" class="link__external">Valve Search</a></li>
             <li class="l-footer-sitemap__inner__nav__item"><a href="<?php echo esc_url(home_url('/')); ?>product/?id=useful">Useful Information</a></li>
           </ul>
         </div>

@@ -51,15 +51,15 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
           <div class="l-header__upper--links">
             <ul>
               <li>
-                <a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/document/catalog.php"
+                <a href="https://www.kitz-valvesearch.com/iportal/CatalogSearch.do?method=catalogSearchByAnyCategories&volumeID=KTZ00001&categoryID=4520000&designID=catalog_ENG"
                   class="link--external" target="_blank" rel="noopener">Catalogs</a>
               </li>
               <!-- <li>
                 <a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/document/manual.php" class="link--external" target="_blank" rel="noopener">Manuals</a>
               </li> -->
               <li>
-                <a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/index.php"
-                  class="upper-link--valve" target="_blank" rel="noopener"><em>Valve Search</em>
+                <a href="https://www.kitz-valvesearch.com/valve-search/en/top" class="upper-link--valve" target="_blank"
+                  rel="noopener"><em>Valve Search</em>
                   <span>(Information on drawings,<br>Manuals, CAD, etc.)</span>
                 </a>
               </li>
@@ -89,11 +89,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
           <nav class="l-header__nav">
             <ul class="l-header__nav--upper">
               <li><a
-                  href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/document/catalog.php"
+                  href="https://www.kitz-valvesearch.com/iportal/CatalogSearch.do?method=catalogSearchByAnyCategories&volumeID=KTZ00001&categoryID=4520000&designID=catalog_ENG"
                   class="link--external" target="_blank" rel="noopener">Catalogs</a></li>
               <!-- <li><a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/document/manual.php" class="link--external" target="_blank" rel="noopener">Manuals</a></li> -->
-              <li><a
-                  href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/index.php"
+              <li><a href="https://www.kitz-valvesearch.com/valve-search/en/top"
                   class="link--external upper-link--valve" target="_blank" rel="noopener">Valve
                   Search<br><span>(Information on drawings,<br class="sp-br">Manuals, CAD, etc.)</span></a></li>
               <li>
@@ -535,8 +534,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
               <dl>
                 <dd>
                   <ul class="l-header__search--links">
-                    <li><a target="_blank"
-                        href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/index.php">Valve
+                    <li><a target="_blank" href="https://www.kitz-valvesearch.com/valve-search/en/top">Valve
                         Search<br>(product name &amp; model NO.)</a><span>(Information on price lists, drawings, CAD,
                         catalogs, etc.)</span></li>
                     <li><a href="<?php echo esc_url(home_url('/')); ?>faq/">Frequently Asked Questions <br>about

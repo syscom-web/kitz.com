@@ -1184,10 +1184,23 @@ figure {
     width: 100%;
   }
 }
+.p-brand-protection__content__list a:last-child .p-brand-protection__content__item::after {
+  background: url("../images/common/icon-pdf.svg") no-repeat;
+  background-size: contain;
+  width: 2.6rem;
+  height: 2.6rem;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 959px) {
+  .p-brand-protection__content__list a:last-child .p-brand-protection__content__item::after {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
 .p-brand-protection__content__item {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 18.125% 15% 1fr;
@@ -1196,7 +1209,7 @@ figure {
 }
 @media (max-width: 959px) {
   .p-brand-protection__content__item {
-    border-bottom: 2px solid #EBEBEB;
+    border-bottom: 2px solid #ebebeb;
     -ms-grid-columns: min(31.25vw, 140px) 1.3020833333vw auto;
     grid-template-columns: min(31.25vw, 140px) auto;
     gap: 1.3020833333vw;
@@ -1208,11 +1221,11 @@ figure {
   }
 }
 .p-brand-protection__content__item:first-child {
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
 }
 @media (max-width: 959px) {
   .p-brand-protection__content__item:first-child {
-    border-top: 2px solid #EBEBEB;
+    border-top: 2px solid #ebebeb;
   }
 }
 .p-brand-protection__content__item::after {

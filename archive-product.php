@@ -109,7 +109,7 @@
             <p class="p-product-category__title c-ttl--type01">Valve Search</p>
             <ul class="p-product-category__items">
               <li class="p-product-category__item">
-                <a href="https://www.kitz-valvesearch.com/frontparts/language.php?mode=change&language=2&url=/index.php" class="p-product-item" target="_blank" rel="noopener">
+                <a href="https://www.kitz-valvesearch.com/valve-search/en/top" class="p-product-item" target="_blank" rel="noopener">
                   <div class="p-product-item__header">
                     <div class="p-product-item__img-wrapper"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/product/top/product-search-img01.png" alt="Valve Search"></div>
                     <p class="p-product-item__title">Valve Search</p>
