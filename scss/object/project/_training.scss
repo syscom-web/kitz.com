@@ -1,515 +1,386 @@
-.p-training {
+/* バルブの技術研修 */
+&training {
   position: relative;
+
+  &-menu {
+    max-width: 1280px;
+    ul {
+      max-width: 1280px;
+      li {
+        width: 18.4%;
+        @include mq(767) {
+          width: 100%;
+        }
+        &:nth-child(4n) {
+          margin-right: 2%;
+          @include mq(767) {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        a {
+          justify-content: center;
+          text-align: center;
+          @include mq(1023) {
+            @include fz(14);
+          }
+          @include mq(940) {
+            font-size: 1.4vw;
+          }
+          @include mq(767) {
+            @include fz(15);
+            text-align: left;
+            justify-content: flex-start;
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 120px;
+    @include bg-container;
+    @include mq(767) {
+      margin-bottom: 12%;
+    }
+  }
   /* 技術研修TOP */
+  &-home {
+    &__intro {
+      @include flex("", "");
+      margin-bottom: 80px;
+      @include mq(767) {
+        flex-direction: column;
+        margin-bottom: 12%;
+      }
+      figure {
+        width: 31.25%;
+        @include mq(767) {
+          width: 60%;
+          margin: 0 auto 5%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      > div {
+        width: 65%;
+        @include mq(767) {
+          width: 100%;
+        }
+        p {
+          @include fz(16);
+          line-height: 1.8;
+          margin-bottom: 30px;
+          @include mq(767) {
+            margin-bottom: 4%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &__menu {
+      @include flex("", "fs");
+      flex-wrap: wrap;
+      @include mq(767) {
+        flex-direction: column;
+      }
+      > div {
+        width: 48%;
+        margin-right: 4%;
+        border-radius: 5px;
+        border: 4px solid #e5e5e5;
+        padding: 40px;
+        margin-bottom: 40px;
+        @include mq(1023) {
+          padding: 40px 10px;
+        }
+        @include mq(767) {
+          width: 100%;
+          padding: 5%;
+          margin-bottom: 6%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        h2 {
+          text-align: center;
+
+          @include mq(767) {
+            @include fz(24);
+          }
+        }
+
+        p {
+          @include fz(16);
+          text-align: center;
+          margin-bottom: 30px;
+          line-height: 1.4;
+
+          @include mq(767) {
+            margin-bottom: 5%;
+          }
+
+          @include mq(480) {
+            text-align: left;
+          }
+        }
+
+        ul {
+          @include flex("", "");
+
+          > li {
+            width: 48%;
+
+            a {
+              @include mq(480) {
+                @include fz(15);
+              }
+            }
+          }
+        }
+
+        &:nth-child(3),
+        &:last-child {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 0;
+
+          ul {
+            justify-content: center;
+
+            li {
+              max-width: 260px;
+
+              @include mq(767) {
+                max-width: 100%;
+                width: 65%;
+              }
+
+              @include mq(480) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* バルブの基礎 -集合研修- */
-}
+  &-valve {
+    &__intro {
+      margin-bottom: 40px;
 
-.p-training-menu {
-  max-width: 1280px;
-}
+      @include mq(767) {
+        margin-bottom: 5%;
+      }
 
-.p-training-menu ul {
-  max-width: 1280px;
-}
+      p {
+        @include fz(18);
+        line-height: 1.6;
 
-.p-training-menu ul li {
-  width: 18.4%;
-}
+        @include mq(767) {
+          @include fz(16);
+        }
 
-@media screen and (max-width: 767px) {
-  .p-training-menu ul li {
-    width: 100%;
+        a {
+          color: #004da1;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &__container {
+      @include flex("", "fs");
+      flex-wrap: wrap;
+
+      @include mq(767) {
+        flex-direction: column;
+      }
+
+      &--box {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 60px;
+
+        @include mq(767) {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 10%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        .p-sustainability-ttl__h2 {
+          @include fz(28);
+
+          @include mq(767) {
+            @include fz(24);
+            margin-bottom: 4% !important;
+          }
+        }
+
+        .valve-date_list,
+        ul {
+          margin-bottom: -1em;
+
+          li {
+            @include fz(16);
+            line-height: 1.6;
+            margin-bottom: 0.75em;
+            text-indent: -1em;
+            margin-left: 1em;
+          }
+        }
+
+        p {
+          @include fz(16);
+          line-height: 1.6;
+          margin-bottom: 0.75em;
+          font-feature-settings: "palt";
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          a {
+            color: #004da1;
+            @include mq(480) {
+              @include fz(15);
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .link--external {
+          width: 280px;
+          @include mq(767) {
+            width: 100%;
+          }
+        }
+
+        &.training-schedule {
+          width: 100%;
+          margin-right: 0;
+
+          .c-table--scroll {
+            & + .c-table--scroll {
+              margin-top: 40px;
+              @include mq(767) {
+                margin-top: 5%;
+              }
+            }
+          }
+
+          table {
+            @include mq(767) {
+              min-width: 800px;
+            }
+
+            th {
+              text-align: left;
+              @include fz(22);
+              padding-left: 0;
+            }
+
+            td {
+              vertical-align: middle;
+              &:first-child {
+                width: 35%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__form {
+      &.p-company-inquiry {
+        padding: 0;
+      }
+
+      .c-form-body {
+        table {
+          @include mq(767) {
+            margin-top: 6%;
+          }
+
+          th {
+            br {
+              @include mq(992) {
+                display: none;
+              }
+            }
+          }
+
+          td {
+            p {
+              @include fz(14);
+              margin-top: 0.5em;
+            }
+
+            .valve-form__list {
+              @include flex("", "fs");
+              flex-wrap: wrap;
+
+              > li,
+              > span {
+                margin-right: 2em;
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                input {
+                  position: relative;
+                  top: -3px;
+                  width: 1.6rem;
+                  height: 1.6rem;
+                  margin-right: 0.5rem;
+                }
+              }
+
+              &.single-row {
+                flex-direction: column;
+
+                > span {
+                  margin-right: 0;
+                  margin-bottom: 10px;
+                  margin-left: 0 !important;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  input {
+                    top: inherit;
+                  }
+                }
+              }
+            }
+
+            .c-form-body__select {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
-}
-
-.p-training-menu ul li:nth-child(4n) {
-  margin-right: 2%;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-menu ul li:nth-child(4n) {
-    margin-right: 0;
-  }
-}
-
-.p-training-menu ul li:nth-child(5n) {
-  margin-right: 0;
-}
-
-.p-training-menu ul li a {
-  justify-content: center;
-  text-align: center;
-}
-
-@media screen and (max-width: 1023px) {
-  .p-training-menu ul li a {
-    font-size: 14px;
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 940px) {
-  .p-training-menu ul li a {
-    font-size: 1.4vw;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-menu ul li a {
-    font-size: 15px;
-    font-size: 1.5rem;
-    text-align: left;
-    justify-content: flex-start;
-  }
-  .p-training-menu ul li a br {
-    display: none;
-  }
-}
-
-.p-training__container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto 120px;
-  background: #fff;
-  box-shadow: 0 3px 36px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training__container {
-    padding: 5%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .p-training__container {
-    margin-bottom: 12%;
-  }
-}
-
-.p-training-home__intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  margin-bottom: 80px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__intro {
-    flex-direction: column;
-    margin-bottom: 12%;
-  }
-}
-
-.p-training-home__intro figure {
-  width: 31.25%;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__intro figure {
-    width: 60%;
-    margin: 0 auto 5%;
-  }
-}
-
-.p-training-home__intro figure img {
-  width: 100%;
-}
-
-.p-training-home__intro > div {
-  width: 65%;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__intro > div {
-    width: 100%;
-  }
-}
-
-.p-training-home__intro > div p {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__intro > div p {
-    margin-bottom: 4%;
-  }
-}
-
-.p-training-home__intro > div p:last-child {
-  margin-bottom: 0;
-}
-
-.p-training-home__menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__menu {
-    flex-direction: column;
-  }
-}
-
-.p-training-home__menu > div {
-  width: 48%;
-  margin-right: 4%;
-  border-radius: 5px;
-  border: 4px solid #e5e5e5;
-  padding: 40px;
-  margin-bottom: 40px;
-}
-
-@media screen and (max-width: 1023px) {
-  .p-training-home__menu > div {
-    padding: 40px 10px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__menu > div {
-    width: 100%;
-    padding: 5%;
-    margin-bottom: 6%;
-  }
-}
-
-.p-training-home__menu > div:nth-child(2n) {
-  margin-right: 0;
-}
-
-.p-training-home__menu > div h2 {
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__menu > div h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
-  }
-}
-
-.p-training-home__menu > div p {
-  font-size: 16px;
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 30px;
-  line-height: 1.4;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__menu > div p {
-    margin-bottom: 5%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .p-training-home__menu > div p {
-    text-align: left;
-  }
-}
-
-.p-training-home__menu > div ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.p-training-home__menu > div ul > li {
-  width: 48%;
-}
-
-@media screen and (max-width: 480px) {
-  .p-training-home__menu > div ul > li a {
-    font-size: 15px;
-    font-size: 1.5rem;
-  }
-}
-
-.p-training-home__menu > div:nth-child(3),
-.p-training-home__menu > div:last-child {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.p-training-home__menu > div:nth-child(3) ul,
-.p-training-home__menu > div:last-child ul {
-  justify-content: center;
-}
-
-.p-training-home__menu > div:nth-child(3) ul li,
-.p-training-home__menu > div:last-child ul li {
-  max-width: 260px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-home__menu > div:nth-child(3) ul li,
-  .p-training-home__menu > div:last-child ul li {
-    max-width: 100%;
-    width: 65%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .p-training-home__menu > div:nth-child(3) ul li,
-  .p-training-home__menu > div:last-child ul li {
-    width: 100%;
-  }
-}
-
-.p-training-valve__intro {
-  margin-bottom: 40px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__intro {
-    margin-bottom: 5%;
-  }
-}
-
-.p-training-valve__intro p {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.6;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__intro p {
-    font-size: 16px;
-    font-size: 1.6rem;
-  }
-}
-
-.p-training-valve__intro p a {
-  color: #004da1;
-}
-
-.p-training-valve__intro p a:hover {
-  text-decoration: underline;
-}
-
-.p-training-valve__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container {
-    flex-direction: column;
-  }
-}
-
-.p-training-valve__container--box {
-  width: 48%;
-  margin-right: 4%;
-  margin-bottom: 60px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container--box {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 10%;
-  }
-}
-
-.p-training-valve__container--box:nth-child(2n) {
-  margin-right: 0;
-}
-
-.p-training-valve__container--box .p-sustainability-ttl__h2 {
-  font-size: 28px;
-  font-size: 2.8rem;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container--box .p-sustainability-ttl__h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    margin-bottom: 4% !important;
-  }
-}
-
-.p-training-valve__container--box .valve-date_list,
-.p-training-valve__container--box ul {
-  margin-bottom: -1em;
-}
-
-.p-training-valve__container--box .valve-date_list li,
-.p-training-valve__container--box ul li {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  margin-bottom: 0.75em;
-  text-indent: -1em;
-  margin-left: 1em;
-}
-
-.p-training-valve__container--box p {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  margin-bottom: 0.75em;
-  font-feature-settings: "palt";
-}
-
-.p-training-valve__container--box p:last-of-type {
-  margin-bottom: 0;
-}
-
-.p-training-valve__container--box p a {
-  color: #004da1;
-}
-
-@media screen and (max-width: 480px) {
-  .p-training-valve__container--box p a {
-    font-size: 15px;
-    font-size: 1.5rem;
-  }
-}
-
-.p-training-valve__container--box p a:hover {
-  text-decoration: underline;
-}
-
-.p-training-valve__container--box .link--external {
-  width: 280px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container--box .link--external {
-    width: 100%;
-  }
-}
-
-.p-training-valve__container--box.training-schedule {
-  width: 100%;
-  margin-right: 0;
-}
-
-.p-training-valve__container--box.training-schedule .c-table--scroll + .c-table--scroll {
-  margin-top: 40px;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container--box.training-schedule .c-table--scroll + .c-table--scroll {
-    margin-top: 5%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__container--box.training-schedule table {
-    min-width: 800px;
-  }
-}
-
-.p-training-valve__container--box.training-schedule table th {
-  text-align: left;
-  font-size: 22px;
-  font-size: 2.2rem;
-  padding-left: 0;
-}
-
-.p-training-valve__container--box.training-schedule table td {
-  vertical-align: middle;
-}
-
-.p-training-valve__container--box.training-schedule table td:first-child {
-  width: 35%;
-}
-
-.p-training-valve__form.p-company-inquiry {
-  padding: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .p-training-valve__form .c-form-body table {
-    margin-top: 6%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .p-training-valve__form .c-form-body table th br {
-    display: none;
-  }
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__box {
-  padding-top: 1em;
-}
-
-@media screen and (max-width: 992px) {
-  .p-training-valve__form .c-form-body table td .valve-form__box {
-    padding-top: 0;
-  }
-}
-
-.p-training-valve__form .c-form-body table td p {
-  font-size: 14px;
-  font-size: 1.4rem;
-  margin-top: 0.5em;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list > li,
-.p-training-valve__form .c-form-body table td .valve-form__list > span {
-  margin-right: 2em;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list > li:last-child,
-.p-training-valve__form .c-form-body table td .valve-form__list > span:last-child {
-  margin-right: 0;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list > li input,
-.p-training-valve__form .c-form-body table td .valve-form__list > span input {
-  position: relative;
-  top: -3px;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.5rem;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list.single-row {
-  flex-direction: column;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list.single-row > span {
-  margin-right: 0;
-  margin-bottom: 10px;
-  margin-left: 0 !important;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list.single-row > span:last-child {
-  margin-bottom: 0;
-}
-
-.p-training-valve__form .c-form-body table td .valve-form__list.single-row > span input {
-  top: inherit;
-}
-
-.p-training-valve__form .c-form-body table td .c-form-body__select {
-  width: 100%;
 }

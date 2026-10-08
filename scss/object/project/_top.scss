@@ -4,6 +4,7 @@
     @include mq(tab) {
       overflow: hidden;
     }
+
     position: relative;
     width: 100%;
     background: url("../images/top/mv.jpg") no-repeat center / cover;
@@ -11,6 +12,7 @@
     z-index: 1;
     @include flex("c", "");
     flex-wrap: nowrap;
+
     @include mq(tab) {
       flex-direction: column;
       justify-content: center;
@@ -18,6 +20,7 @@
       height: auto;
       padding: 13% 0 8%;
     }
+
     &::after {
       content: "";
       display: block;
@@ -28,10 +31,12 @@
       width: 100%;
       height: 100%;
       z-index: 2;
+
       @include mq(tab) {
         display: none;
       }
     }
+
     &__ttl {
       position: relative;
       width: 50%;
@@ -41,73 +46,93 @@
         padding-left: 3.5%;
         margin-bottom: 12%;
       }
+
       @include mq(tab) {
         width: 76%;
         padding-left: inherit;
       }
+
       img {
         width: 100%;
         max-width: 610px;
+
         @include mq(tab) {
           max-width: inherit;
         }
       }
     }
+
     &__slide {
       position: absolute;
       z-index: 10;
       top: inherit;
       right: 0;
       width: 74%;
-      -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 1) 41%);
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 33%,
+        rgba(0, 0, 0, 1) 41%
+      );
+
       @media all and (-ms-high-contrast: none) {
         position: relative;
         width: 84%;
       }
+
       @include mq(tab) {
         position: relative;
         width: 130%;
         left: -25%;
       }
+
       @include mq(sp) {
         width: 175%;
         left: -30%;
       }
+
       &__box {
         img {
           display: block;
+
           @media all and (-ms-high-contrast: none) {
             width: 100%;
           }
         }
+
         span {
           display: block;
           color: #fff;
           @include fz(13);
           margin-top: 15px;
           padding-left: 10%;
+
           @include mq(tab) {
             font-size: 1.6rem;
             margin-top: 2rem;
           }
+
           @include mq(sp) {
             font-size: 1.3rem;
           }
         }
       }
+
       .splide__slide.is-next {
         animation: splide 0.1s ease forwards;
         animation-delay: 0s;
       }
+
       .splide__slide.is-active {
         opacity: 0;
       }
+
       .is-next.is-active {
         opacity: 0;
         animation: none;
       }
     }
   }
+
   @keyframes splide {
     from {
       opacity: 1;
@@ -116,128 +141,110 @@
       opacity: 0;
     }
   }
-  &__news {
-    $news: &;
 
+  &-sustainability {
+    &__inner {
+      &__link {
+        width: 240px;
+        margin: 0 auto;
+        @include mq(tab) {
+          width: 64%;
+        }
+
+        &.u-marginLeft {
+          margin-right: auto;
+          margin-left: 0;
+          margin-top: 2rem;
+          width: 220px;
+
+          a {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__news {
     overflow: hidden;
     top: 0;
     left: 0;
     width: calc(100% - 80px);
     background: rgba(0, 128, 204, 0.9);
-    @include fz(16);
+    font-size: 16px;
+    font-size: 1.6rem;
     z-index: 98;
     padding: 10px 40px;
     color: #fff;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+
     @include mq(tab) {
-      width: 90%;
-      padding: 10px 5%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 20px;
       background: rgba(0, 128, 204, 0.7);
     }
-    > ul {
-      position: relative;
-      li {
-        margin: auto 0;
-        bottom: 0;
-        > span {
-          display: block;
-          // will-change: transform;
-          // transform: translateX(110%);
-          // animation: slider 3s cubic-bezier(0, 0, 0.02, 1) forwards;
-          &::before {
-            content: "NEWS";
-            display: inline-block;
-            background: #fff;
-            color: #0080cc;
-            padding: 5px 10px;
-            margin-right: 10px;
-            // animation: flash 0.5s 1.5s ease forwards;
-            // animation-iteration-count: 3;
-          }
-          a {
-            color: #fff;
-            &:hover {
-              text-decoration: underline;
-            }
-            &.link-pdf {
-              position: relative;
-              padding-right: 1em;
-              font-feature-settings: "palt";
-              &::after {
-                content: "";
-                display: inline-block;
-                background: url("../images/common/icon-pdf.svg") no-repeat left center / contain;
-                width: 26px;
-                height: 26px;
-                position: absolute;
-                margin-left: 0;
-                top: inherit;
-                margin-top: 2px;
-                @include mq(tab) {
-                  margin-top: inherit;
-                }
-              }
-            }
-          }
-          + span {
-            margin-top: 10px;
+
+    ul {
+      li > span {
+        display: block;
+
+        &::before {
+          content: "NEWS";
+          display: inline-block;
+          background: #fff;
+          color: #0080cc;
+          padding: 5px 10px;
+          margin-right: 10px;
+
+          @include mq(tab) {
+            padding: 0 10px 1px;
           }
         }
-        &#{$news} {
-          &__maintenance {
-            > span {
-              &::before {
-                content: "MAINTENANCE";
-                display: inline-block;
-                background: #fff;
-                color: #0080cc;
-                padding: 5px 10px;
-                margin-right: 10px;
-                // animation: flash 0.5s 1.5s ease forwards;
-                // animation-iteration-count: 3;
-              }
-            }
-          }
-        }
-        &.slick-slide {
-          border: none;
-        }
+      }
+
+      li > span a {
+        color: white;
       }
     }
   }
+
+  &-news__title {
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #2c4e9d;
+    line-height: normal;
+    border-right: 1px solid #b8bdc1;
+  }
+
   @keyframes slider {
     from {
       transform: translateX(110%);
     }
+
     to {
       transform: translateX(0px);
     }
   }
+
   @keyframes flash {
     50% {
       opacity: 0;
     }
   }
+
   //product
   &-product {
-    padding: 120px 15px 80px;
+    padding: 10rem 15px 0;
     position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #fff;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
+
     @include mq(tab) {
-      padding: 12% 5.33%;
+      padding: 12% 0;
     }
+
     &__inner {
       width: 100%;
       max-width: 1200px;
@@ -245,627 +252,214 @@
       position: relative;
       z-index: 1;
     }
-    &__link {
-      @include flex("", "fs");
-      margin-bottom: 60px;
-      @include mq(tab) {
-        margin-bottom: 6%;
-      }
-      li {
-        width: calc(20% - 1px);
-        height: 240px;
-        margin-right: 1px;
-        &:nth-child(5n) {
-          width: 20%;
-          @include mq(pc) {
-            margin-right: 0;
-          }
-        }
-        @media screen and (max-width: 1199px) {
-          height: 20vw;
-        }
-        @include mq(tab) {
-          width: 48%;
-          margin-right: 4%;
-          margin-bottom: 4%;
-          height: 42.5vw;
-          &:nth-child(5n) {
-            width: 48%;
-          }
-          &:nth-child(2n) {
-            margin-right: 0;
-          }
-        }
-        a {
-          display: block;
-          position: relative;
-          width: 100%;
-          height: 100%;
-          @include hov-alpha;
-          overflow: hidden;
-          border-bottom: 1px solid #f3f4f4;
-          @include mq(tab) {
-            border-bottom: none;
-          }
-          img {
-            width: 100%;
-            object-fit: cover;
-            height: 240px;
-            @include img-zoom;
-            @media screen and (max-width: 1199px) {
-              height: 20vw;
-            }
-            @include mq(tab) {
-              height: 42.5vw;
-              border-radius: 4px;
-            }
-          }
-          span {
-            display: block;
-            position: absolute;
-            text-align: right;
-            right: 25px;
-            bottom: 10px;
-            @include fz(15);
-            color: #fff;
-            z-index: 2;
-            @media screen and (max-width: 1199px) and (min-width: 768px) {
-              br {
-                display: none;
-              }
-            }
-            @include mq(tab) {
-              font-feature-settings: "palt";
-              @include fz(18);
-              right: 3%;
-              bottom: 3%;
-              &::after {
-                display: none;
-              }
-            }
-            @include mq(sp) {
-              @include fz(16);
-            }
-            em {
-              display: block;
-              @include fz(11);
-              @include mq(tab) {
-                font-size: 1.2rem;
-              }
-            }
-          }
-        }
-        &:nth-child(9) span {
-          @include fz(14);
-          @include mq(tab) {
-            @include fz(18);
-          }
-          @include mq(sp) {
-            @include fz(16);
-          }
-        }
-      }
-    }
-    &__link02 {
-      @include flex("c", "c");
-      flex-wrap: nowrap;
-      @include mq(tab) {
-        flex-direction: column;
-      }
-      li {
-        width: 290px;
-        margin-right: 30px;
-        @include mq(tab) {
-          width: 78%;
-          margin-right: 0;
-          margin-bottom: 4%;
-        }
-        &:last-child {
-          margin-right: 0;
-          margin-bottom: 0;
-        }
-      }
-    }
-    &__categories {
+
+    &__titleList {
       display: flex;
-      flex-direction: column;
-      gap: 45px;
-      margin-bottom: 40px;
-      @include mq(tab) {
-        gap: 28px;
-        margin-bottom: 28px;
-      }
-    }
-    &__category {
-    }
-    &-cat {
-      display: block;
-      &__title {
-        position: relative;
-        width: 100%;
-        @include fz(20);
-        letter-spacing: 0.06em;
-        line-height: 1;
-        color: #004DA1;
-        font-weight: 500;
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -15px;
-          left: 0;
-        }
-        &::before {
-          width: 100%;
-          height: 1px;
-          background-color: #C1C1C1;
-        }
-        &::after {
-          width: 20%;
-          height: 2px;
-          background-color: #418AC9;
-          @include mq(tab) {
-            width: 75%;
-          }
-        }
-      }
-      &__items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        @include mq(tab) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
-        }
-        @media screen and (max-width: 450px) {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        margin-top: 55px;
-        @include mq(tab) {
-          margin-top: 45px;
-        }
-      }
-      &__item {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-    }
-    &-item {
-      display: flex;
-      gap: 10px;
-      height: 100%;
+      width: 100%;
+      justify-content: space-between;
       align-items: center;
-      padding: 10px;
-      border-radius: 4px;
-      background-color: #fff;
-      box-shadow: 0 1px 0 rgba($color: #E5E5E5, $alpha: 1.0);
-      transition: opacity 0.3s;
-      &:hover {
-        opacity: 0.7;
+
+      @include mq(sp) {
+        align-items: flex-start;
+        gap: 2rem;
       }
-      &__img-wrapper {
-        flex-basis: 16%;
-        flex-shrink: 0;
-        img {
-          aspect-ratio: 1 / 1;
-          width: 100%;
-          object-fit: contain;
-        }
+
+      .c-ttl--type01 {
+        margin-bottom: 0;
       }
-      &__body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      &__title {
+
+      a {
+        font-size: 1.6rem;
         position: relative;
-        @include fz(16);
-        font-weight: 700;
-        line-height: 1.5;
-        letter-spacing: 0.06em;
-        color: #004DA1;
-        padding-right: 8px;
-        em {
-          @include fz(12);
+        padding-right: 2.8rem;
+        font-weight: 500;
+        line-height: normal;
+
+        @include mq(tab) {
+          padding-left: 2.8rem;
         }
+
+        @include mq(sp) {
+          padding-left: 0;
+        }
+
         &::after {
           content: "";
-          display: inline-block;
+          display: block;
           position: absolute;
           right: 0;
           top: 50%;
-          transform: translateY(-50%) rotate(45deg);
-          width: 8px;
-          height: 8px;
-          border-top: 1px solid #004DA1;
-          border-right: 1px solid #004DA1;
+          transform: translateY(-50%);
+          background: url("../images/common/arrow-icon-blue.svg") no-repeat;
+          width: 2rem;
+          height: 2rem;
+          background-size: cover;
         }
       }
     }
-  }
-  //solution
-  &-solution {
-    padding: 100px 15px;
-    position: relative;
-    z-index: 1;
-    @include mq(tab) {
-      padding: 12% 0 15%;
-    }
-    &__inner {
-      width: 100%;
-      max-width: 810px;
-      margin: 0 auto;
+
+    &__grid {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 48.75% 1fr 1fr;
+      grid-template-rows: repeat(2, 200px);
+      gap: 3rem;
+
       @include mq(tab) {
-        width: 80%;
-        max-width: 100%;
+        margin-top: 2.5rem;
+        gap: 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
       }
-    }
-    &__link {
-      li {
-        a {
-          @include hov-alpha;
-          img {
+
+      a {
+        &:first-of-type {
+          grid-row: span 2;
+
+          @include mq(tab) {
+            grid-column: span 2;
+            grid-row: auto;
+          }
+        }
+
+        img {
+          @include mq(tab) {
             width: 100%;
           }
-          p {
-            @include fz(16);
-            margin-top: 10px;
-          }
-          &[target] {
-            p {
-              &::after {
-                content: "";
-                background: url(../images/common/icon-external_blue.svg) no-repeat left center/contain;
-                width: 13px;
-                height: 9px;
-                position: relative;
-                display: inline-block;
-                margin-left: 0.5em;
-              }
-            }
-          }
         }
       }
-    }
-    .splide__arrows {
-      display: none;
-      @include mq(tab) {
-        display: block;
-      }
-      .splide__arrow {
-        background-color: transparent;
-        width: 4.2rem;
-        height: auto;
-        left: -2.5rem;
-        opacity: 1;
-        &.splide__arrow--next {
-          right: inherit;
-          left: 100%;
-          margin-left: -2.5rem;
-        }
-      }
-    }
-  }
-  //about
-  &-about {
-    padding: 100px 15px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #f3f4f4;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-    @include mq(tab) {
-      padding: 13% 5%;
-    }
-    &__inner {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      @include flex("", "");
-      flex-wrap: nowrap;
-      position: relative;
-      z-index: 1;
-      @include mq(tab) {
+
+      @include mq(sp) {
+        display: flex;
         flex-direction: column;
       }
-      &__intro {
-        width: 40%;
-        margin-right: 5%;
-        @include mq(tab) {
-          width: 100%;
-          margin-right: 0;
-        }
-        h2 {
-          text-align: left;
-          margin-bottom: 60px;
-          @include mq(tab) {
-            text-align: center;
-            margin-bottom: 10%;
-          }
-          em {
-            text-align: left;
-            margin-top: 10px;
-            @include mq(tab) {
-              text-align: center;
-              margin-top: 2.5%;
-            }
-          }
-        }
-        &__lead {
-          @include fz(24);
-          margin-bottom: 40px;
-          padding-left: 15%;
-          @include mq(tab) {
-            margin-bottom: 8%;
-            padding-left: 1rem;
-          }
-          span {
-            display: block;
-            @include fz(50);
-          }
-        }
-        &__txt {
-          @include fz(16);
-          line-height: 1.8;
-          padding-left: 15%;
-          letter-spacing: 0.05em;
-          @include mq(tab) {
-            padding-left: 0;
-          }
-        }
-      }
-      &__link {
-        width: 55%;
-        @include mq(tab) {
-          padding-top: 10%;
-          width: 100%;
-        }
-        ul {
-          @include flex("", "");
-          margin-bottom: -30px;
-          @include mq(tab) {
-            flex-direction: column;
-            margin-bottom: -5%;
-          }
-          li {
-            width: 46%;
-            max-width: 300px;
-            margin-right: 8%;
-            margin-bottom: 30px;
-            @include mq(tab) {
-              width: 100%;
-              max-width: 100%;
-              margin-right: 0;
-              margin-bottom: 5%;
-            }
-            &:nth-child(2n) {
-              margin-right: 0;
-            }
-            a {
-              position: relative;
-              display: block;
-              @include hov-alpha;
-              @include mq(tab) {
-                display: flex;
-                justify-content: space-between;
-              }
-              p {
-                @include fz(16);
-                margin-top: 10px;
-                @include mq(tab) {
-                  margin-top: 0;
-                  width: 63%;
-                }
-                strong {
-                  display: none;
-                  @include mq(tab) {
-                    display: block;
-                    @include fz(16);
-                    font-weight: bold;
-                    margin-bottom: 3%;
-                    &::after {
-                      position: relative;
-                      border-top: 1px solid #333;
-                      border-right: 1px solid #333;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        &__img {
-          position: relative;
-          overflow: hidden;
-          height: 200px;
-          @media screen and (max-width: 1179px) {
-            height: 20vw;
-          }
-          @include mq(tab) {
-            width: 32%;
-            height: 30vw;
-          }
-          span {
-            position: absolute;
-            z-index: 10;
-            right: 20px;
-            bottom: 20px;
-            @include fz(18);
-            font-weight: 700;
-            color: #fff;
-            &::after {
-              position: relative;
-            }
-            @include mq(1023) {
-              @include fz(14);
-              right: inherit;
-              left: 10px;
-              bottom: 10px;
-            }
-            @include mq(tab) {
-              display: none;
-            }
-          }
-          img {
-            width: 100%;
-            object-fit: cover;
-            @include img-zoom;
-            @media screen and (max-width: 1179px) {
-              height: 20vw;
-            }
-            @include mq(tab) {
-              height: 30vw;
-              border-radius: 4px;
-            }
-          }
-        }
+    }
+
+    &__gridTitle {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 140%;
+      margin-top: 1.2rem;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0;
+
+      @include mq(tab) {
+        font-size: 1.8rem;
       }
     }
   }
+
+  // about
+  &-about {
+    margin-top: 12rem;
+
+    @include mq(tab) {
+      margin-top: 0;
+    }
+  }
+
+  &-about__inner {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    @include mq(tab) {
+      padding: 0 5.33%;
+    }
+  }
+
+  &-about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   //news
   &-news {
-    padding: 80px 0;
-    @media screen and (max-width: 1279px) {
-      padding: 80px 1%;
+    border: 1px solid #b8bdc1;
+    padding: 5rem;
+
+    @include mq(sp) {
+      padding: 4rem 3rem;
     }
-    @include mq(tab) {
-      padding: 13% 5%;
-    }
+
     &__inner {
       @include inner-box;
-      @include flex("c", "");
       height: 100%;
       position: relative;
       z-index: 1;
+
       @include mq(tab) {
         padding: 0;
         flex-direction: column;
       }
-      &__ttl {
-        width: 21.5%;
-        padding-right: 8%;
-        @media screen and (max-width: 1279px) {
-          padding-right: 4%;
+
+      &__container {
+        &.u-mt30 {
+          margin-top: 3rem;
         }
 
-        &.-ir {
-          @media screen and (max-width: 1279px) {
-            padding-right: 2%;
-          }
-        }
-        h2 {
-          margin-bottom: 20px;
-          em {
-            margin-top: 2.5%;
-          }
-        }
         @include mq(tab) {
           width: 100%;
-          padding-right: 0;
-          h2 {
-            margin-bottom: 6%;
-          }
         }
-      }
-      &__link {
-        width: 100px;
-        margin: 0 auto;
-        @include mq(tab) {
-          display: none;
-        }
-        a {
-          @include fz(16);
-          padding: 5px 10px;
-        }
-      }
-      &__container {
-        width: 78.5%;
-        padding-left: 8%;
-        border-left: 1px solid #dedede;
-        @media screen and (max-width: 1279px) {
-          padding-left: 4%;
-        }
-        @include mq(tab) {
-          width: 100%;
-          padding-left: 0;
-          border-left: none;
-        }
+
         dl {
-          @include flex("", "");
-          flex-wrap: nowrap;
-          margin-bottom: 20px;
-          @media screen and (max-width: 1279px) {
-            flex-direction: column;
-            border-bottom: 1px dotted #333;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+          display: grid;
+          row-gap: 0.8rem;
+
+          &:nth-of-type(n + 2) {
+            margin-top: 2rem;
           }
-          @include mq(tab) {
-            padding-bottom: 3%;
-            margin-bottom: 5%;
-          }
-          &:last-of-type {
-            margin-bottom: 0;
-          }
+
           dt {
-            @include fz(16);
-            @include flex("c", "");
-            width: 200px;
-            @media screen and (max-width: 1279px) {
-              width: 100%;
-              margin-bottom: 10px;
-              justify-content: flex-start;
-            }
-            @include mq(tab) {
-              display: block;
-              @include fz(14);
-              margin-bottom: 2.5%;
-            }
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-size: 1.6rem;
+
             span {
               color: #fff;
-              background: #004da1;
-              padding: 2px 5px;
-              width: 9rem;
+              background: #0085ce;
+              padding: 2px 14px;
+              width: auto;
               display: inline-block;
               text-align: center;
-              border-radius: 3px;
-              @include fz(14);
-              @media screen and (max-width: 1279px) {
-                margin-left: 1em;
-              }
+              @include fz(15);
             }
           }
+
           dd {
             flex: 1;
-            margin-left: 2.5%;
-            @media screen and (max-width: 1279px) {
-              flex: unset;
-              width: 100%;
-              margin-left: 0;
-            }
+
             a {
               display: inline-block;
               @include fz(16);
+
               &:hover {
                 text-decoration: underline;
               }
+
               &.link-pdf {
                 position: relative;
                 padding-right: 1em;
                 font-feature-settings: "palt";
+
                 &::after {
                   content: "";
                   display: inline-block;
-                  background: url("../images/common/icon-pdf.svg") no-repeat left center / contain;
+                  background: url("../images/common/icon-pdf.svg") no-repeat
+                    left center / contain;
                   width: 26px;
                   height: 26px;
                   position: absolute;
@@ -876,7 +470,13 @@
             }
           }
         }
+
+        &.u-p0 {
+          padding-left: 0;
+          border: none;
+        }
       }
+
       &__link-sp {
         width: 64%;
         margin: 8% auto 0;
@@ -887,25 +487,59 @@
       }
     }
   }
+
+  &-news__list {
+    width: 100%;
+    max-width: 1160px;
+    padding-inline: 20px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 48.75% 48.75%;
+    justify-content: space-between;
+
+    @include mq(tab) {
+      margin: 12% 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
   //maintenance
   &-maintenance {
-    padding: 80px 0;
-    @media screen and (max-width: 1279px) {
-      padding: 80px 1%;
-    }
+    padding: 40px 20px 10rem;
+    max-width: 1160px;
+    margin: auto;
+
     @include mq(tab) {
-      padding: 13% 5%;
+      padding-top: 0;
     }
+
+    @include mq(sp) {
+      padding: 0 20px;
+      margin-bottom: 12%;
+    }
+
     &__inner {
-      @include inner-box;
-      @include flex("c", "fs");
-      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      border: 1px solid var(--D5D5D5, #b8bdc1);
+      z-index: 1;
+      width: 100%;
+      margin: 0 auto;
       position: relative;
       z-index: 1;
-      @include mq(tab) {
-        padding: 0;
-        flex-direction: column;
+      padding: 5rem;
+
+      @include mq(sp) {
+        padding: 2rem;
       }
+
       &__ttl {
         padding-right: 8%;
         @media screen and (max-width: 1279px) {
@@ -931,7 +565,6 @@
         }
         a {
           max-width: 400px;
-          padding: 10px;
           @include mq(tab) {
             width: 80%;
             padding: 3%;
@@ -940,206 +573,9 @@
         }
       }
     }
-  }
-  //ir
-  &-ir {
-    padding: 80px 0;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #f3f4f4;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-    @include mq(tab) {
-      padding: 13% 10%;
-    }
-    &__inner {
-      @include inner-box;
-      position: relative;
-      z-index: 1;
-      h2 {
-        text-align: left;
-        margin-bottom: 25px;
-        @include mq(tab) {
-          text-align: center;
-          margin-bottom: 6%;
-        }
-        em {
-          display: inline-block;
-          text-align: left;
-          margin-top: 0;
-          margin-left: 1em;
-          @include mq(tab) {
-            text-align: center;
-            display: block;
-            margin-top: 2.5%;
-            margin-left: 0;
-          }
-        }
-      }
-      &__link {
-        ul {
-          @include flex("", "");
-          @include mq(tab) {
-            flex-direction: column;
-            margin-bottom: -10%;
-          }
-          li {
-            width: 23.4375%;
-            @include mq(tab) {
-              width: 100%;
-              margin-bottom: 10%;
-            }
-            a {
-              display: block;
-              @include hov-alpha;
-              img {
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-              }
-              dl {
-                dt {
-                  @include fz(18);
-                  font-weight: bold;
-                  margin-bottom: 15px;
-                  @include mq(tab) {
-                    margin-bottom: 3%;
-                  }
-                }
-                dd {
-                  @include fz(16);
-                  line-height: 1.6;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  //sustainability
-  &-sustainability {
-    padding: 120px 0 80px;
-    //background: #fff;
-    overflow: hidden;
-    @include mq(tab) {
-      padding: 10% 5% 13%;
-    }
-    &__inner {
-      @include inner-box;
-      position: relative;
-      z-index: 1;
-      &__container {
-        width: 100%;
-        h2 {
-          text-align: left;
-          font-weight: bold !important;
-          @include mq(tab) {
-            text-align: center;
-            @include fz(24);
-          }
-          em {
-            text-align: left;
-            @include mq(tab) {
-              text-align: center;
-            }
-          }
-        }
-        &__lead {
-          @include fz(22);
-          font-weight: bold;
-          color: #004da1;
-          -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-          letter-spacing: 0.1em;
-          width: auto;
-          margin: 0 auto 6.66%;
-          span {
-            font-weight: bold;
-            color: #f3a20b;
-          }
-        }
-        &__txt {
-          @include fz(16);
-          margin: 30px 0;
-          @include mq(tab) {
-            margin: 8% 0;
-          }
-        }
-      }
-      &__link {
-        width: 240px;
-        margin: 0 auto;
-        @include mq(tab) {
-          width: 64%;
-        }
-      }
-      &__slide {
-        position: relative;
-        > div {
-          width: 100%;
-        }
-        .splide__arrows {
-          .splide__arrow {
-            background-color: transparent;
-            width: 5.2rem;
-            height: auto;
-            left: -2.5em;
-            opacity: 1;
-            @include mq(1024) {
-              left: 1%;
-            }
-            @include mq(sp) {
-              width: 4.2rem;
-              left: -2.5em;
-            }
-            &.splide__arrow--next {
-              right: inherit;
-              left: calc(100% - 2.5em);
-              @include mq(1024) {
-                left: calc(100% - 5em);
-              }
-              @include mq(sp) {
-                left: calc(100% - 1.5em);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // letter
-  &-letter {
-    padding: 50px 15px;
-    @include mq(tab) {
-      padding: 12% 5.33%;
-    }
-    &__inner {
-      max-width: 850px;
-      background: #f3f4f4;
-      border: 1px solid #dedede;
-      padding: 15px;
-      margin: 0 auto;
-      @include mq(tab) {
-        padding: 5.33%;
-      }
-      > p {
-        @include fz(14);
-        text-align: center;
-        color: #444;
-      }
-      > a {
-        max-width: 300px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin: 20px auto 0;
+    .p-top-product__titleList {
+      @include mq(sp) {
+        flex-direction: column;
       }
     }
   }

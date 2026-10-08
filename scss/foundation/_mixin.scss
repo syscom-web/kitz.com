@@ -1,28 +1,36 @@
 // メディアクエリ
 @mixin mq($device: null) {
-  @if $device == 'pc' {
-    @media print,screen and (min-width: #{nth($breakpoint_list, 2) + 1}){
+  @if $device == "pc" {
+    @media print,screen and (min-width: #{nth($breakpoint_list, 2) + 1}) {
       @content;
     }
-  } @else if $device == 'tab' {
-    @media screen and (max-width: #{nth($breakpoint_list, 2)}){
+  } @else if $device == "tab" {
+    @media screen and (max-width: #{nth($breakpoint_list, 2)}) {
       @content;
     }
-  } @else if $device == 'sp' {
-    @media screen and (min-width: 1px) and (max-width: #{nth($breakpoint_list, 1)}){
+  } @else if $device == "sp" {
+    @media screen and (min-width: 1px) and (max-width: #{nth($breakpoint_list, 1)}) {
       @content;
     }
   } @else {
-    @media screen and (max-width: $device + px){
+    @media screen and (max-width: $device + px) {
       @content;
     }
   }
 }
 
+@mixin mq-min($device: null) {
+  @media screen and (min-width: $device + px) {
+    @content;
+  }
+}
+
 // IEハック
 @mixin hack($IE-ver: null) {
-  @if $IE-ver == 'gteIE11' { // IE11以上
-    @at-root _:-ms-fullscreen,:root & {
+  @if $IE-ver == "gteIE11" {
+    // IE11以上
+    @at-root _:-ms-fullscreen,
+      :root & {
       @content;
     }
   }
@@ -30,7 +38,9 @@
 
 // Safariハック
 @mixin safari {
-  @at-root _::-webkit-full-page-media, _:future, :root & {
+  @at-root _::-webkit-full-page-media,
+    _:future,
+    :root & {
     @content;
   }
 }
@@ -42,7 +52,7 @@
 }
 
 // flexbox
-@mixin flex($ai, $jc){
+@mixin flex($ai, $jc) {
   display: flex;
   flex-wrap: wrap;
 
@@ -92,7 +102,6 @@
   animation-fill-mode: both;
 }
 
-
 /* 汎用スタイル */
 // wrapper-box
 @mixin wrapper-box {
@@ -111,15 +120,15 @@
   margin: 0 auto;
   position: relative;
   @media screen and (max-width: 1280px) {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
 // hov-alpha
 @mixin hov-alpha {
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -127,62 +136,62 @@
 @mixin img-zoom {
   width: 100%;
   height: auto;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-	@include mq(tab) {
-		transition: none;
-	}
+  @include mq(tab) {
+    transition: none;
+  }
   &:hover {
     transform: scale(1.2);
-    transition-duration: .5s;
-		@include mq(tab) {
-			transform: scale(1.2);
-			transition: none;
-		}
+    transition-duration: 0.5s;
+    @include mq(tab) {
+      transform: scale(1.2);
+      transition: none;
+    }
   }
 }
 // font style
 @mixin font-noto {
-  font-family: 'Noto Sans CJK JP', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-family: "Noto Sans CJK JP", "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", sans-serif;
 }
 // contents-bg {
 @mixin bg-container {
-	background: #fff;
-	box-shadow: 0 3px 36px rgba(0,0,0,.1);
-	padding: 50px;
-	border-radius: 10px;
-	position: relative;
-	z-index: 1;
-	@include mq(tab) {
-		padding: 5%;
-	}
+  background: #fff;
+  box-shadow: 0 3px 36px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  @include mq(tab) {
+    padding: 5%;
+  }
 }
 //marker {
 @mixin txt-marker {
-  background:linear-gradient(transparent 60%, #FFFF00 60%);
+  background: linear-gradient(transparent 60%, #ffff00 60%);
 }
 //link arrow {
 @mixin link-arrow_left {
-	position: relative;
-	font-feature-settings: "palt";
-	margin-left: 1.5em;
-	text-indent: -1.5em;
-	&::before {
-		content: "";
-		display: inline-block;
-		position: relative;
-		width: 6px;
-		height: 6px;
-		border-top: 1px solid #004DA1;
-		border-right: 1px solid #004DA1;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-		margin-right: 1em;
-		top: -1px;
-	}
-	&:hover {
-		text-decoration: underline;
-	}
+  position: relative;
+  font-feature-settings: "palt";
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #004da1;
+    border-right: 1px solid #004da1;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 1em;
+    top: -1px;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
 }
-	

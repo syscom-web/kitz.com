@@ -1,0 +1,32 @@
+@include mq(pc) {
+  &tab,
+  &sp {
+    display: none !important;
+  }
+
+  &pc-none {
+    display: none !important;
+  }
+}
+
+// @include mq(tab) {
+//   &pc,
+//   &sp {
+//     display: none !important;
+//   }
+
+//   &tab-none {
+//     display: none !important;
+//   }
+// }
+
+@include mq(tab) {
+  &pc,
+  &tab {
+    display: none !important;
+  }
+
+  &sp-none {
+    display: none !important;
+  }
+}

@@ -122,6 +122,20 @@ Template Name: ブランドページ英語
               painted with a pastel Carmine red color that seems to stand out even in dark places.<br>It was used for
               the handle design for a bronze valve in 1980, and then gradually was expanded to other products as well.
             </p>
+            <div class="p-brand-award">
+              <div class="p-brand-award__inner">
+                <img src="<?php echo get_template_directory_uri(); ?>/brand/assets/images/page/award.svg"
+                  alt="LONG LIFE DESIGN AWARD" class="p-brand-award__image">
+                <div class="p-brand-award__list">
+                  <p class="p-brand-txt u-color_black">
+                    A “CHRYSANTHEMUM-HANDLE®,” a symbol of KITZ, the brand of valve reliability,<br>has received the
+                    2026 Good Design, Long Life Design Award, organized by Japan Institute of Design Promotion (JDP).
+                  </p>
+                  <img src="<?php echo get_template_directory_uri(); ?>/brand/assets/images/page/award-02.png"
+                    alt="菊ハンドル">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

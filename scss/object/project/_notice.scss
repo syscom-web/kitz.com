@@ -1,0 +1,182 @@
+// お知らせ
+&notice {
+  &__inner {
+    @include mq(tab) {
+      max-width: 1120px;
+    }
+  }
+
+  &__block {
+    margin-block: 80px;
+
+    @include mq(tab) {
+      margin-block: 60px;
+    }
+
+    > .p-notice__heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      @include mq(tab) {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: #0085ce;
+        font-size: 3.4rem;
+        font-weight: 700;
+        line-height: 1;
+
+        @include mq(tab) {
+          font-size: 2.4rem;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 7px;
+        height: 32px;
+        padding: 0 10px 0 20px;
+        border: 1px solid #0085ce;
+        border-radius: 50px;
+        color: #0085ce;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+        box-sizing: border-box;
+
+        &::after {
+          content: "";
+          flex: 0 0 7px;
+          width: 7px;
+          height: 7px;
+          border-top: 1px solid #0085ce;
+          border-right: 1px solid #0085ce;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    > ul,
+    > .p-notice__item {
+      padding: 60px 50px;
+      border: 1px solid #b8bdc1;
+
+      @include mq(tab) {
+        padding: 30px 5.33%;
+      }
+
+      > li {
+        + li {
+          margin-top: 30px;
+
+          @include mq(tab) {
+            margin-top: 28px;
+          }
+        }
+      }
+
+      article {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mq(tab) {
+          display: block;
+        }
+      }
+
+      article > div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: none;
+        font-size: 1.6rem;
+
+        @include mq(tab) {
+          gap: 12px;
+          font-size: 1.4rem;
+        }
+
+        time {
+          flex: none;
+        }
+
+        span {
+          min-width: 97px;
+          padding: 4px 12px;
+          color: #fff;
+          background: #0085ce;
+          font-size: 1.5rem;
+          line-height: 1.2;
+          text-align: center;
+
+          @include mq(tab) {
+            min-width: 88px;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      h3 {
+        min-width: 0;
+        font-size: inherit;
+        font-weight: 400;
+
+        @include mq(tab) {
+          margin-top: 10px;
+        }
+
+        a {
+          display: inline;
+          font-size: 1.6rem;
+          line-height: 1.6;
+
+          @include mq(tab) {
+            font-size: 1.5rem;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &.link-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+
+            &::after {
+              content: "";
+              flex: 0 0 26px;
+              width: 26px;
+              height: 26px;
+              background: url("../images/common/icon-pdf.svg") no-repeat center / contain;
+            }
+          }
+        }
+      }
+
+      // 読み込み調整
+      .eir_area_area_top_002 {
+        .s_eirList_item {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 20px;
+
+          @include mq(tab) {
+            border-bottom: none;
+          }
+        }
+        .s_eirModule_titleBox {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

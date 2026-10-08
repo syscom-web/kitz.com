@@ -1,42 +1,67 @@
 &form-body {
   table {
     width: 100%;
+
     tr {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 1em;
+
       &:not(:first-child) {
         border-top: 1px solid #e6e6e6;
       }
+
       @include mq(tab) {
+        display: block;
+
         &:first-child {
           th {
             padding-top: 0;
           }
         }
       }
+
       th {
-        width: 30%;
-        @include fz(16);
+        width: 100%;
+        @include fz(18);
         vertical-align: middle;
         text-align: left;
         position: relative;
         padding: 20px 0;
+
         @media screen and (max-width: 992px) {
           display: block;
           width: 100%;
         }
+
         @include mq(tab) {
           padding: 4% 0 0;
         }
+
         @include mq(sp) {
           @include fz(16);
         }
+
+        &.u-width {
+          max-width: 277.31px;
+          display: inline-block;
+          width: 29.5%;
+
+          @include mq(tab) {
+            max-width: none;
+            width: 100% !important;
+          }
+        }
       }
+
       td {
-        width: 70%;
-        @include fz(16);
+        width: 100%;
+        @include fz(18);
         padding: 20px 0;
         padding-left: 3%;
         vertical-align: middle;
         word-break: break-all;
+
         @media screen and (max-width: 992px) {
           display: block;
           width: 100%;
@@ -50,7 +75,7 @@
           width: 100%;
           height: 60px;
           padding: 1em;
-          @include fz(16);
+          @include fz(18);
           border: none;
           border-radius: 4px;
           background: #f3f5f5;
@@ -59,7 +84,7 @@
           appearance: none;
           @include mq(sp) {
             height: 50px;
-            @include fz(14);
+            @include fz(16);
           }
           &:hover,
           &:focus {
@@ -77,20 +102,28 @@
         textarea {
           width: 100%;
           min-height: 230px;
-          @include fz(16);
+          @include fz(18);
           padding: 1em;
           border: none;
           background: #f3f5f5;
           border-radius: 4px;
           resize: vertical;
           @include mq(sp) {
-            @include fz(14);
+            @include fz(16);
           }
           &:hover,
           &:focus {
             border: none;
             outline: none;
             background: #e7ebeb;
+          }
+        }
+
+        &.u-width {
+          display: inline-block;
+
+          @include mq(sp) {
+            width: 100%;
           }
         }
       }
@@ -120,11 +153,16 @@
     color: #fff;
     text-align: center;
     display: inline-block;
-    @include fz(12);
-    width: auto;
+    @include fz(15);
+    width: 66px;
     padding: 0.25rem 0.5rem;
+    top: 1.1em;
+
+    @include mq(sp) {
+      @include fz(13);
+    }
+
     &.v-align {
-      top: 30px;
       @include mq(tab) {
         top: inherit;
       }
@@ -209,7 +247,7 @@
     height: 100%;
     padding: 1rem;
     border-radius: 60px;
-    @include fz(16);
+    @include fz(18);
     font-weight: 700;
     background: #004da1;
     color: #fff;
@@ -219,6 +257,8 @@
     appearance: none;
     cursor: pointer;
     @include hov-alpha;
+    @include mq(sp) {
+    }
     &[name="submitBack"] {
       background: #707070;
       border-color: #707070;
@@ -247,23 +287,19 @@
       }
     }
     &__txt {
-      @include fz(14);
+      @include fz(16);
       a {
         color: #004da1;
         text-decoration: underline;
-        display: inline-block;
         &:hover {
           text-decoration: none;
-        }
-        &:not(:last-child) {
-          margin-bottom: 10px;
         }
       }
     }
   }
   //mw_wp_form
   .error {
-    font-size: 1.4rem !important;
+    font-size: 1.6rem !important;
     margin-top: 1rem;
   }
   &.confirm-form {
@@ -337,18 +373,22 @@
   form {
     flex: 1;
     @include flex("fs", "");
+
     @include mq(sp) {
       flex: unset;
       display: block;
     }
+
     > div {
       flex: 1;
       margin-right: 25px;
+
       @include mq(sp) {
         flex: unset;
         width: 100%;
         margin: 0 0 15px 0;
       }
+
       input {
         width: 100%;
         @include fz(16);
@@ -358,12 +398,15 @@
         border: none;
         border-radius: 4px;
         padding: 18px;
+
         @include mq(sp) {
           padding: 15px;
         }
+
         &::placeholder {
           color: #bababa;
         }
+
         &::-webkit-search-cancel-button {
           opacity: 1;
         }
@@ -371,7 +414,7 @@
     }
     button {
       width: 185px;
-      @include fz(16);
+      @include fz(18);
       line-height: 1;
       font-weight: bold;
       color: #fff;
@@ -384,11 +427,12 @@
 
       @include mq(sp) {
         width: 50%;
-        @include fz(14);
+        @include fz(16);
         padding: 14px 0;
         margin: 0 auto;
         display: block;
       }
+
       &::before {
         content: "";
         width: 25px;
@@ -401,6 +445,7 @@
         bottom: 0;
         left: 20px;
         display: inline-block;
+
         @include mq(sp) {
           width: 21px;
           height: 21px;
@@ -412,6 +457,7 @@
     font-size: 14px;
     margin-top: 5px;
     display: inline-block;
+
     @include mq(sp) {
       font-size: 12px;
     }

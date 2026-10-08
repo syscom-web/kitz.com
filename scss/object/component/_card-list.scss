@@ -1,0 +1,78 @@
+&card-list {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  margin-block: 8rem;
+  width: 100%;
+
+  @include mq(1024) {
+    gap: 24px;
+  }
+
+  @include mq(767) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include mq(592) {
+    gap: 16px;
+    margin-block: 4.8rem;
+  }
+
+  > li {
+    display: flex;
+    flex: 1 0 0;
+    min-width: 0;
+    padding: 40px 50px;
+    background: #fff;
+    border: 1px solid #b8bdc1;
+
+    @include mq(1024) {
+      padding: 32px 28px;
+    }
+
+    @include mq(767) {
+      padding: 28px 24px;
+    }
+
+    @include mq(592) {
+      padding: 24px 18px;
+    }
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  dt {
+    width: 100%;
+    color: #0085ce;
+    @include fz(20);
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-align: center;
+    font-feature-settings: "palt";
+
+    @include mq(592) {
+      @include fz(18);
+    }
+  }
+
+  dd {
+    width: 100%;
+    color: #333;
+    @include fz(16);
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    font-feature-settings: "palt";
+
+    @include mq(592) {
+      @include fz(15);
+    }
+  }
+}

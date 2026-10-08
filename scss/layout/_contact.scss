@@ -1,16 +1,7 @@
 &contact {
 	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		background: #F3F4F4;
-		display: block;
-		width: 100%;
-		height: 100%;
-		z-index: -2;
-	}
+  background: #F3F4F4;
+	mix-blend-mode: multiply;
 	@include mq(tab) {
 		padding: 13% 5%;
 	}
@@ -24,7 +15,7 @@
 			height: auto;
 		}
 		> div {
-			width: 100%;
+			width: 50%;
       height: 100%;
       @include flex("c", "c");
       flex-wrap: nowrap;
@@ -56,6 +47,15 @@
 				}
       }
     }
+		&__product {
+      border-right: 1px dotted #B9B9B9;
+			@include mq(tab) {
+				border-right: none;
+				border-bottom: 1px dotted #707070;
+				padding-bottom: 10%;
+				margin-bottom: 10%;
+			}
+    }
 		&__link {
       width: 240px;
 			@include mq(tab) {
@@ -64,4 +64,7 @@
 			}
     }
   }
+}
+.page-id-36 .l-contact {
+	background: #fff;
 }

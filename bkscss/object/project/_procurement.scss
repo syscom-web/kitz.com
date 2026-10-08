@@ -1,0 +1,182 @@
+/* 資材調達情報 */
+&procurement {
+	position: relative;
+	.p-page-menu {
+		li {
+			a {
+				font-feature-settings: "palt";
+			}
+		}
+	}
+	p {
+		@include fz(16);
+		line-height: 1.8;
+		&.palt {
+			font-feature-settings: "palt";
+		}
+	}
+	.procurement-list {
+		li {
+			@include fz(16);
+			text-indent: -1em;
+			margin-left: 1em;
+			line-height: 1.6;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__pdf {
+			position: relative;
+			color: #004DA1;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				display: inline-block;
+				background: url("../images/common/icon-pdf.svg") no-repeat left center /contain;
+				width: 26px;
+				height: 26px;
+				top: 50%;
+				margin-top: -13px;
+			}
+			&::before {
+				content: "■";
+				position: relative;
+			}
+		}
+	}
+	&__wrapper {
+		@include bg-gray;
+		padding: 60px 0;
+		@include mq(767) {
+			padding: 10% 5%;
+		}
+	}
+	&__container {
+    @include bg-container;
+    @include inner-box;
+    margin-top: 60px;
+		@include mq(1280) {
+			padding: 5% 20px;
+		}
+		@include mq(767) {
+			margin-top: 10%;
+			padding: 10% 5%;
+		}
+  }
+	.procurement-table {
+		max-width: 940px;
+		margin: 0 auto;
+		thead {
+		&::after {
+			background: none;
+			}
+		}
+		td {
+			text-align: left;
+			padding: 20px 10px;
+		}
+	}
+	.c-table--scroll {
+		@include mq(1023) {
+			width: 100%;
+			overflow-x: scroll;
+		  table {
+			  min-width: 940px;
+		  }
+		}
+	}
+	.btn-procurement {
+		position: relative;
+		display: block;
+		width: 100%;
+		color: #4958A2;
+		border: 1px solid #4958A2;
+		padding: 10px;
+		text-align: center;
+		@include fz(15);
+		@include hov-alpha;
+		background: #fff;
+		&::after {
+			content: "";
+			display: block;
+			background: url("../images/procurement/icon_arrow.png") no-repeat left center /contain;
+			width: 10px;
+			height: 9px;
+			position: absolute;
+			top: 50%;
+			margin-top: -4px;
+			right: 10px;
+		}
+	}
+	#procurement-sec04 {
+		figure {
+			width: 100%;
+			max-width: 940px;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	#procurement-sec05 {
+		.p-sustainability-col__type02 {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.procurement-txt_note {
+		text-indent: -2em;
+		margin-left: 2em;
+		a {
+			color: #004DA1;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	#procurement-sec05 {
+		.procurement-list {
+		li {
+			@include fz(16);
+			margin-bottom: 10px;
+			}
+		}
+	}
+	.p-sustainability-ttl__h3 {
+		font-feature-settings: "palt";
+	}
+	#procurement-sec05 h3 + p {
+		a {
+			text-decoration: underline;
+			color: #1D4C9B;
+		}
+	}
+	.c-form-body {
+		width: 100%;
+		max-width: 940px;
+		margin: 50px auto 0;
+		@include mq(767) {
+			margin-top: 8%;
+		}
+		.input50 {
+			width: 60% !important;
+			@include mq(767) {
+				width: 100% !important;
+			}
+		}
+		th.v-align {
+			vertical-align: top !important;
+			padding-top: 30px;
+			@include mq(767) {
+				padding-top: 4%;
+			}
+		}
+	}
+}

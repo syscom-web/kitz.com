@@ -4,7 +4,7 @@
   &--container {
     h3 {
       text-align: center;
-      color: #004da1;
+      color: #004DA1;
       @include fz(34);
       font-weight: 700;
       margin-bottom: 60px;
@@ -26,7 +26,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #f3f4f4;
+      background: #F3F4F4;
       display: block;
       width: 100%;
       height: 100%;
@@ -52,7 +52,7 @@
       margin-bottom: 0;
     }
     h3 {
-      color: #004da1;
+      color: #004DA1;
       @include fz(34);
       font-weight: 700;
       margin-bottom: 50px;
@@ -81,7 +81,7 @@
     }
     &__source {
       font-size: 1.4rem !important;
-      border-top: 1px solid #e6e6e6;
+      border-top: 1px solid #E6E6E6;
       padding-top: 30px;
       @include mq(tab) {
         padding-top: 5%;
@@ -101,7 +101,7 @@
       padding: 10% 5%;
     }
     h2 {
-      color: #004da1;
+      color: #004DA1;
       @include fz(42);
       font-weight: 700;
       text-align: center;
@@ -204,7 +204,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #f3f4f4;
+      background: #F3F4F4;
       display: block;
       width: 100%;
       height: 100%;
@@ -222,7 +222,7 @@
         @include fz(34);
         font-weight: 700;
         text-align: center;
-        color: #004da1;
+        color: #004DA1;
         margin-bottom: 70px;
         @include mq(tab) {
           @include fz(30);
@@ -257,7 +257,7 @@
     }
     &__intro {
       @include flex("", "");
-      background: url("../images/business/index/business-sec02-img04.svg") no-repeat 95% 95%;
+      background: url("../images/business/index/business-sec02-img04.svg") no-repeat center;
       @media screen and (max-width: 1179px) {
         flex-direction: column;
         background: none;
@@ -298,7 +298,7 @@
           a {
             width: 90%;
             margin: 15px auto 0;
-            @include fz(14);
+            @include fz(16);
             @media screen and (max-width: 1179px) {
               width: 250px;
             }
@@ -324,10 +324,10 @@
               margin-bottom: 3%;
             }
             &.business01 {
-              color: #00baf4;
+              color: #00BAF4;
             }
             &.business02 {
-              color: #90cecc;
+              color: #90CECC;
             }
             &.business03 {
               color: #717171;
@@ -372,6 +372,29 @@
           width: 100%;
           margin-top: 40px;
         }
+        > div {
+          > div {
+            order: 2;
+            margin-right: 0;
+            margin-left: 2%;
+            @media screen and (max-width: 1179px) {
+              order: 1;
+              margin-left: 0;
+              margin-right: 30px;
+            }
+            @include mq(tab) {
+              margin-right: 5%;
+            }
+          }
+          dl {
+            order: 1;
+            text-align: right;
+            @media screen and (max-width: 1179px) {
+              order: 2;
+              text-align: left;
+            }
+          }
+        }
       }
     }
     &__note {
@@ -401,7 +424,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #f3f4f4;
+      background: #F3F4F4;
       display: block;
       width: 100%;
       height: 100%;
@@ -552,7 +575,7 @@
   }
   &__bg {
     width: 100%;
-    background: #fff url("../images/business/valve/valve-bg-img01.svg") no-repeat center / cover;
+    background: #fff url("../images/business/valve/valve-bg-img01.svg") no-repeat center /cover;
     height: 330px;
     @include mq(tab) {
       height: 44vw;
@@ -664,7 +687,7 @@
             margin-bottom: 4%;
           }
           dt {
-            color: #004da1;
+            color: #004DA1;
             @include fz(18);
             font-weight: 700;
             margin-bottom: 15px;
@@ -729,7 +752,7 @@
         }
         span {
           display: block;
-          color: #004da1;
+          color: #004DA1;
           @include fz(18);
           font-weight: 700;
           margin-bottom: 10px;
@@ -847,7 +870,7 @@
       &.u-full {
         width: 100%;
         margin-right: 0;
-        + figure {
+        +figure {
           width: 60%;
           margin: 40px auto 0;
         }
@@ -903,7 +926,7 @@
           h4 {
             @include fz(18);
             font-weight: 700;
-            color: #004da1;
+            color: #004DA1;
             line-height: 1;
             margin-bottom: 15px;
             font-feature-settings: "palt";
@@ -914,7 +937,7 @@
               position: relative;
               top: -5px;
               @include fz(12);
-              margin-left: 0.5em;
+              margin-left: .5em;
             }
           }
           p {
@@ -1053,7 +1076,7 @@
               order: 1;
             }
             dt {
-              color: #004da1;
+              color: #004DA1;
               @include fz(18);
               font-weight: 700;
               margin-bottom: 1em;
@@ -1130,8 +1153,8 @@
           position: relative;
           width: auto;
           left: 50%;
-          -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+          -webkit-transform: translate(-50%,0);
+          transform: translate(-50%,0);
           @include fz(18);
           font-weight: 700;
           text-align: center;
@@ -1140,8 +1163,7 @@
           @include mq(tab) {
             margin-bottom: 4%;
           }
-          &::before,
-          &::after {
+          &::before,&::after {
             content: "";
             display: inline-block;
             background: #707070;
@@ -1183,7 +1205,7 @@
             }
             dl {
               dt {
-                color: #004da1;
+                color: #004DA1;
                 @include fz(18);
                 font-weight: 700;
                 min-height: 80px;
@@ -1195,7 +1217,7 @@
                   display: block;
                   font-weight: normal;
                   @include fz(16);
-                  margin-top: 0.5em;
+                  margin-top: .5em;
                 }
               }
               dd {
@@ -1213,14 +1235,14 @@
                   }
                   figcaption {
                     display: block;
-                    margin-top: 0.75em;
+                    margin-top: .75em;
                     text-align: center;
                     @include fz(13);
                     span {
                       display: block;
                       @include fz(16);
                       font-weight: 700;
-                      margin-top: 0.25rem;
+                      margin-top: .25rem;
                     }
                   }
                 }
@@ -1242,7 +1264,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #f3f4f4;
+      background: #F3F4F4;
       display: block;
       width: 100%;
       height: 100%;
@@ -1340,7 +1362,7 @@
         }
         &::before {
           content: "";
-          background: url("../images/business/strength/strength-sec02-img04.svg") no-repeat center top / contain;
+          background: url("../images/business/strength/strength-sec02-img04.svg") no-repeat center top /contain;
           width: 470px;
           height: 26px;
           position: absolute;
@@ -1365,7 +1387,7 @@
           @include fz(38);
           font-weight: 700;
           text-align: center;
-          background: #004da1;
+          background: #004DA1;
           border-radius: 60px;
           padding: 20px 10px;
           margin-bottom: 30px;
@@ -1407,7 +1429,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #f3f4f4;
+      background: #F3F4F4;
       display: block;
       width: 100%;
       height: 100%;
@@ -1423,7 +1445,7 @@
       position: relative;
       z-index: 1;
       h3 {
-        color: #004da1;
+        color: #004DA1;
         text-align: center;
         @include fz(34);
         font-weight: 700;

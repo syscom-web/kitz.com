@@ -21,12 +21,11 @@
       margin: 30px 0 60px;
       @include mq(767) {
         flex-direction: column;
-        margin: 4% 0 10%;
+        margin: 4% 0;
       }
       > div {
         width: 23.5%;
         margin-right: 2%;
-				margin-bottom: 2%;
         @include mq(992) {
           width: 49%;
           margin-bottom: 4%;
@@ -37,7 +36,7 @@
         @include mq(767) {
           width: 100%;
           margin-right: 0;
-          margin-bottom: 10%;
+          margin-bottom: 8%;
         }
         &:nth-child(4n) {
           margin-right: 0;
@@ -46,7 +45,7 @@
           position: relative;
           display: block;
           color: #004da1;
-          @include fz(16);
+          @include fz(17);
           margin-bottom: 15px;
           @include mq(767) {
             margin-bottom: 2.5%;
@@ -54,8 +53,9 @@
           &::after {
             content: "";
             display: inline-block;
-            position: relative;
-            top: -2px;
+            position: absolute;
+            top: 50%;
+            margin-top: -5px;
             width: 8px;
             height: 8px;
             border-top: 1px solid #004da1;
@@ -66,7 +66,7 @@
           }
         }
         p {
-          @include fz(14);
+          @include fz(15);
           @include mq(992) {
             br {
               display: none;
@@ -132,7 +132,7 @@
     }
     h2 {
       color: #004da1;
-      @include fz(30);
+      @include fz(32);
       font-weight: 700;
       text-align: center;
       margin-bottom: 40px;
@@ -146,16 +146,16 @@
     }
     h3 {
       color: #004da1;
-      @include fz(24);
+      @include fz(26);
       font-weight: 700;
       margin-bottom: 25px;
       font-feature-settings: "palt";
       @include mq(tab) {
-        @include fz(20);
+        @include fz(22);
         margin-bottom: 3%;
       }
       @include mq(sp) {
-        @include fz(18);
+        @include fz(20);
       }
       span {
         font-size: 77%;
@@ -164,8 +164,8 @@
     .comment {
       li {
         @include fz(16);
-        margin-left: 1.25em;
-        text-indent: -1.25em;
+        margin-left: 1em;
+        text-indent: -1em;
         line-height: 1.3;
         margin-bottom: 10px;
         &:last-child {
@@ -182,7 +182,8 @@
       .c-btn--type01 {
         &.link--pdf {
           &::after {
-            background: url("../images/common/icon-pdf_blue.png") no-repeat left center / contain;
+            background: url("../images/common/icon-pdf_blue.png") no-repeat left
+              center / contain;
             width: 16px;
             height: 19px;
             margin-top: -10px;
@@ -202,7 +203,8 @@
         @include fz(16);
         color: #004da1;
         &::after {
-          background: url("../images/common/icon-pdf_blue.png") no-repeat left center / contain;
+          background: url("../images/common/icon-pdf_blue.png") no-repeat left
+            center / contain;
           width: 16px;
           height: 19px;
           top: 3px;
@@ -327,7 +329,30 @@
     &.green {
       background: #65a27a;
     }
+
+    &.u-afterNone {
+      &:hover {
+        opacity: 1;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
   }
+
+  &__txt__box {
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+
+      span {
+        color: #004da1;
+      }
+    }
+  }
+
   &__column-3,
   &__list {
     @include flex("", "fs");
@@ -354,5 +379,185 @@
   }
   &__ind {
     margin: 1em 0 0 1em;
+  }
+
+  &__fig__txt {
+    margin-top: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      background: url("../images/calculator/calculator-02.png") no-repeat;
+      background-size: contain;
+      width: 80px;
+      height: 17px;
+      top: 50%;
+      left: 165px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__fig__txt02 {
+    margin-top: 30px;
+  }
+
+  &__fig__txt03 {
+    margin-top: 30px;
+  }
+
+  &__fig__txt04 {
+    margin-top: 30px;
+  }
+
+  &__fig {
+    margin-top: 15px;
+  }
+
+  &__wrapper {
+    margin-top: 15px;
+    display: flex;
+    gap: 90px;
+
+    @media screen and (max-width: 767px) {
+      gap: 20px;
+    }
+  }
+
+  &__wrapper__list:first-child {
+    .p-calculator__wrapper__item {
+      position: relative;
+      padding-left: 50px;
+
+      @media screen and (max-width: 767px) {
+        padding-left: 35px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        top: 1.5rem;
+        background-size: cover;
+      }
+
+      &:first-child {
+        &::before {
+          background: url("../images/calculator/calculator-06.png") no-repeat;
+          width: 22px;
+          height: 14px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        &::before {
+          background: url("../images/calculator/calculator-07.png") no-repeat;
+          width: 14px;
+          height: 15px;
+        }
+      }
+
+      &:nth-of-type(3) {
+        &::before {
+          background: url("../images/calculator/calculator-08.png") no-repeat;
+          width: 21px;
+          height: 14px;
+        }
+      }
+
+      &:nth-of-type(4) {
+        &::before {
+          background: url("../images/calculator/calculator-09.png") no-repeat;
+          width: 24px;
+          height: 16px;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background: url("../images/calculator/calculator-17.png") no-repeat;
+          width: 84px;
+          height: 20px;
+          right: 20px;
+          top: 0.3rem;
+          right: 0;
+        }
+      }
+
+      &:nth-of-type(5) {
+        &::before {
+          background: url("../images/calculator/calculator-10.png") no-repeat;
+          width: 20px;
+          height: 16px;
+        }
+      }
+
+      &:nth-of-type(6) {
+        &::before {
+          background: url("../images/calculator/calculator-11.png") no-repeat;
+          width: 21px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  &__wrapper__list:last-child {
+    .p-calculator__wrapper__item {
+      position: relative;
+      padding-left: 50px;
+
+      @media screen and (max-width: 767px) {
+        padding-left: 35px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        top: 1.5rem;
+        background-size: cover;
+      }
+
+      &:first-child {
+        &::before {
+          background: url("../images/calculator/calculator-13.png") no-repeat;
+          width: 11px;
+          height: 16px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        &::before {
+          background: url("../images/calculator/calculator-14.png") no-repeat;
+          width: 17px;
+          height: 14px;
+        }
+      }
+
+      &:nth-of-type(3) {
+        &::before {
+          background: url("../images/calculator/calculator-15.png") no-repeat;
+          width: 20px;
+          height: 14px;
+        }
+      }
+
+      &:nth-of-type(4) {
+        &::before {
+          background: url("../images/calculator/calculator-16.png") no-repeat;
+          width: 19px;
+          height: 15px;
+        }
+      }
+    }
   }
 }

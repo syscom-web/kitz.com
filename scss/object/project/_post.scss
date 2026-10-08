@@ -33,6 +33,7 @@
 	}
 	&__inner {
 		@include inner-box;
+    margin-bottom: 80px;
 		article {
 			> section {
 				+ section {

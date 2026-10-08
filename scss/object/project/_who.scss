@@ -1,192 +1,166 @@
 /* キッツとは */
 &who {
-	position: relative;
-	&-mv {
-		position: relative;
-		z-index: 1;
-		width: 100%;
-		height: 482px;
-		background: url("../images/who/who-bg01.jpg") no-repeat right center,url("../images/who/who-bg02.jpg") repeat left top;
-		@include flex("c", "");
-		padding: 0 10px;
-		@media screen and (max-width: 1280px) {
-			background: url("../images/who/who-bg01.jpg") no-repeat 20% center;
-		}
-		@media screen and (max-width: 1080px) {
-			background: url("../images/who/who-bg03.jpg") no-repeat right center /cover;
-		}
-		@include mq(tab) {
-			display: block;
-			padding: 0;
-			height: inherit;
-			background: none;
-		}
-		&__inner {
-			position: relative;
-			width: 100%;
-			max-width: 1180px;
-			margin: 0 auto;
-			@include mq(tab) {
-				background: url("../images/who/who-mv-img01_sp.jpg") no-repeat right center /cover;
-				@include flex("c", "");
-				height: 60vw;
-				padding: 0 5%;
-			}
-			h2 {
-				color: #fff;
-				@include fz(35);
-				font-weight: 700;
-				margin-bottom: 30px;
-				@include mq(tab) {
-					display: none;
-				}
-			}
-			p {
-				color: #fff;
-				@include fz(18);
-				line-height: 2;
-				@media screen and (max-width: 992px) {
-					@include fz(16);
-					width: 60%;
-					br {
-						display: none;
-					}
-				}
-				@include mq(tab) {
-					@include fz(16);
-				}
-				@include mq(sp) {
-					@include fz(14);
-				}
-			}
-		}
-		&__ttl-sp {
-			display: none;
-			@include mq(tab) {
-				display: block;
-				color: #004DA1;
-				@include fz(30);
-				font-weight: 700;
-				text-align: center;
-				padding: 2.5% 5%;
-			}
-			@include mq(tab) {
-				@include fz(26);
-			}
-		}
-	}
+  position: relative;
+  //z-index: 1;
+  &-mv {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 482px;
+    background:
+      url("../images/who/who-bg01.jpg") no-repeat right center,
+      url("../images/who/who-bg02.jpg") repeat left top;
+    @include flex("c", "");
+    padding: 0 10px;
+    @media screen and (max-width: 1280px) {
+      background: url("../images/who/who-bg01.jpg") no-repeat 20% center;
+    }
+    @media screen and (max-width: 1080px) {
+      background: url("../images/who/who-bg03.jpg") no-repeat right center /
+        cover;
+    }
+    @include mq(tab) {
+      display: block;
+      padding: 0;
+      height: inherit;
+      background: none;
+    }
+    &__inner {
+      position: relative;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      @include mq(tab) {
+        background: url("../images/who/who-mv-img01_sp.jpg") no-repeat right
+          center / cover;
+        @include flex("c", "");
+        height: 60vw;
+        padding: 0 5%;
+      }
+      h2 {
+        color: #fff;
+        @include fz(42);
+        font-weight: 700;
+        margin-bottom: 30px;
+        @media screen and (max-width: 992px) {
+          @include fz(36);
+        }
+        @include mq(tab) {
+          display: none;
+        }
+      }
+      p {
+        color: #fff;
+        @include fz(18);
+        line-height: 2;
+        @media screen and (max-width: 992px) {
+          @include fz(16);
+          width: 60%;
+          br {
+            display: none;
+          }
+        }
+        @include mq(tab) {
+          @include fz(16);
+        }
+        @include mq(sp) {
+          @include fz(14);
+        }
+      }
+    }
+    &__ttl-sp {
+      display: none;
+      @include mq(tab) {
+        display: block;
+        color: #004da1;
+        @include fz(30);
+        font-weight: 700;
+        text-align: center;
+        padding: 2.5% 5%;
+      }
+      @include mq(tab) {
+        @include fz(26);
+      }
+    }
+  }
   &__wrap {
     padding: 70px 10px 90px;
-		@media screen and (max-width: 1366px) {
-			mix-blend-mode: normal;
-		}
-		@include mq(tab) {
-			padding: 10% 5%;
-		}
+    //background: #F3F4F4;
+    //mix-blend-mode: multiply;
+    @media screen and (max-width: 1366px) {
+      mix-blend-mode: normal;
+    }
+    @include mq(tab) {
+      padding: 10% 5%;
+    }
   }
   &__container {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     @include bg-container;
-    padding: 50px 10px 70px;
-		@include mq(tab) {
-			padding: 6% 2.5% 8%;
-		}
+    padding: 0;
+
     &__inner {
       width: 100%;
-      max-width: 1020px;
       margin: 0 auto;
       h2 {
         @include fz(32);
         font-weight: 700;
-        color: #004DA1;
+        color: #004da1;
         margin-bottom: 50px;
         text-align: center;
-				@include mq(tab) {
-					@include fz(26);
-					margin-bottom: 6.66%;
-				}
+        @include mq(tab) {
+          @include fz(26);
+          margin-bottom: 6.66%;
+        }
         em {
           @include fz(62);
           font-weight: bold;
-          color: #D62626;
+          color: #d62626;
           position: relative;
-          top: .05em;
-					@include mq(tab) {
-						@include fz(52);
-					}
+          top: 0.05em;
+          @include mq(tab) {
+            @include fz(52);
+          }
         }
         span {
           @include fz(42);
           font-weight: 900;
-					@include mq(tab) {
-						@include fz(32);
-					}
+          @include mq(tab) {
+            @include fz(32);
+          }
         }
       }
     }
     &-box {
       position: relative;
-      background: rgba(243,243,243,.4);
+      background: rgba(243, 243, 243, 0.4);
       border-radius: 10px;
-      padding: 50px;
+      padding: 0;
       margin-bottom: 50px;
-			@media screen and (max-width: 992px) {
-				padding: 5%;
-			}
-			@include mq(tab) {
-				margin-bottom: 8%;
-			}
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-      h3 {
-        color: #004DA1;
-        @include fz(34);
-        display: inline-block;
-        margin-bottom: 30px;
-				@include mq(tab) {
-					@include fz(30);
-					margin-bottom: 5%;
-				}
-				@include mq(sp) {
-					@include fz(24);
-				}
-        span {
-          @include txt-marker;
-          font-weight: 700;
-        }
+      @media screen and (max-width: 992px) {
+        padding: 5%;
       }
-      p {
-        @include fz(16);
-        line-height: 1.8;
+      @include mq(tab) {
+        margin-bottom: 8%;
       }
-      &__btn {
-        width: 290px;
-				@include mq(tab) {
-					width: 64%;
-					margin: 0 auto;
-				}
-				@include mq(sp) {
-					width: 100%;
-				}
-        a {
-          @include hov-alpha;
-        }
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
   &__valve {
     min-height: 300px;
-		@include mq(tab) {
-			min-height: inherit;
-			padding-bottom: 0;
-		}
+    @include mq(tab) {
+      min-height: inherit;
+      padding-bottom: 0;
+    }
     &::after {
       content: "";
       display: none;
-      background: url("../images/who/who-sec01-img02.png") no-repeat left top /contain;
+      background: url("../images/who/who-sec01-img02.png") no-repeat left top /
+        contain;
       width: 278px;
       height: 252px;
       position: absolute;
@@ -196,39 +170,38 @@
     > div {
       @include flex("c", "fs");
       max-width: 100%;
-			@include mq(tab) {
-				justify-content: space-between;
-				padding-bottom: 3%;
-			}
-			@include mq(sp) {
-				align-items: flex-end;
-
-			}
+      @include mq(tab) {
+        justify-content: space-between;
+        padding-bottom: 3%;
+      }
+      @include mq(sp) {
+        align-items: flex-end;
+      }
       div {
         order: 2;
         width: 60.3125%;
-				@include mq(tab) {
-					order: 1;
-					width: 75%;
-				}
-				@include mq(sp) {
-					width: 67.5%;
-				}
+        @include mq(tab) {
+          order: 1;
+          width: 75%;
+        }
+        @include mq(sp) {
+          width: 67.5%;
+        }
       }
       figure {
         order: 1;
         width: 33.4375%;
         max-width: 214px;
         margin-right: 6.25%;
-				@include mq(tab) {
-					order: 2;
-					max-width: 100%;
-					width: 20%;
-					margin-right: 0;
-				}
-				@include mq(sp) {
-					width: 25%;
-				}
+        @include mq(tab) {
+          order: 2;
+          max-width: 100%;
+          width: 20%;
+          margin-right: 0;
+        }
+        @include mq(sp) {
+          width: 25%;
+        }
         img {
           width: 100%;
         }
@@ -239,63 +212,63 @@
     min-height: 420px;
     position: relative;
     @include flex("c", "");
-		@include mq(tab) {
-			min-height: inherit;
-		}
-		@media screen and (max-width: 992px) {
-			flex-direction: column;
-		}
+    @include mq(tab) {
+      min-height: inherit;
+    }
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
     > div {
       width: 50%;
-			@media screen and (max-width: 992px) {
-				width: 100%;
-				div {
-					display: none;
-				}
-			}
-			.c-ttl--type02 {
-				margin-bottom: 30px;
-				@include mq(sp) {
-					margin-bottom: 6.66%;
-				}
-			}
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        div {
+          display: none;
+        }
+      }
+      .c-ttl--type02 {
+        margin-bottom: 30px;
+        @include mq(sp) {
+          margin-bottom: 6.66%;
+        }
+      }
       p {
         margin-bottom: 25px;
-				@media screen and (max-width: 992px) {
-					br {
-						display: none;
-					}
-				}
-				@include mq(tab) {
-					margin-bottom: 4%;
-				}
+        @media screen and (max-width: 992px) {
+          br {
+            display: none;
+          }
+        }
+        @include mq(tab) {
+          margin-bottom: 4%;
+        }
       }
     }
     figure {
       width: 50%;
       max-width: 440px;
-			@include mq(tab) {
-				max-width: 100%;
-				width: 70%;
-			}
-			@include mq(sp) {
-				width: 100%;
+      @include mq(tab) {
+        max-width: 100%;
+        width: 70%;
+      }
+      @include mq(sp) {
+        width: 100%;
         top: 0;
-			}
+      }
       img {
         width: 100%;
       }
     }
-		&__btn {
-			@include mq(tab) {
-				width: 64% !important;
-				margin: 6.66% auto 0;
-			}
-			@include mq(sp) {
-				width: 100% !important;
-				margin-top: 8%;
-			}
-		}
+    &__btn {
+      @include mq(tab) {
+        width: 64% !important;
+        margin: 6.66% auto 0;
+      }
+      @include mq(sp) {
+        width: 100% !important;
+        margin-top: 8%;
+      }
+    }
   }
   &__use {
     &__box {
@@ -304,503 +277,699 @@
       background: url("../images/who/who-sec03-img01.png") no-repeat right top;
       height: 658px;
       margin: 0 auto;
-			@media screen and (max-width: 992px) {
-				background: none;
-				height: inherit;
-			}
+      @media screen and (max-width: 992px) {
+        background: none;
+        height: inherit;
+      }
     }
     p {
       width: 62%;
-			@media screen and (max-width: 992px) {
-				width: 100%;
-			}
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
     }
-		figure {
-			display: none;
-			@media screen and (max-width: 992px) {
-				display: block;
-				width: 85%;
-				margin: 5% auto 0;
-				@include mq(sp) {
-					width: 100%;
-				}
-				img {
-					width: 100%;
-				}
-			}
-		}
-		&__sp {
-			display: none;
-			@include mq(tab) {
-				display: block;
-				width: 90%;
-				margin: 0 auto;
-				> div {
-					margin-bottom: 8%;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-				figure {
-					width: 100%;
-					margin-bottom: 1em;
-					&:last-of-type {
-						margin-bottom: 0;
-					}
-					img {
-						width: 100%;
-					}
-					figcaption {
-						@include fz(14);
-						margin-top: .5em;
-					}
-				}
-			}
-		}
+    figure {
+      display: none;
+      @media screen and (max-width: 992px) {
+        display: block;
+        width: 85%;
+        margin: 5% auto 0;
+        @include mq(sp) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__sp {
+      display: none;
+      @include mq(tab) {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        > div {
+          margin-bottom: 8%;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        figure {
+          width: 100%;
+          margin-bottom: 1em;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          img {
+            width: 100%;
+          }
+          figcaption {
+            @include fz(14);
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
   }
   &__quality {
-		h3 {
-			display: flex;
-			justify-content: center;
-			width: auto;
-			@include mq(tab) {
-				display: block;
-				margin-bottom: 6.66%;
-			}
-		}
-		&__lead {
-			text-align: center !important;
-			font-size: 2.2rem;
-			margin-bottom: 60px;
-			@include mq(tab) {
-				font-size: 2rem !important;
-				text-align: left;
-				margin-bottom: 6.66%;
-			}
-		}
-		&__box {
-			width: 100%;
-			margin: 0 auto 60px;
-			position: relative;
-			background: #fff;
-			border: 1px solid #B5B5B5;
-			border-radius: 10px;
-			padding: 30px;
-			@include mq(tab) {
-				padding: 5%;
-				margin-bottom: 8%;
-			}
-			&::after {
-				content: "";
-				display: block;
-				background: #F9FAFA;
-				width: 90%;
-				height: 2px;
-				position: absolute;
-				top: -1px;
-				left: 5%;
-				@include mq(tab) {
-					display: none;
-				}
-			}
-			dl {
-				position: relative;
-				margin-top: -5rem;
-				z-index: 2;
-				@include mq(tab) {
-					margin-top: inherit;
-				}
-				dt {
-					position: relative;
-					text-align: center;
-					margin-bottom: 30px;
-					@include mq(tab) {
-						margin-bottom: 4%;
-					}
-					span {
-						color: #ACAC16;
-						font-feature-settings: "palt";
-						@include fz(30);
-						font-weight: 700;
-						margin-right: .75em;
-						@media screen and (max-width: 992px) {
-							@include fz(24);
-						}
-						@include mq(tab) {
-							display: block;
-							text-align: left;
-							@include fz(26);
-						}
-						@include mq(sp) {
-							@include fz(22);
-						}
-						&:last-of-type {
-							margin-right: 0;
-						}
-					}
-				}
-			}
-		}
-		&__flow {
-			position: relative;
-			&::after {
-				content: "";
-				display: block;
-				background: url("../images/who/who-sec04-bg01.svg") no-repeat left center/contain;
-				width: 100%;
-				height: 100px;
-				position: absolute;
-				top: -3rem;
-				left: 0;
-				z-index: 1;
-				@include mq(tab) {
-					display: none;
-				}
-			}
-			h4 {
-				position: relative;
-				text-align: center;
-				color: #004DA1;
-				@include fz(24);
-				font-weight: 700;
-				margin-bottom: 40px;
-				z-index: 2;
-				@include mq(tab) {
-					@include fz(21);
-					margin-bottom: 6.66%;
-				}
-			}
-			ul {
-				@include flex("", "");
-				margin-bottom: 25px;
-				@include mq(tab) {
-					margin-bottom: 4%;
-					justify-content: center;
-				}
-				li {
-					width: 18%;
-					margin-right: 2%;
-					@include mq(tab) {
-						width: 30%;
-						margin-right: 5%;
-						margin-bottom: 4%;
-					}
-					&:nth-child(5n) {
-						margin-right: 0;
-					}
-					&:nth-child(3n) {
-						@include mq(tab) {
-							margin-right: 0;
-						}
-					}
-					img {
-						width: 100%;
-					}
-					span {
-						display: block;
-						text-align: center;
-						margin-top: 1rem;
-						@include fz(16);
-						color: #004DA1;
-					}
-				}
-			}
-			@include mq(tab) {
-				figure {
-					width: 90%;
-					margin: 0 auto 4%;
-					img {
-						width: 100%;
-					}
-				}
-			}
-			@include mq(sp) {
-				figure {
-					width: 100%;
-				}
-			}
-		}
-		&__btn {
-			width: 340px;
-			margin: 0 auto;
-			@include mq(sp) {
-				width: 100%;
-			}
-		}
-  }
-	&__service {
-		@include mq(tab) {
-			&-sp  {
-				width: 90%;
-				margin: 0 auto 10%;
-				figure {
-					width: 100%;
-					margin: 0 auto;
-					img {
-						width: 100%;
-					}
-				}
-				dl {
-					margin-bottom: 8%;
-					dt {
-						@include fz(16);
-						font-weight: 700;
-						margin-bottom: 3%;
-						color: #2B90DD;
-					}
-					dd {
-						ul {
-							margin-bottom: -.5em;
-							li {
-								@include fz(15);
-								margin-bottom: .5em;
-								text-indent: -1em;
-								margin-left: 1em;
-							}
-						}
-					}
-					&:nth-of-type(2) dt {
-						color: #E55F00;
-					}
-					&:nth-of-type(3) dt {
-						color: #554B9A;
-					}
-					&:nth-of-type(4) dt {
-						color: #6DB138;
-					}
-					&:nth-of-type(5) dt {
-						color: #907D27;
-					}
-					&:nth-of-type(6) dt {
-						color: #30AEAB;
-					}
-				}
-			}
-		}
-		@include mq(sp) {
-			&-sp  {
-				width: 100%;
-			}
-		}
-		h3 {
-			display: flex;
-			justify-content: center;
-			width: auto;
-			margin-bottom: 40px;
-			@include mq(tab) {
-				display: block;
-				margin-bottom: 6.66%;
-			}
-			+ p {
-				margin-bottom: 40px;
-				@include mq(tab) {
-					margin-bottom: 5%;
-				}
-			}
-		}
-		figure {
-			img {
-				display: block;
-				width: auto;
-				margin: 0 auto 40px;
-				mix-blend-mode: multiply;
-				@include mq(tab) {
-					margin-bottom: 8%;
-				}
-			}
-		}
-		h4 {
-			br {
-				@include mq(tab) {
-					display: none;
-				}
-			}
-		}
-		&__btn {
-			width: 340px;
-			margin: 0 auto;
-			@include mq(sp) {
-				width: 100%;
-			}
-		}
-	}
-	&__network {
-		h3 {
-			display: flex;
-			justify-content: center;
-			width: auto;
-			margin-bottom: 40px;
-			@include mq(tab) {
-				display: block;
-				margin-bottom: 6.66%;
-			}
-			+ p {
-				margin-bottom: 40px;
-				@include mq(tab) {
-					margin-bottom: 5%;
-				}
-			}
-		}
-		figure {
-			img {
-				display: block;
-				width: auto;
-				margin: 0 auto 40px;
-				mix-blend-mode: multiply;
-				@include mq(tab) {
-					width: 90%;
-					margin: 0 auto 8%;
-				}
-				@include mq(sp) {
-					width: 100%;
-					margin-bottom: 10%;
-				}
-			}
-		}
-		&__btn {
-			width: 340px;
-			margin: 0 auto;
-			@include mq(sp) {
-				width: 100%;
-			}
-		}
-	}
-	&__movie {
-		width: 100%;
-		background: #fff;
-		padding: 80px 10px;
-		mix-blend-mode: multiply;
-		@include mq(tab) {
-			padding: 10% 5%;
-		}
-		h3 {
-			color: #004DA1;
-			@include fz(36);
-			font-weight: 700;
-			text-align: center;
-			margin-bottom: 30px;
-			@include mq(tab) {
-				@include fz(28);
-				margin-bottom: 5%;
-			}
-			@include mq(sp) {
-				@include fz(24);
-			}
-		}
-		&__box {
-			width: 100%;
-			max-width: 570px;
-			margin: 0 auto;
-			@include mq(tab) {
-				max-width: 100%;
-			}
-			a {
-				@include hov-alpha;
-				img {
-					width: 100%;
-				}
-			}
-		}
-	}
-
-    .u-who {
-      margin-bottom: 0 !important;
+    h3 {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      @include mq(tab) {
+        display: block;
+        margin-bottom: 6.66%;
+      }
     }
-
-    .u-who ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-
-      li {
-        margin-bottom: 0;
-        width: 450px;
-        height: 50px;
+    &__lead {
+      text-align: center !important;
+      font-size: 2.2rem;
+      margin-bottom: 60px;
+      @include mq(tab) {
+        font-size: 2rem !important;
+        text-align: left;
+        margin-bottom: 6.66%;
+      }
+    }
+    &__box {
+      width: 100%;
+      margin: 0 auto 60px;
+      position: relative;
+      background: #fff;
+      border: 1px solid #b5b5b5;
+      border-radius: 10px;
+      padding: 30px;
+      @include mq(tab) {
+        padding: 5%;
+        margin-bottom: 8%;
+      }
+      &::after {
+        content: "";
+        display: block;
+        background: #f9fafa;
+        width: 80%;
+        height: 2px;
+        position: absolute;
+        top: -1px;
+        left: 10%;
+        @include mq(tab) {
+          display: none;
+        }
+      }
+      dl {
         position: relative;
-
-        &:first-child {
-
-          &::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            background: url('../images/who/toyo-logo.svg') no-repeat;
-            background-size: cover;
-            width: 43px;
-            height: 32.53px;
-            left: 41px;
-            top: 50%;
-            transform: translateY(-50%);
+        margin-top: -6rem;
+        z-index: 2;
+        @media screen and (max-width: 992px) {
+          margin-top: -5rem;
+        }
+        @include mq(tab) {
+          margin-top: inherit;
+        }
+        dt {
+          position: relative;
+          text-align: center;
+          margin-bottom: 30px;
+          @include mq(tab) {
+            margin-bottom: 4%;
           }
-
-          &::after {
-            content: "";
-            background: url("../images/common/icon-external_blue.svg") no-repeat left center/contain;
-            display: inline-block;
-            width: 13px;
-            height: 9px;
-            position: relative;
-            display: inline-block;
-            margin-left: 0.5em;
-            right: -410px;
-            border: none !important;
-            margin-left: 0 !important;
-            top: -30px;
-            transform: translateY(-50%) rotate(0) !important;
+          span {
+            color: #acac16;
+            @include fz(34);
+            font-weight: 700;
+            margin-right: 0.75em;
+            @media screen and (max-width: 992px) {
+              @include fz(25);
+            }
+            @include mq(tab) {
+              display: block;
+              text-align: left;
+              @include fz(30);
+            }
+            @include mq(sp) {
+              @include fz(26);
+            }
+            &:last-of-type {
+              margin-right: 0;
+            }
           }
-
-          a {
-            padding-left: 120px;
-            height: 100%;
-            padding-top: 0;
-            padding-bottom: 0;
-            display: flex;
-            align-items: center;
-
-            &.u-outside {
-
-              &::after {
-                display: none !important;
+        }
+      }
+    }
+    &__flow {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        background: url("../images/who/who-sec04-bg01.svg") no-repeat left
+          center/contain;
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        z-index: 1;
+        @include mq(tab) {
+          display: none;
+        }
+      }
+      h4 {
+        position: relative;
+        text-align: center;
+        color: #004da1;
+        @include fz(24);
+        font-weight: 700;
+        margin-bottom: 40px;
+        z-index: 2;
+        @include mq(tab) {
+          @include fz(21);
+          margin-bottom: 6.66%;
+        }
+      }
+      ul {
+        @include flex("", "");
+        margin-bottom: 25px;
+        @include mq(tab) {
+          margin-bottom: 4%;
+          justify-content: center;
+        }
+        li {
+          width: 18%;
+          margin-right: 2%;
+          @include mq(tab) {
+            width: 30%;
+            margin-right: 5%;
+            margin-bottom: 4%;
+          }
+          &:nth-child(5n) {
+            margin-right: 0;
+          }
+          &:nth-child(3n) {
+            @include mq(tab) {
+              margin-right: 0;
+            }
+          }
+          img {
+            width: 100%;
+          }
+          span {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            @include fz(16);
+            color: #004da1;
+          }
+        }
+      }
+      @include mq(tab) {
+        figure {
+          width: 90%;
+          margin: 0 auto 4%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      @include mq(sp) {
+        figure {
+          width: 100%;
+        }
+      }
+    }
+    &__btn {
+      width: 340px;
+      margin: 0 auto;
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+  }
+  &__service {
+    @include mq(tab) {
+      &-sp {
+        width: 90%;
+        margin: 0 auto 10%;
+        figure {
+          width: 100%;
+          margin: 0 auto;
+          img {
+            width: 100%;
+          }
+        }
+        dl {
+          margin-bottom: 8%;
+          dt {
+            @include fz(16);
+            font-weight: 700;
+            margin-bottom: 3%;
+            color: #2b90dd;
+          }
+          dd {
+            ul {
+              margin-bottom: -0.5em;
+              li {
+                @include fz(15);
+                margin-bottom: 0.5em;
+                text-indent: -1em;
+                margin-left: 1em;
               }
             }
           }
+          &:nth-of-type(2) dt {
+            color: #e55f00;
+          }
+          &:nth-of-type(3) dt {
+            color: #554b9a;
+          }
+          &:nth-of-type(4) dt {
+            color: #6db138;
+          }
+          &:nth-of-type(5) dt {
+            color: #907d27;
+          }
+          &:nth-of-type(6) dt {
+            color: #30aeab;
+          }
         }
       }
     }
+    @include mq(sp) {
+      &-sp {
+        width: 100%;
+      }
+    }
+    h3 {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      margin-bottom: 40px;
+      @include mq(tab) {
+        display: block;
+        margin-bottom: 6.66%;
+      }
+      + p {
+        margin-bottom: 40px;
+        @include mq(tab) {
+          margin-bottom: 5%;
+        }
+      }
+    }
+    figure {
+      img {
+        display: block;
+        width: auto;
+        margin: 0 auto 40px;
+        mix-blend-mode: multiply;
+        @include mq(tab) {
+          margin-bottom: 8%;
+        }
+      }
+    }
+    h4 {
+      br {
+        @include mq(tab) {
+          display: none;
+        }
+      }
+    }
+    &__btn {
+      width: 340px;
+      margin: 0 auto;
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+  }
+  &__network {
+    h3 {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      margin-bottom: 40px;
+      @include mq(tab) {
+        display: block;
+        margin-bottom: 6.66%;
+      }
+      + p {
+        margin-bottom: 40px;
+        @include mq(tab) {
+          margin-bottom: 5%;
+        }
+      }
+    }
+    figure {
+      img {
+        display: block;
+        width: auto;
+        margin: 0 auto 40px;
+        mix-blend-mode: multiply;
+        @include mq(tab) {
+          width: 90%;
+          margin: 0 auto 8%;
+        }
+        @include mq(sp) {
+          width: 100%;
+          margin-bottom: 10%;
+        }
+      }
+    }
+    &__btn {
+      width: 340px;
+      margin: 0 auto;
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+  }
+  &__movie {
+    width: 100%;
+    background: #fff;
+    padding: 80px 10px;
+    mix-blend-mode: multiply;
+    @include mq(tab) {
+      padding: 10% 5%;
+    }
+    h3 {
+      color: #004da1;
+      @include fz(36);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      @include mq(tab) {
+        @include fz(28);
+        margin-bottom: 5%;
+      }
+      @include mq(sp) {
+        @include fz(24);
+      }
+    }
+    &__box {
+      width: 100%;
+      max-width: 570px;
+      margin: 0 auto;
+      @include mq(tab) {
+        max-width: 100%;
+      }
+      a {
+        @include hov-alpha;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 
-    @media screen and (max-width: 767px) {
+  .u-who {
+    margin-bottom: 0 !important;
+  }
+  .u-who ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 
-      .u-who {
+    li {
+      margin-bottom: 0;
+      width: 400px;
+      height: 50px;
+      position: relative;
 
-        li {
-          width: 100% !important;
+      &:first-child {
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background: url("../images/who/toyo-logo.svg") no-repeat;
+          background-size: cover;
+          width: 43px;
+          height: 32.53px;
+          left: 41px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
 
-          &::before {
-            left: 20px !important;
+        &::after {
+          content: "";
+          background: url("../images/common/icon-external_blue.svg") no-repeat
+            left center/contain;
+          display: inline-block;
+          width: 13px;
+          height: 9px;
+          position: absolute;
+          display: inline-block;
+          margin-left: 0.5em;
+          left: 360px;
+          top: 50% !important;
+          border: none !important;
+          margin-left: 0 !important;
+          transform: translateY(-50%) rotate(0) !important;
+
+          @include mq(tab) {
+            left: 92%;
           }
+        }
+
+        a {
+          height: 100%;
+          padding-top: 0;
+          padding-bottom: 0;
+          display: flex;
+          align-items: center;
+          padding: 15px 10px !important;
+          padding-left: 107px !important;
+
+          &.u-outside {
+            &::after {
+              display: none !important;
+            }
+          }
+
+          @include mq(tab) {
+            padding-left: 20vw !important;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background: url("../images/who/miyoshi-logo.svg") no-repeat;
+          background-size: cover;
+          width: 111px;
+          height: 32px;
+          left: 31px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &::after {
+          content: "";
+          background: url("../images/common/icon-external_blue.svg") no-repeat
+            left center/contain;
+          display: inline-block;
+          width: 13px;
+          height: 9px;
+          position: absolute;
+          display: inline-block;
+          margin-left: 0.5em;
+          left: 360px;
+          border: none !important;
+          top: 50% !important;
+          margin-left: 0 !important;
+          transform: translateY(-50%) rotate(0) !important;
+
+          @include mq(tab) {
+            left: 92%;
+          }
+        }
+
+        a {
+          padding: 15px 10px !important;
+          padding-left: 154px !important;
+          height: 100%;
+          padding-top: 0;
+          padding-bottom: 0;
+          display: flex;
+          align-items: center;
 
           &::after {
-            right: -92% !important;
+            display: none !important;
           }
 
-          a {
-            font-size: 1.6rem !important;
-          }
-
-          &:first-child {
-            a {
-              padding-left: 20vw !important;
-            }
-          }
-
-          &:last-child {
-            a {
-              padding-right: 10vw !important;
-              padding-left: 20vw !important;
-              line-height: 1.2 !important;
-            }
+          @include mq(tab) {
+            padding-left: 33vw !important;
           }
         }
       }
     }
+  }
+
+  &-strong {
+    margin-block: 8rem;
+
+    @include mq(tab) {
+      margin-block: 4.8rem;
+    }
+  }
+
+  &-strong__list {
+    counter-reset: strong;
+  }
+
+  &-strong__item {
+    counter-increment: strong;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #b8bdc1;
+    padding: 2rem;
+
+    @include mq(tab) {
+      gap: 10px;
+      padding: 1.6rem;
+    }
+
+    &::before {
+      content: counter(strong, decimal-leading-zero);
+      color: #0085ce;
+      font-size: 3.2rem;
+      letter-spacing: 0.03em;
+      line-height: 180%;
+      font-weight: 600;
+      white-space: nowrap;
+
+      @include mq(tab) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #b8bdc1;
+    }
+  }
+
+  &-strong__title {
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+    line-height: 180%;
+    font-weight: 500;
+    color: #333;
+
+    @include mq(tab) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-strong__block {
+    display: grid;
+    grid-template-columns: 1fr 33%;
+    gap: 6rem;
+
+    @include mq(tab) {
+      grid-template-columns: 1fr;
+    }
+
+    &.is-small {
+      grid-template-columns: 1fr 33%;
+    }
+
+    &.is-large {
+      grid-template-columns: 1fr 50%;
+    }
+
+    &:nth-of-type(n + 2) {
+      margin-top: 6rem;
+    }
+  }
+
+  &-strong__text {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    line-height: 180%;
+    margin-top: 3rem;
+  }
+
+  &-strong__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-block: 8rem;
+
+    @include mq(tab) {
+      grid-template-columns: 1fr;
+      margin-block: 4.8rem;
+    }
+  }
+
+  &-strong__card-title {
+    font-size: 1.8rem;
+    color: #418ac9;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+  }
+
+  &-strong__card-item {
+    border: 1px solid #b8bdc1;
+    padding: 3rem;
+  }
+
+  &-strong__card-list {
+    display: grid;
+    grid-template-columns: 46.66% 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @include mq(tab) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      &:last-child {
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 180%;
+        letter-spacing: 0.03em;
+        color: #333;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .u-who {
+      li {
+        width: 100% !important;
+
+        &::before {
+          left: 20px !important;
+        }
+
+        &::after {
+          right: -92% !important;
+        }
+
+        a {
+          font-size: 1.6rem !important;
+        }
+
+        &:first-child {
+          a {
+            padding-left: 20vw !important;
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-left: 30vw !important;
+          }
+        }
+      }
+    }
+  }
 }

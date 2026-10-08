@@ -185,9 +185,10 @@
     p {
       @include fz(20);
       font-weight: 700;
-      @include mq(767) {
+      @include mq(tab) {
+        font-weight: 500;
         @include fz(18);
-        line-height: 1.6;
+        line-height: 1.8;
       }
     }
   }
@@ -500,22 +501,24 @@
           }
         }
         &.sustainability-bnrs__bottom {
-          margin-bottom: -50px;
+          // margin-bottom: -50px;
+          gap: 50px 5%;
           @include mq(767) {
-            margin-bottom: -5%;
+            // margin-bottom: -5%;
+            column-gap: 5%;
           }
           li {
             width: 30%;
-            margin-right: 5%;
-            margin-bottom: 50px;
+            // margin-right: 5%;
+            // margin-bottom: 50px;
             @include mq(767) {
               width: 100%;
-              margin-right: 0;
-              margin-bottom: 5%;
+              // margin-right: 0;
+              // margin-bottom: 5%;
             }
-            &:nth-child(3n) {
-              margin-right: 0;
-            }
+            // &:nth-child(3n) {
+            //   margin-right: 0;
+            // }
           }
         }
         a {
@@ -692,11 +695,11 @@
     }
   }
   &__container {
-    @include bg-gray;
-    padding: 60px 0;
-    @include mq(767) {
-      padding: 10% 5%;
-    }
+    // @include bg-gray;
+    // padding: 60px 0;
+    // @include mq(767) {
+    //   padding: 10% 5%;
+    // }
     h3 {
       @include fz(36);
       font-weight: 700;
@@ -1503,7 +1506,8 @@
       }
     }
   }
-    &__nav03 {
+
+  &__nav03 {
     padding-bottom: 0;
 
     .p-sustainability-products__nav {
@@ -1523,7 +1527,7 @@
 
     .p-sustainability-list--type01 {
       margin-bottom: 40px;
-      padding-bottom: 0;;
+      padding-bottom: 0;
 
       @include mq(767) {
         margin-bottom: 8%;
@@ -1640,20 +1644,30 @@
   p {
     @include fz(16);
     line-height: 1.8;
+
     @include mq(480) {
       @include fz(15);
     }
   }
+
   &__container {
     @include bg-container;
     @include inner-box;
     margin-top: 60px;
+
     @include mq(1280) {
       padding: 5% 20px;
     }
+
     @include mq(767) {
       margin-top: 10%;
       padding: 10% 5%;
+    }
+
+    &.l-inner {
+      padding-inline: 20px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
     }
   }
   &__intro {
@@ -2011,6 +2025,33 @@
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
+
+    .addBlue {
+      position: relative;
+      color: #0085ce !important;
+      font-size: 1.8rem;
+
+      &:hover {
+        text-decoration-color: #0085ce !important;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        background: url(../images/common/icon-external_blue.svg) no-repeat left
+          center / contain;
+        width: 13px;
+        height: 9px;
+        margin-left: 0.5em;
+      }
+
+      &.afterNone {
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
   &__graph {
     @include flex("", "fs");
@@ -2645,14 +2686,16 @@
     }
   }
   &__container {
-    @include bg-container;
     @include inner-box;
-    margin-top: 60px;
+    @include bg-container;
+    margin-block: 60px;
+    box-shadow: none;
+    padding: 0;
     @include mq(1280) {
-      padding: 5% 20px;
+      // padding: 5% 20px;
     }
     @include mq(767) {
-      margin-top: 10%;
+      margin-block: 10%;
       padding: 10% 5%;
     }
     p {
@@ -3191,53 +3234,6 @@
           -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
           margin-left: 0.75em;
-        }
-      }
-    }
-  }
-
-  &__nav01 {
-
-    li {
-
-      @media screen and (min-width: 769px) {
-        &:last-child {
-          padding-right: 5vw;
-          a::after {
-            margin-left: 1vw;
-          }
-        }
-      }
-    }
-  }
-  &__nav02 {
-    @media screen and (max-width: 768px) {
-
-      li {
-
-        &:last-child {
-
-          a {
-
-            &::after {
-              top: 71%;
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 675px) {
-      li {
-
-        &:last-child {
-
-          a {
-
-            &::after {
-              top: 50%;
-            }
-          }
         }
       }
     }

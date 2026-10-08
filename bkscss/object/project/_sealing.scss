@@ -1,0 +1,36 @@
+&sealing__flex {
+  display: flex; width: 100% !important;
+
+  > div {
+    width: 60%;
+    margin-right: 5%;
+
+    @include mq(767) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  figure {
+    margin-top: 0;
+    width: 250px;
+    max-width: 250px;
+    margin: 0  auto 0;
+  }
+}
+
+&sustainability-products {
+
+  .u-pc-none {
+    @include mq(767) {
+      margin: 5% auto 0;
+      max-width: 250px;
+
+      &.u-mt {
+        @include mq(767) {
+          margin-top: 10%;
+        }
+      }
+    }
+  }
+}

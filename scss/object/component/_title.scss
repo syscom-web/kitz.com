@@ -1,18 +1,23 @@
 &ttl--type01 {
-  color: #004DA1;
+  color: #0085ce;
   text-align: center;
-  @include fz(34);
+  @include fz(28);
   font-weight: 700;
   line-height: 1;
   margin-bottom: 40px;
-	word-break: normal;
-	@include mq(sp) {
-		@include fz(28);
-	}
+
+  @include mq(sp) {
+    @include fz(28);
+  }
+
+  &.small {
+    font-size: 2.4rem;
+  }
+
   span {
     font-size: 80%;
     font-weight: 700;
-    padding: 0 .5em;
+    padding: 0 0.5em;
   }
   em {
     display: block;
@@ -21,92 +26,112 @@
     font-weight: 700;
     margin-top: 20px;
     @include font-noto;
-		@include mq(tab) {
-			margin-top: 4%;
-		}
+    @include mq(tab) {
+      margin-top: 4%;
+    }
   }
 }
 &ttl--type02 {
-	position: relative;
-	@include fz(18);
-	font-weight: 700;
-	color: #004DA1;
-	overflow: hidden;
-	margin-bottom: 50px;
-	word-break: normal;
-	@include mq(tab) {
-		margin-bottom: 6.66%;
-	}
-	span {
-		position: relative;
-		display: inline-block;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 100%;
-			width: 1000%;
-			height: 1px;
-			display: inline-block;
-			background: #82A4C9;
-			margin-left: 1em;
-		}
-	}
+  position: relative;
+  @include fz(18);
+  font-weight: 700;
+  color: #004da1;
+  overflow: hidden;
+  margin-bottom: 50px;
+  @include mq(tab) {
+    margin-bottom: 6.66%;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 2000%;
+      height: 1px;
+      display: inline-block;
+      background: #82a4c9;
+      margin-left: 1em;
+    }
+  }
 }
 &ttl--type03 {
-	position: relative;
-	text-align: center;
-	@include fz(34);
-	font-weight: 700;
-	color: #004DA1;
-	display: inline-block;
-	line-height: 1;
-	width: auto;
-	margin: 0 auto 70px;
-	left: 50%;
-	-webkit-transform: translate(-50%,0);
-	transform: translate(-50%,0);
-	word-break: normal;
-	@include mq(tab) {
-		@include fz(28);
-		margin-bottom: 10%;
-	}
-	@include mq(sp) {
-		@include fz(24);
-		margin-bottom: 13%;
-	}
-	&::after {
-		content: "";
-		display: block;
-		width: 9rem;
-		border-bottom: 2px dotted #034FA2;
-		position: absolute;
-		left: 50%;
-		bottom: -2.5rem;
-		margin-left: -4.5rem;
-	}
-	em {
-		@include fz(16);
-		font-weight: bold;
-		margin-left: .5rem;
-		position: relative;
-		top: 1px;
-	}
+  position: relative;
+  text-align: center;
+  @include fz(34);
+  font-weight: 700;
+  color: #004da1;
+  display: inline-block;
+  line-height: 1;
+  width: auto;
+  margin: 0 auto 70px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  @include mq(tab) {
+    @include fz(28);
+    margin-bottom: 10%;
+  }
+  @include mq(sp) {
+    @include fz(24);
+    margin-bottom: 13%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 9rem;
+    border-bottom: 2px dotted #034fa2;
+    position: absolute;
+    left: 50%;
+    bottom: -2.5rem;
+    margin-left: -4.5rem;
+  }
+  em {
+    @include fz(16);
+    font-weight: bold;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 1px;
+  }
 }
 &ttl--type04 {
-	color: #004DA1;
-	@include fz(30);
-	font-weight: 700;
-	border-bottom: 1px solid #E6E6E6;
-	padding-bottom: 15px;
-	margin-bottom: 40px;
-	word-break: normal;
-	@include mq(tab) {
-		@include fz(26);
-		padding-bottom: 3%;
-		margin-bottom: 6%;
-	}
-	@include mq(sp) {
-		@include fz(22);
-	}
+  color: #004da1;
+  @include fz(30);
+  font-weight: 700;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  @include mq(tab) {
+    @include fz(26);
+    padding-bottom: 3%;
+    margin-bottom: 6%;
+  }
+  @include mq(sp) {
+    @include fz(22);
+  }
+}
+
+&section-title {
+  margin-block: 8rem 3rem;
+  color: #0085ce;
+  @include fz(34);
+  font-weight: 700;
+  line-height: 1.2;
+  font-feature-settings: "palt";
+
+  @include mq(767) {
+    margin-top: 6rem;
+    @include fz(28);
+  }
+
+  @include mq(592) {
+    margin-block: 4rem 2rem;
+    @include fz(24);
+  }
+
+  + * {
+    margin-top: 0 !important;
+  }
 }
