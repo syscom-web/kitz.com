@@ -1472,10 +1472,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- 決算補足説明資料・決算説明会（質疑応答・動画） -->
+                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
                 <li class="sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    決算補足説明資料・決算説明会（質疑応答・動画）
+                    Presentation Materials (Financial Results and Other IR Events)‌
                   </a>
                 </li>
 
@@ -2980,10 +2980,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- 決算補足説明資料・決算説明会（質疑応答・動画） -->
+                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
                 <li class=" sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    決算補足説明資料・決算説明会（質疑応答・動画）
+                    Presentation Materials (Financial Results and Other IR Events)‌
                   </a>
                 </li>
 
@@ -4472,10 +4472,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- 決算補足説明資料・決算説明会（質疑応答・動画） -->
+                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
                 <li class=" sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    決算補足説明資料・決算説明会（質疑応答・動画）
+                    Presentation Materials (Financial Results and Other IR Events)‌
                   </a>
                 </li>
 

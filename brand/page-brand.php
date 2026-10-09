@@ -128,8 +128,9 @@ Template Name: ブランドページ英語
                   alt="LONG LIFE DESIGN AWARD" class="p-brand-award__image">
                 <div class="p-brand-award__list">
                   <p class="p-brand-txt u-color_black">
-                    A “CHRYSANTHEMUM-HANDLE®,” a symbol of KITZ, the brand of valve reliability,<br>has received the
-                    2026 Good Design, Long Life Design Award, organized by Japan Institute of Design Promotion (JDP).
+                    A “CHRYSANTHEMUM-HANDLE®,” a symbol of KITZ, the brand of valve reliability,<br>has received **the
+                    2026 Good Design Award and Long Life Design Award, organized** by Japan Institute
+                    of Design Promotion (JDP).
                   </p>
                   <img src="<?php echo get_template_directory_uri(); ?>/brand/assets/images/page/award-02.png"
                     alt="菊ハンドル">
