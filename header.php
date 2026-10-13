@@ -1,19 +1,57 @@
 <?php
-if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
-  if (!$_GET['country']) {
-    wp_safe_redirect('/en/contact/');
+if ($_SERVER['REQUEST_URI'] === '/company/inquiry/product/' || $_SERVER['REQUEST_URI'] === '/company/inquiry/company/') {
+  if (!$_GET['inquiry-cat']) {
+    wp_safe_redirect('/company/inquiry/');
     exit;
   }
 }
 ?>
 <!-- new -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head prefix="og: http://ogp.me/ns#">
-  <meta name="google-site-verification" content="iLuwLq0XPTZ9sp6TIdxD4bSy0FrjI_0fbS1CgQt1Bw4" />
+
+  <?php if ($_SERVER['HTTP_HOST'] === 'www.kitz.co.jp'): ?>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M9D8MBP');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZCSP7W4CEE', {
+        'custom_map': {
+          'dimension1': 'ip_address',
+          'dimension2': 'access_time',
+        },
+      });
+    </script>
+  <?php endif; ?>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>総合バルブメーカー株式会社キッツ</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180"
     href="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/apple-touch-icon.png">
@@ -34,7 +72,6 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
   <link
     href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.css?v=<?php echo date('YmdHi', filemtime(get_template_directory() . '/css/style.css')); ?>"
     rel="stylesheet">
-
   <?php if (is_user_logged_in()): ?>
     <style type="text/css">
       header {
@@ -46,6 +83,13 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
 </head>
 
 <body <?php body_class(); ?>>
+
+  <?php if ($_SERVER['HTTP_HOST'] === 'www.kitz.co.jp'): ?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9D8MBP" height="0"
+        width="0"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  <?php endif; ?>
 
   <div class="l-wrapper">
     <header class="l-header">
@@ -73,7 +117,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
             <ul>
               <li>
                 <a href="https://www.kitz.com/en/" target="_blank" rel="noopener">
-                  ENGLISH
+                  JAPANESE
                 </a>
               </li>
               <li>
@@ -1472,10 +1516,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
+                <!-- 説明会資料・動画（決算・その他IRイベント） -->
                 <li class="sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    Presentation Materials (Financial Results and Other IR Events)‌
+                    説明会資料・動画（決算・その他IRイベント）
                   </a>
                 </li>
 
@@ -2980,10 +3024,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
+                <!-- 説明会資料・動画（決算・その他IRイベント） -->
                 <li class=" sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    Presentation Materials (Financial Results and Other IR Events)‌
+                    説明会資料・動画（決算・その他IRイベント）
                   </a>
                 </li>
 
@@ -4472,10 +4516,10 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
                   </a>
                 </li>
 
-                <!-- Presentation Materials (Financial Results and Other IR Events)‌ -->
+                <!-- 説明会資料・動画（決算・その他IRイベント） -->
                 <li class=" sub-menu-item">
                   <a href="<?php echo esc_url(home_url('/investor_ir/library/materials/')); ?>" class="sub-menu-link">
-                    Presentation Materials (Financial Results and Other IR Events)‌
+                    説明会資料・動画（決算・その他IRイベント）
                   </a>
                 </li>
 
@@ -4658,7 +4702,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
     <ul class="l-header__nav__links">
       <li class="link--global">
         <a href="https://www.kitz.com/en/" target="_blank" class="u-poppins">
-          <span>ENGLISH</span>
+          <span>Japanese</span>
         </a>
       </li>
       <li class="link--contact">
@@ -4715,7 +4759,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
         <li class="l-floatingButton__item">
           <a href="https://www.kitz-valvesearch.com/valve-search/ja/top" target="_blank" class="l-floatingButton__link">
             <span>
-              バルブ<br class="u-br">製品検索
+              Valve Search
             </span>
           </a>
         </li>
@@ -4723,7 +4767,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
           <a href="https://www.kitz-valvesearch.com/iportal/CatalogSearch.do?method=catalogSearchByAnyCategories&volumeID=KTZ00001&categoryID=4040000&designID=catalog_JPN"
             target="_blank" class="l-floatingButton__link">
             <span>
-              価格表•<br class="u-br">カタログ
+              Catalogs
             </span>
           </a>
         </li>
@@ -4731,7 +4775,7 @@ if ($_SERVER['REQUEST_URI'] === '/en/contact/global/') {
           <a href="https://www.kitz-valvesearch.com/user-management/ja/top?redirectUrl=%2Fvalve-search%2Fja%2FsecurityServices%2Fdeclaration"
             target="_blank" class="l-floatingButton__link">
             <span>
-              安全保障<br class="u-br">貿易書類
+              Security Trade <br class="u-br">Control Documents
             </span>
           </a>
         </li>

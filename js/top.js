@@ -1,4 +1,7 @@
 $(function () {
+  var floatingButton = document.querySelector(".l-floatingButton");
+  var header = document.querySelector(".l-header");
+  var topMv = document.querySelector(".p-top-mv");
   var topNews = document.querySelector(".p-top__news");
 
   function updateFloatingButtonTop() {
@@ -52,17 +55,22 @@ $(function () {
     perMove: 1,
     pagination: false,
   };
-  new Splide("#slider1", {
-    perPage: 5,
-    arrows: false,
-    interval: 4500,
-    speed: 500,
-  }).mount();
-  new Splide("#slider2", {
-    perPage: 6,
-    fixedWidth: "164px",
-    gap: "30px",
-  }).mount();
+  if (document.querySelector("#slider1")) {
+    new Splide("#slider1", {
+      perPage: 5,
+      arrows: false,
+      interval: 4500,
+      speed: 500,
+    }).mount();
+  }
+
+  if (document.querySelector("#slider2")) {
+    new Splide("#slider2", {
+      perPage: 6,
+      fixedWidth: "164px",
+      gap: "30px",
+    }).mount();
+  }
 
   var maxHeight = 0;
 

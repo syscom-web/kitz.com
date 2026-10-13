@@ -9,8 +9,8 @@
 <?php get_header(); ?>
 
 <?php
-if (have_posts()) :
-  while (have_posts()) :
+if (have_posts()):
+  while (have_posts()):
     the_post(); ?>
 
     <main class="p-main">
@@ -26,7 +26,8 @@ if (have_posts()) :
           <ul class="c-breadcrumb__list">
             <li class="c-breadcrumb__item"><a title="HOME" href="/">HOME</a></li>
             <li class="c-breadcrumb__item"><a title="IR data" href="<?php echo home_url() ?>/investor_ir/">IR data</a></li>
-            <li class="c-breadcrumb__item"><a title="IR library" href="<?php echo home_url() ?>/investor_ir/library/">IR library</a></li>
+            <li class="c-breadcrumb__item"><a title="IR library" href="<?php echo home_url() ?>/investor_ir/library/">IR
+                library</a></li>
             <li class="c-breadcrumb__item">Corporate Profile and financial data</li>
           </ul>
         </div>
@@ -39,11 +40,12 @@ if (have_posts()) :
                   <div class="p-page-ir__eir-list__wrap">
                     <!-- E-IR Parts Corporate Profile 1/1 -->
                     <div class="eir" data-area-name="area_ir_material_033"></div>
-                    <script type="text/javascript" src="/en/cms/wp-content/themes/kitz/js/eire_v5.js" charset="utf-8"></script>
+                    <script type="text/javascript" src="/en/cms/wp-content/themes/kitz/js/eire_v5.js"
+                      charset="utf-8"></script>
                     <script type="text/javascript">
                       scriptLoader.setSrc(eirPassCore + 'eir_common.js');
                       scriptLoader.load(
-                        function() {
+                        function () {
                           setParts('file_ir_material_039');
                         }, showMaintenanceMessage);
                     </script>
@@ -55,11 +57,19 @@ if (have_posts()) :
           </div>
           <div class="p-page-menu">
             <ul>
-              <li><a href="<?php echo home_url() ?>/investor_ir/library/financial-results/">Financial Results</a>
+              <li>
+                <a href="<?php echo home_url() ?>/investor_ir/library/financial-results/">Financial Results</a>
               </li>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/library/materials/">Supplementary materials for financial results and financial results briefing</a></li>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/library/financial-data/" class="current">Corporate Profile and financial data</a></li>
-              <li><a href="<?php echo home_url() ?>/investor_ir/library/external-reports/">External reports</a></li>
+              <li>
+                <a href="<?php echo home_url() ?>/investor_ir/library/materials/">Presentation Materials</a>
+              </li>
+              <li class="is-multiline">
+                <a href="<?php echo home_url() ?>/investor_ir/library/financial-data/" class="current">Corporate Profile and
+                  financial data</a>
+              </li>
+              <li>
+                <a href="<?php echo home_url() ?>/investor_ir/library/external-reports/">External reports</a>
+              </li>
             </ul>
           </div>
 
@@ -67,11 +77,13 @@ if (have_posts()) :
             <div class="l-contact__inner">
               <div class="l-contact__inner__product">
                 <h2 class="c-ttl--type01">Frequently Asked Questions About IR<br class="is-tab">（FAQ）</h2>
-                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/" class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
+                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/"
+                    class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
               </div><!-- /.l-contact__inner__product -->
               <div class="l-contact__inner__company">
                 <h2 class="c-ttl--type01">IR inquiries</h2>
-                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/company/inquiry/?content=2" class="c-btn--type01">Contact Us</a>
+                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/company/inquiry/?content=2"
+                    class="c-btn--type01">Contact Us</a>
                 </div>
               </div><!-- /.l-contact__inner__company -->
             </div><!-- /.l-contact__inner -->
@@ -81,6 +93,6 @@ if (have_posts()) :
 
 
       <?php endwhile;
-  else : ?>
+else: ?>
     <?php endif; ?>
     <?php get_footer(); ?>

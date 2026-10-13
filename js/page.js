@@ -301,13 +301,6 @@ $(window).on("load", function () {
   }
 });
 
-$(function () {
-  $(".l-flt-bnr__close").on("click", function () {
-    $(this).parent().addClass("is-hidden");
-    document.cookie = "floating=false; path=/";
-  });
-});
-
 function megaMenu() {
   let mega = false;
   let megaTimer = 0;

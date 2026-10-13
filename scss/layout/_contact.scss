@@ -1,70 +1,66 @@
 &contact {
-	position: relative;
-  background: #F3F4F4;
-	mix-blend-mode: multiply;
-	@include mq(tab) {
-		padding: 13% 5%;
-	}
-	&__inner {
+  position: relative;
+  background: #f3f4f4;
+  mix-blend-mode: multiply;
+  @include mq(tab) {
+    padding: 13% 5%;
+  }
+  &__inner {
     @include inner-box;
     @include flex("", "");
     flex-wrap: nowrap;
     height: 370px;
-		@include mq(tab) {
-			flex-direction: column;
-			height: auto;
-		}
-		> div {
-			width: 50%;
+    @include mq(tab) {
+      flex-direction: column;
+      height: auto;
+    }
+    > div {
+      width: 100%;
       height: 100%;
       @include flex("c", "c");
       flex-wrap: nowrap;
       flex-direction: column;
-			@include mq(tab) {
-				width: 100%;
-				display: block;
-			}
-			h2 {
+      @include mq(tab) {
+        width: 100%;
+        display: block;
+      }
+      h2 {
         @include fz(28);
         margin-bottom: 30px;
-				@include mq(tab) {
-					@include fz(22);
-					margin-bottom: 5%;
-				}
+        @include mq(tab) {
+          @include fz(22);
+          margin-bottom: 5%;
+        }
       }
       p {
         text-align: center;
         @include fz(16);
         line-height: 1.5;
         margin-bottom: 30px;
-				@include mq(tab) {
-					margin-bottom: 5%;
-				}
-				@include mq(sp) {
-					br {
-						display: none;
-					}
-				}
+        @include mq(tab) {
+          margin-bottom: 5%;
+        }
+        @include mq(sp) {
+          br {
+            display: none;
+          }
+        }
       }
     }
-		&__product {
-      border-right: 1px dotted #B9B9B9;
-			@include mq(tab) {
-				border-right: none;
-				border-bottom: 1px dotted #707070;
-				padding-bottom: 10%;
-				margin-bottom: 10%;
-			}
+    &__product {
+      @include mq(tab) {
+        border-right: none;
+      }
     }
-		&__link {
+    &__link {
       width: 240px;
-			@include mq(tab) {
-				width: 64%;
-				margin: 0 auto;
-			}
+      @include mq(tab) {
+        width: 64%;
+        margin: 0 auto;
+      }
     }
   }
 }
 .page-id-36 .l-contact {
-	background: #fff;
+  background: #fff;
 }

@@ -1421,12 +1421,24 @@ function custom_layout($exclude_layouts = array(), $include_layouts = array(), $
 
                 $radio = get_sub_field('radio');
                 $li_class = $radio === 'true' ? ' class="is-multiline"' : '';
+                $link_text = get_sub_field('related_page_links_text');
+                $link_classes = array();
+
+                if ($is_current) {
+                  $link_classes[] = 'current';
+                }
+
+                if (trim(wp_strip_all_tags($link_text)) === 'Corporate Mission, Long-Term Management Vision, and Action Guide') {
+                  $link_classes[] = 'p-page-menu_paragraph03';
+                }
+
+                $link_class = implode(' ', $link_classes);
                 ?>
 
                 <li<?php echo $li_class; ?>>
                   <?php if ($link): ?>
-                    <a href="<?php echo esc_url($link); ?>" target="<?php echo esc_attr($target); ?>" <?php echo $is_current ? 'class="current"' : ''; ?>               <?php echo $target === '_blank' ? 'rel="noopener noreferrer"' : ''; ?>>
-                      <?php echo get_sub_field('related_page_links_text'); ?></a>
+                    <a href="<?php echo esc_url($link); ?>" target="<?php echo esc_attr($target); ?>" <?php echo $link_class ? ' class="' . esc_attr($link_class) . '"' : ''; ?><?php echo $target === '_blank' ? ' rel="noopener noreferrer"' : ''; ?>>
+                      <?php echo $link_text; ?></a>
                   <?php endif; ?>
                   </li>
                 <?php endwhile; ?>

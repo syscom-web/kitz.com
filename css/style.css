@@ -2227,57 +2227,6 @@ label {
     display: block;
   }
 }
-.l-flt-bnr {
-  position: fixed;
-  bottom: 50px;
-  left: 20px;
-  z-index: 10;
-}
-@media screen and (max-width: 767px) {
-  .l-flt-bnr {
-    width: 45%;
-    bottom: 64px;
-    left: 10px;
-    display: block;
-  }
-}
-.l-flt-bnr__close {
-  width: 26px;
-  height: 26px;
-  background: url("../images/common/bnr-susaki-close.png") 0 0 no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  top: -9px;
-  right: -11px;
-  z-index: 1;
-  display: inline-block;
-  cursor: pointer;
-}
-@media screen and (max-width: 425px) {
-  .l-flt-bnr__close {
-    width: 20px;
-    height: 20px;
-  }
-}
-.l-flt-bnr a {
-  border-radius: 15px;
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
-  display: inline-block;
-  transition: opacity 0.3s;
-}
-.l-flt-bnr a:hover {
-  opacity: 0.7;
-}
-@media screen and (max-width: 425px) {
-  .l-flt-bnr a {
-    border-radius: 8px;
-  }
-}
-.l-flt-bnr.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
 .l-recruit {
   position: relative;
   z-index: 1;
@@ -2456,7 +2405,7 @@ label {
 }
 .l-contact {
   position: relative;
-  background: #F3F4F4;
+  background: #f3f4f4;
   mix-blend-mode: multiply;
 }
 @media screen and (max-width: 767px) {
@@ -2489,7 +2438,7 @@ label {
   }
 }
 .l-contact__inner > div {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -2533,15 +2482,9 @@ label {
     display: none;
   }
 }
-.l-contact__inner__product {
-  border-right: 1px dotted #B9B9B9;
-}
 @media screen and (max-width: 767px) {
   .l-contact__inner__product {
     border-right: none;
-    border-bottom: 1px dotted #707070;
-    padding-bottom: 10%;
-    margin-bottom: 10%;
   }
 }
 .l-contact__inner__link {
@@ -6383,6 +6326,17 @@ label {
   .p-page-menu .is-multiline02 a {
     padding-top: 8px;
     padding-bottom: 8px;
+  }
+}
+.p-page-menu_paragraph03 {
+  padding: 8px 20px !important;
+  font-size: 1.2rem !important;
+  line-height: 1.26 !important;
+}
+@media screen and (max-width: 860px) {
+  .p-page-menu_paragraph03 {
+    padding: 3% 4% !important;
+    font-size: 1.3rem !important;
   }
 }
 @media screen and (max-width: 827px) {

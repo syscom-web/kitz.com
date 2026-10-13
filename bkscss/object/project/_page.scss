@@ -2515,8 +2515,8 @@
         &::after {
           position: absolute;
           content: "";
-          background: url("../images/ir/top-two/top-two-icon.jpg") center center /
-            contain no-repeat;
+          background: url("../images/ir/top-two/top-two-icon.jpg") center
+            center / contain no-repeat;
           width: 18px;
           height: 18px;
           right: 28px;
@@ -3908,8 +3908,8 @@
           &::after {
             content: "";
             display: inline-block;
-            background: url("../images/common/icon-pdf.svg") no-repeat left top /
-              contain;
+            background: url("../images/common/icon-pdf.svg") no-repeat left
+              top / contain;
             width: 26px;
             height: 26px;
             position: relative;
@@ -4182,8 +4182,8 @@
           &::after {
             content: "";
             display: inline-block;
-            background: url("../images/common/icon-pdf.svg") no-repeat left top /
-              contain;
+            background: url("../images/common/icon-pdf.svg") no-repeat left
+              top / contain;
             width: 26px;
             height: 26px;
             position: relative;
@@ -4343,4 +4343,3 @@
     }
   }
 }
-

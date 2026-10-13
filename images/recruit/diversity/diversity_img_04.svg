@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="150" viewBox="0 0 350 150">
+  <g id="グループ_272" data-name="グループ 272" transform="translate(-625)">
+    <rect id="長方形_328" data-name="長方形 328" width="350" height="150" rx="10" transform="translate(625)" fill="#fff"/>
+    <g id="グループ_265" data-name="グループ 265" transform="translate(665 -1376.898)">
+      <text id="PC操作_郵便業務" data-name="PC操作郵便業務" transform="translate(0 1461)" fill="#333" font-size="18" font-family="NotoSansJP-Regular, Noto Sans JP"><tspan x="0" y="0">PC</tspan><tspan y="0">操作</tspan><tspan x="0" y="28.8">郵便業務</tspan></text>
+      <text id="一般事務アシスタント" transform="translate(0 1430)" fill="#333" font-size="20" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700"><tspan x="0" y="0">一般事務</tspan><tspan y="0">アシスタント</tspan></text>
+    </g>
+    <g id="グループ_268" data-name="グループ 268" transform="translate(895 46.125)">
+      <circle id="楕円形_1_のコピー_2" data-name="楕円形 1 のコピー 2" cx="30" cy="30" r="30" fill="#b26abd"/>
+      <g id="グループ_268-2" data-name="グループ 268" transform="translate(20.142 21.5)">
+        <g id="グループ_269" data-name="グループ 269">
+          <path id="シェイプ_1_のコピー_3" data-name="シェイプ 1 のコピー 3" d="M717.706,262.156l-1.864-2.35,9.235-7.325-9.235-7.324,1.864-2.35,12.2,9.675Z" transform="translate(-707.774 -243.981)" fill="#fff"/>
+          <path id="シェイプ_2" data-name="シェイプ 2" d="M19.63,1.5H0v-3H19.63Z" transform="translate(0 8.5)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -29,7 +29,7 @@
   //     left: inherit;
   //     right: -270px;
   //     width: 830px;
-  //     height: 100%;links
+  //     height: 100%;
   //     z-index: -1;
   //     @media screen and (max-width: 1180px) {
   //       display: none;
@@ -938,6 +938,17 @@
           padding-top: 8px;
           padding-bottom: 8px;
         }
+      }
+    }
+
+    &_paragraph03 {
+      padding: 8px 20px !important;
+      font-size: 1.2rem !important;
+      line-height: 1.26 !important;
+
+      @media screen and (max-width: 860px) {
+        padding: 3% 4% !important;
+        font-size: 1.3rem !important;
       }
     }
 

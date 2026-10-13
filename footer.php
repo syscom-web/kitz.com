@@ -6,37 +6,14 @@
     <div class="l-contact">
       <div class="l-contact__inner">
         <div class="l-contact__inner__product">
-          <h2 class="c-ttl--type01">製品・お取引のお問い合わせ</h2>
-          <p>製品技術、製品購入、カタログ、品質に関する<br>お問い合わせはこちらから</p>
-          <div class="l-contact__inner__link">
-            <a href="<?php echo esc_url(home_url('/')); ?>company/inquiry/?id=topPageLinkAdd" class="c-btn--type01">
-              Contact us
-            </a>
-          </div>
+          <h2 class="c-ttl--type01">Contact us</h2>
+          <p>For inquiries about product technology, product purchases, <br>catalogs, and quality</p>
+          <div class="l-contact__inner__link"><a href="https://www.kitz.com/en/contact/" class="c-btn--type01">Contact
+              us</a></div>
         </div><!-- /.l-contact__inner__product -->
-        <div class="l-contact__inner__company">
-          <h2 class="c-ttl--type01">会社情報のお問い合わせ</h2>
-          <p>会社情報、投資・総会・IR情報、プライバシーポリシー、<br>その他のお問い合わせはこちらから</p>
-          <div class="l-contact__inner__link">
-            <a href="<?php echo esc_url(home_url('/')); ?>company/inquiry/?id=company" class="c-btn--type01">Contact us</a>
-          </div>
-        </div><!-- /.l-contact__inner__company -->
       </div><!-- /.l-contact__inner -->
-    </div><!-- /.l-contact -->
+    </div>
   <?php endif; ?>
-
-  <div class="l-recruit">
-    <div class="l-recruit__inner">
-      <h2 class="c-ttl--type01 u-poppins">RECRUIT<em>採用情報</em></h2>
-      <p>一緒に働ける仲間を募集しています。</p>
-      <ul>
-        <li><a href="<?php echo esc_url(home_url('/')); ?>recruit/information" target="_blank" rel="noopener"
-            class="c-btn--type01 link--external-white">新卒採用情報</a></li>
-        <li><a href="<?php echo esc_url(home_url('/')); ?>recruit/career/" target="_blank" rel="noopener"
-            class="c-btn--type01 link--external-white">社会人採用情報</a></li>
-      </ul>
-    </div><!-- /.l-recruit__inner -->
-  </div><!-- /.l-recruit -->
 <?php endif; ?>
 </div><!-- /.p-page-valve -->
 </main><!-- /.p-main -->
@@ -56,9 +33,10 @@
           </a>
         </div>
         <dl>
-          <dt>本社所在地</dt>
+          <dt>Head Office Address</dt>
           <dd>
-            <p>〒105-7305　東京都港区東新橋一丁目9番1号　東京汐留ビルディング</p>
+            <p>Tokyo Shiodome Building, 1-9-1,<br>Higashi-Shimbashi, Minato-ku,<br>Tokyo
+              105-7305, Japan</p>
           </dd>
         </dl>
       </div><!-- /.l-footer-sitemap__inner__info -->
@@ -192,11 +170,17 @@
     <div class="l-footer-sitemap__bottom">
       <div class="l-footer-sitemap__bottom__inner">
         <ul class="l-footer-sitemap__bottom__links">
-          <li><a href="<?php echo esc_url(home_url('/')); ?>guide/">本サイトのご利用について</a></li>
-          <li><a href="<?php echo esc_url(home_url('/')); ?>privacy/">プライバシーポリシー</a></li>
-          <li><a href="<?php echo esc_url(home_url('/')); ?>cookie_policy/">クッキーポリシー</a></li>
+          <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>guide/">Terms of Use</a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>privacy/">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>cookie_policy/">クッキーポリシー</a>
+          </li>
           <li class="l-footer-sitemap__bottom__links__social">
-            <a href="<?php echo esc_url(home_url('/')); ?>social_policy/">ソーシャルメディアポリシー</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>social_policy/">Social Media Policy</a>
             <ul>
               <li><a href="https://twitter.com/kitz_sns" target="_blank"><img
                     src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon-twitter.png"
@@ -215,7 +199,7 @@
         </ul>
         <div class="l-footer-sitemap__bottom__symbol">
           <p><i><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon-kiku_handle.svg"
-                alt="菊ハンドル"></i><span>菊ハンドルは信頼されるバルブのブランド「KITZ（キッツ）」のシンボルです。<br><span>A
+                alt="菊ハンドル"></i><span><span>A
                 &ldquo;CHRYSANTHEMUM-HANDLE<sup>&reg;</sup>&rdquo; is a symbol of KITZ, the brand of valve
                 reliability.</span></span></p>
         </div>
@@ -230,16 +214,6 @@
     class="u-pc"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/btn-pagetop-sp.png"
     alt="PAGETOP" class="u-pc-none">
 </button>
-
-<?php if (is_front_page()): ?>
-  <div class="l-flt-bnr">
-    <span class="l-flt-bnr__close"></span>
-    <a href="https://www.kitz.co.jp/news/%e3%80%8ckitz-industrial-convention-2026%e3%80%8d%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/"
-      target="_blank">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/INDUSTRIAL-banner.png" alt="バナー画像">
-    </a>
-  </div>
-<?php endif; ?>
 
 <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>

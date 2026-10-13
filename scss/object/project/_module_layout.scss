@@ -133,7 +133,8 @@
     bottom: 0.8rem;
     width: 47px;
     height: 47px;
-    background: url("../images/product/module_layout/icon_zoom.svg") 0 0 no-repeat;
+    background: url("../images/product/module_layout/icon_zoom.svg") 0 0
+      no-repeat;
     background-size: 100% auto;
   }
 }
@@ -357,7 +358,8 @@
   display: block;
   color: #004da1;
   text-decoration: underline;
-  background: url("../images/product/module_layout/icon_circle_right_blue.svg") 0 center no-repeat;
+  background: url("../images/product/module_layout/icon_circle_right_blue.svg")
+    0 center no-repeat;
   background-size: 5.33px 10.65px;
   padding: 2.5px 0 2.5px 20px;
 
@@ -492,7 +494,8 @@
 
       &::after {
         content: "";
-        background: url(../images/common/icon-external_blue.svg) no-repeat left center / contain;
+        background: url(../images/common/icon-external_blue.svg) no-repeat left
+          center / contain;
         min-width: 13px;
         min-height: 9px;
         position: relative;
@@ -681,7 +684,8 @@
     left: 0rem;
     width: 100%;
     height: 100%;
-    background: url("../images/product/module_layout/icon_play_white.svg") center center no-repeat;
+    background: url("../images/product/module_layout/icon_play_white.svg")
+      center center no-repeat;
 
     background-color: rgba(0, 0, 0, 0.3);
     background-size: 15% auto;
@@ -855,7 +859,8 @@
 
   &.active {
     display: block;
-    animation: photoZoomAnime 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
+    animation: photoZoomAnime 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+      forwards;
   }
 }
 @keyframes photoZoomAnime {
@@ -873,7 +878,8 @@
   position: absolute;
   top: -40px;
   right: 0rem;
-  background: url("../images/product/module_layout/icon_close_white.svg") 0 0 no-repeat;
+  background: url("../images/product/module_layout/icon_close_white.svg") 0 0
+    no-repeat;
   width: 30px;
   height: 30px;
   background-size: 100% auto;
@@ -897,7 +903,8 @@
 
   &.active {
     display: block;
-    animation: photoZoomBgAnime 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
+    animation: photoZoomBgAnime 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+      forwards;
   }
 }
 @keyframes photoZoomBgAnime {

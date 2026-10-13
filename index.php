@@ -139,7 +139,7 @@ function get_filesize($file_path)
       <div class="l-inner">
         <div class="p-top-product__titleList">
           <h2 class="c-ttl--type01 u-poppins">PRODUCT<span>/</span>SERVICES</h2>
-          <a href="<?php echo esc_url(home_url('product')); ?>">Valve Products</a>
+          <a href="<?php echo esc_url(home_url('product')); ?>">Products & Solutions</a>
         </div>
         <div class="p-top-product__grid">
           <a href="<?php echo esc_url(home_url('/product#valve/')); ?>">
@@ -159,9 +159,8 @@ function get_filesize($file_path)
             <p class="p-top-product__gridTitle">Maintenance</p>
           </a>
           <a href="<?php echo esc_url(home_url('/product/aerospace/')); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/top/valve-img-05.jpg"
-              alt="Aviation and Aerospace Valves">
-            <p class="p-top-product__gridTitle">Aviation and Aerospace Valves</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/valve-img-05.jpg" alt="AEROSPACE VALVES">
+            <p class="p-top-product__gridTitle">AEROSPACE VALVES</p>
           </a>
         </div>
       </div><!-- /.p-top-product__inner -->
@@ -175,7 +174,7 @@ function get_filesize($file_path)
           <h2 class="c-ttl--type01">About Us</h2>
         </div>
         <div class="p-top-about__grid">
-          <a href="<?php echo home_url('/company'); ?>">
+          <a href="https://www.kitz.com/en/company/">
             <img src="<?php echo get_template_directory_uri(); ?>/images/top/about-img-01.jpg" alt="Corporate Profile">
             <p class="p-top-product__gridTitle">Corporate Profile</p>
           </a>
