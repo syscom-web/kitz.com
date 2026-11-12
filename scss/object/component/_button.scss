@@ -9,9 +9,12 @@
   padding: 10px;
   text-align: center;
   @include hov-alpha;
+
   @include mq(tab) {
     padding: 3.5% 1rem;
+    padding-right: 1.5em;
   }
+
   &::after {
     content: "";
     display: block;
@@ -26,6 +29,7 @@
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
   &.link--external {
     &::after {
       background: url("../images/common/icon-external_blue.svg") no-repeat left
@@ -126,5 +130,4 @@
   .p-product-mm__btn.u-width03 {
     width: 100% !important;
   }
-
 }

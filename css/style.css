@@ -2917,6 +2917,7 @@ label {
 @media screen and (max-width: 767px) {
   .c-btn--type01 {
     padding: 3.5% 1rem;
+    padding-right: 1.5em;
   }
 }
 .c-btn--type01::after {
@@ -26653,14 +26654,14 @@ label {
 }
 .p-reference .reference-ttl_h2 {
   color: #1f4c9b;
-  font-size: 34px;
-  font-size: 3.4rem;
+  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
   .p-reference .reference-ttl_h2 {
-    font-size: calc(24px + 4 * (100vw - 320px) / 450);
+    font-size: calc(21px + 4 * (100vw - 320px) / 450);
   }
 }
 .p-reference .reference-ttl_h2 span {
@@ -27092,6 +27093,10 @@ label {
 .p-reference-use__list > div {
   padding: 30px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
 }
 @media screen and (max-width: 1023px) {
   .p-reference-use__list > div {
@@ -27149,13 +27154,11 @@ label {
   }
 }
 .p-reference-use__list .btn-wh {
-  width: 290px;
+  width: 100%;
   margin: 0 auto;
+  margin-top: auto;
 }
 @media screen and (max-width: 767px) {
-  .p-reference-use__list .btn-wh {
-    width: 65%;
-  }
   .p-reference-use__list .btn-wh a {
     font-size: calc(14px + 4 * (100vw - 320px) / 450);
   }
