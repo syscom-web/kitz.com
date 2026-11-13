@@ -1,0 +1,18 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null,
+      "savePathReplacementPairs": {
+        "/brand/scss": "/brand/assets/css",
+        "/scss": "/css"
+      }
+    }
+  ],
+
+  "liveSassCompile.settings.includeItems": [
+    "/scss/style.scss",
+    "/brand/scss/style.scss"
+  ]
+}

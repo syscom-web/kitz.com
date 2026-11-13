@@ -1,0 +1,61 @@
+&bnr {
+  background: #f3f4f4;
+  padding: 6rem 0;
+  @include mq(tab) {
+    padding: 13% 5%;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 1160px;
+    padding-inline: 20px;
+    margin: 0 auto;
+
+    ul {
+      @include flex("", "c");
+      margin-bottom: -2%;
+
+      @include mq(tab) {
+        margin-bottom: -3%;
+      }
+
+      li {
+        width: 18.9%;
+        margin-right: 1.2%;
+        margin-bottom: 1.2%;
+
+        @include mq(tab) {
+          width: 48%;
+          margin-bottom: 3%;
+          margin-right: 4%;
+
+          &:nth-child(2n) {
+            margin-right: 0 !important;
+          }
+        }
+
+        &:nth-child(5n) {
+          margin-right: 0;
+
+          @include mq(tab) {
+            margin-right: 4%;
+          }
+        }
+
+        a {
+          display: block;
+          @include hov-alpha;
+
+          img {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

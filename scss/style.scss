@@ -1,0 +1,446 @@
+@charset "UTF-8";
+
+/*!
+Coding style from FLOCSS
+https://github.com/hiloki/flocss
+ */
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/_function";
+@import "foundation/_setting";
+@import "foundation/_mixin";
+@import "foundation/_reset";
+@import "foundation/_base";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+.l- {
+  @import "layout/_header";
+  @import "layout/gnav";
+  @import "layout/main";
+  @import "layout/footer";
+  @import "layout/recruit";
+  @import "layout/bnr";
+  @import "layout/contact";
+  @import "layout/floatingButton";
+}
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+.c- {
+  @import "object/component/_title";
+  @import "object/component/text";
+  @import "object/component/space";
+  @import "object/component/_button";
+  @import "object/component/list";
+  @import "object/component/table";
+  @import "object/component/card-list";
+  @import "object/component/form";
+  @import "object/component/breadcrumb";
+  @import "object/component/data-list";
+  @import "object/component/hero";
+  @import "object/component/image-banner";
+  @import "object/component/link-panel";
+  @import "object/component/section-heading";
+  @import "object/component/local-nav";
+}
+
+// cookie
+@import "object/component/cookie";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+
+.p- {
+  @import "object/project/top";
+  @import "object/project/page";
+  @import "object/project/company";
+  @import "object/project/group";
+  @import "object/project/who";
+  @import "object/project/product";
+  @import "object/project/business";
+  @import "object/project/post";
+  @import "object/project/sustainability";
+  @import "object/project/procurement";
+  @import "object/project/training";
+  @import "object/project/calculator";
+  @import "object/project/reference";
+  @import "object/project/sealing";
+  @import "object/project/song";
+  @import "object/project/notice";
+  @import "object/project/valve";
+}
+
+// module_layout
+@import "object/project/module_layout";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+
+.u- {
+  @import "object/utility/_font";
+  @import "object/utility/_talign";
+  @import "object/utility/_display";
+  @import "object/utility/_margin";
+}
+
+@import "wp.scss";
+
+.addBlue {
+  color: #004da1 !important;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #004da1;
+  }
+}
+
+.p-product__service__links01 li .p-sustainability-after__none::after {
+  display: none !important;
+}
+
+.u-fontSize130 {
+  font-size: 130%;
+}
+
+.p-page__valve_sizing_system__list {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+
+  .p-calculator__list > li {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-page__valve_sizing_system__list {
+    flex-direction: column;
+
+    .p-calculator__list > li {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .page-id-4249 .p-page-ir__m-vision__wrap__box__img img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-id-4249 .p-page-ir__m-vision__wrap__box__img02 img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mwform-file-delete {
+  display: none;
+}
+
+form input[type="file"] {
+  display: none !important;
+}
+
+.mw_wp_form_input form .label {
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-id-7193 .mw_wp_form_input .mw_wp_form input[type="file"] {
+  font-size: 1.6rem;
+}
+
+.page-id-15112 .mw_wp_form_input .mw_wp_form input[type="file"] {
+  font-size: 1.6rem;
+}
+
+.page-id-15434 .mw_wp_form_input .mw_wp_form input[type="file"],
+.page-id-23340 .mw_wp_form_input .mw_wp_form input[type="file"] {
+  font-size: 1.6rem;
+}
+
+.page-id-7193 .mw_wp_form_input .label {
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-id-15434 .mw_wp_form_input .label,
+.page-id-23340 .mw_wp_form_input .label {
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-id-15112 .mw_wp_form_input .label {
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-id-15434 .mw_wp_form_input .label,
+.page-id-23340 .mw_wp_form_input .label {
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+// .page-id-7193 .mw_wp_form_input .label::after {
+//   content: "ファイルを選択";
+//   position: absolute;
+//   font-size: 1.6rem;
+//   color: #000;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   display: block;
+//   width: 100%;
+//   text-align: center;
+// }
+
+.page-id-7193 .mw_wp_form_input .mwform-file-delete {
+  display: none !important;
+}
+
+.page-id-15112 .mw_wp_form_input .mwform-file-delete {
+  display: none !important;
+}
+
+.page-id-15434 .mw_wp_form_input .mwform-file-delete,
+.page-id-23340 .mw_wp_form_input .mwform-file-delete {
+  display: none !important;
+}
+
+.page-id-7193 .mw_wp_form_input .add_text {
+  font-size: 1.6rem;
+}
+
+.page-id-15112 .mw_wp_form_input .add_text {
+  font-size: 1.6rem;
+}
+
+.page-id-15434 .mw_wp_form_input .add_text,
+.page-id-23340 .mw_wp_form_input .add_text {
+  font-size: 1.6rem;
+}
+
+// .mw_wp_form_confirm .add_text {
+//   display: none;
+// }
+
+.page-id-7193 .check_file {
+  display: block !important;
+}
+
+.page-id-15112 .check_file {
+  display: block !important;
+}
+
+.page-id-15434 .check_file,
+.page-id-23340 .check_file {
+  display: block !important;
+}
+
+.afterNone::after {
+  display: none !important;
+}
+
+#WEB会議を希望する {
+  display: none !important;
+}
+
+.mw_wp_form {
+  input,
+  textarea {
+    max-width: 100%;
+    width: auto;
+    display: block;
+    box-sizing: border-box;
+  }
+}
+
+.mw_wp_form_confirm {
+  input,
+  textarea {
+    display: revert;
+  }
+}
+
+.mw_wp_form table {
+  display: block;
+}
+
+.mw_wp_form_confirm table {
+  display: revert;
+}
+
+.mw_wp_form tbody {
+  display: block;
+}
+
+.mw_wp_form_confirm tbody {
+  display: revert;
+}
+
+.mw_wp_form table tr {
+  display: block;
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  @include mq(tab) {
+    display: block;
+  }
+}
+
+.mw_wp_form th {
+  @media screen and (max-width: 767px) {
+    display: flex !important;
+  }
+}
+
+.mw_wp_form_confirm table tr {
+  display: grid;
+
+  @include mq(tab) {
+    display: block;
+  }
+}
+
+.mw_wp_form .u-flex {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.mw_wp_form .c-form-body__radio-box label,
+.mw_wp_form .mwform-checkbox-field label {
+  display: flex;
+  align-items: center;
+}
+
+.mw_wp_form .c-form-body__required {
+  @media screen and (max-width: 767px) {
+    position: static;
+    display: block;
+    margin-top: -0.1vw;
+    margin-left: auto;
+  }
+}
+
+.mw_wp_form .c-form-body__required.v-align {
+  @media screen and (max-width: 767px) {
+    margin-top: -0.1vw;
+  }
+}
+
+.p-page-shareholder {
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 20px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+  }
+
+  p {
+    font-size: 1.6rem;
+    border: 1px solid #333;
+    padding: 0.5em;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .u-pcDb {
+    display: block;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.change-list li {
+  @include mq(sp) {
+    display: block !important;
+  }
+}
+
+.change-list {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+  .eir_area_area_top_001 .s_eirList_item {
+    padding-right: 2rem;
+  }
+}
+
+.eirItem {
+  flex-direction: column;
+  align-items: flex-start !important;
+  row-gap: 0.8rem !important;
+}
+
+.s_eirModule_date_time {
+  display: block !important;
+}
+
+.eir_area_area_top_001 .s_eirModule_titleBox {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 767px) {
+  .eir_area_area_top_001 .s_eirModule_date {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .eir_area_area_top_001 .s_eirList_item {
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .eir_area_area_top_001 .s_eirList_item {
+    padding-bottom: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+}

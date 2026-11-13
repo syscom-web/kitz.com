@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361.298" height="361.298" viewBox="0 0 361.298 361.298">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_519" data-name="長方形 519" width="361.298" height="361.298" fill="none"/>
+    </clipPath>
+    <filter id="METAL_SOLUTIONS_BUSINESS" x="44.587" y="57.113" width="107" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#4a6e6c"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Hotel_Business" x="115.587" y="8.113" width="93" height="53" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-color="#6e6e6e"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ_779" data-name="グループ 779" transform="translate(-875.526 -1056)">
+    <g id="グループ_956" data-name="グループ 956" transform="translate(875.526 1056)">
+      <g id="グループ_927" data-name="グループ 927" transform="translate(20)">
+        <g id="グループ_926" data-name="グループ 926" transform="translate(-20)" clip-path="url(#clip-path)">
+          <path id="パス_2141" data-name="パス 2141" d="M180.649,180.649,161.923,2.481c5.9-.62,12.79-.981,18.726-.981Z" fill="#c8c9cb"/>
+          <path id="パス_2142" data-name="パス 2142" d="M179.157,180.806,160.274,1.146l1.492-.157C167.753.361,174.635,0,180.649,0h1.5V180.649ZM163.572,3.823l15.577,148.2V3.007C174.115,3.056,168.588,3.346,163.572,3.823Z" fill="#fff"/>
+          <path id="パス_2143" data-name="パス 2143" d="M180.649,180.649l-166.1-67.11C40.193,50.057,93.83,9.638,161.923,2.481Z" fill="#90cecc"/>
+          <path id="パス_2144" data-name="パス 2144" d="M182.4,182.975,12.592,114.368l.562-1.391A190.058,190.058,0,0,1,37.621,69.507a171.347,171.347,0,0,1,75.614-56.98A190.057,190.057,0,0,1,161.766.989l1.492-.157ZM16.5,112.712,178.9,178.323,160.589,4.135a186.68,186.68,0,0,0-46.274,11.19,168.347,168.347,0,0,0-74.3,55.99A186.68,186.68,0,0,0,16.5,112.712Z" fill="#fff"/>
+          <path id="パス_2145" data-name="パス 2145" d="M180.649,180.649V1.5A179.149,179.149,0,1,1,1.5,180.649c0-24.537,3.853-44.36,13.045-67.11Z" fill="#00baf4"/>
+          <path id="パス_2146" data-name="パス 2146" d="M179.149,0h1.5a181.971,181.971,0,0,1,36.405,3.67,179.667,179.667,0,0,1,64.6,27.183A181.172,181.172,0,0,1,347.1,110.332a179.744,179.744,0,0,1,10.527,33.912,182.393,182.393,0,0,1,0,72.811,179.667,179.667,0,0,1-27.183,64.6A181.172,181.172,0,0,1,250.966,347.1a179.744,179.744,0,0,1-33.912,10.527,182.393,182.393,0,0,1-72.811,0,179.667,179.667,0,0,1-64.6-27.183A181.172,181.172,0,0,1,14.2,250.966,179.744,179.744,0,0,1,3.67,217.054,181.971,181.971,0,0,1,0,180.649a179.263,179.263,0,0,1,3.1-34.511,179.245,179.245,0,0,1,10.051-33.161l.562-1.391,1.391.562,164.042,66.277Zm1.5,358.3a178.965,178.965,0,0,0,35.8-3.609,176.667,176.667,0,0,0,63.52-26.73A178.173,178.173,0,0,0,344.338,249.8a176.742,176.742,0,0,0,10.351-33.344,179.394,179.394,0,0,0,0-71.608,176.667,176.667,0,0,0-26.73-63.52A178.174,178.174,0,0,0,249.8,16.96,176.742,176.742,0,0,0,216.453,6.609a178.9,178.9,0,0,0-34.3-3.6V182.873L15.378,115.494A174.7,174.7,0,0,0,6.048,146.71,176.308,176.308,0,0,0,3,180.649a178.965,178.965,0,0,0,3.609,35.8,176.666,176.666,0,0,0,26.73,63.52A178.172,178.172,0,0,0,111.5,344.338a176.742,176.742,0,0,0,33.344,10.351A178.965,178.965,0,0,0,180.649,358.3Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <text id="Valve_Manufacturing_Business" data-name="Valve Manufacturing
+Business" transform="translate(1057.613 1309.613)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-100.296" y="0">VALVE MANUFACTURING</tspan><tspan x="-41.864" y="20">BUSINESS</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 875.53, 1056)" filter="url(#METAL_SOLUTIONS_BUSINESS)">
+      <text id="METAL_SOLUTIONS_BUSINESS-2" data-name="METAL
+SOLUTIONS
+BUSINESS" transform="translate(98.09 79.61)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-27.368" y="0">METAL</tspan><tspan x="-48.752" y="20">SOLUTIONS</tspan><tspan x="-41.864" y="40">BUSINESS</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 875.53, 1056)" filter="url(#Hotel_Business)">
+      <text id="Hotel_Business-2" data-name="Hotel
+Business" transform="translate(162.09 30.61)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-27.752" y="0">HOTEL</tspan><tspan x="-41.864" y="20">BUSINESS</tspan></text>
+    </g>
+  </g>
+</svg>

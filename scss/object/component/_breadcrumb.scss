@@ -1,0 +1,36 @@
+&breadcrumb {
+  background: #fff;
+  padding: 10px 0;
+
+  &__list {
+    @include inner-box;
+    @include flex("", "fs");
+  }
+
+  &__item {
+    position: relative;
+    @include fz(13);
+
+    &::before {
+      content: "";
+      background: url("../images/common/breadcrumbs-arrow.png") no-repeat;
+      background-size: cover;
+      width: 1.3rem;
+      height: 1.3rem;
+      aspect-ratio: 1 / 1;
+      display: inline-block;
+      margin: 0 0.6rem;
+      position: relative;
+      top: 1px;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+    a {
+      @include fz(13);
+      color: #004da1;
+      @include hov-alpha;
+    }
+  }
+}

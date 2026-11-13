@@ -1,0 +1,777 @@
+/* 製品/サービス案内 */
+&product {
+  position: relative;
+  &__intro {
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 10px 80px;
+    margin: 0 auto;
+    position: relative;
+    pointer-events: none;
+    @include mq(tab) {
+      padding: 10% 5%;
+    }
+    h2 {
+      color: #004da1;
+      @include fz(42);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+      @include mq(tab) {
+        @include fz(34);
+        margin-bottom: 8%;
+      }
+      @include mq(sp) {
+        @include fz(26);
+      }
+    }
+    > div {
+      @include flex("", "");
+      @include mq(tab) {
+        flex-direction: column;
+      }
+      p {
+        @include fz(16);
+        width: 48%;
+        line-height: 2;
+        @include mq(tab) {
+          order: 2;
+          width: 100%;
+        }
+      }
+      figure {
+        width: 48%;
+        max-width: 570px;
+        @include mq(tab) {
+          order: 1;
+          width: 65%;
+          margin: 0 auto 5%;
+        }
+        @include mq(sp) {
+          width: 80%;
+        }
+      }
+    }
+  }
+  &__nav {
+    position: relative;
+    padding: 60px 10px;
+    @include mq(tab) {
+      padding: 5%;
+      mix-blend-mode: normal;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #f3f4f4;
+      mix-blend-mode: multiply;
+      z-index: -1;
+    }
+    ul {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      @include flex("", "fs");
+      position: relative;
+      li {
+        width: 18.5%;
+        margin-right: 2.5%;
+        margin-bottom: 2.5%;
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(7),
+        &:nth-child(9) {
+          width: 11.5%;
+        }
+        &:nth-child(3),
+        &:nth-child(8) {
+          width: 30%;
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        @include mq(tab) {
+          width: 48% !important;
+          margin-right: 4% !important;
+          &:nth-child(2n) {
+            margin-right: 0 !important;
+          }
+        }
+        a {
+          position: relative;
+          @include flex("c", "c");
+          color: #004da1;
+          @include fz(16);
+          text-align: center;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 2px 0px #e5e5e5;
+          height: 80px;
+          line-height: 1.2;
+          padding: 10px 10px 20px 10px;
+          @include hov-alpha;
+          font-feature-settings: "palt";
+          @media screen and (max-width: 1139px) {
+            height: 9.5vw;
+          }
+          @media screen and (max-width: 992px) {
+            flex-direction: column;
+            height: 11vw;
+          }
+          @include mq(tab) {
+            flex-direction: column;
+            padding: 4% 1vw 6% 1vw;
+            height: 8.5rem;
+            @include fz(14);
+          }
+          span {
+            @include fz(12);
+            @media screen and (max-width: 992px) {
+              display: block;
+              margin-top: 0.25rem;
+            }
+          }
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            margin-top: -2rem;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid #004da1;
+            border-right: 1px solid #004da1;
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+            left: 50%;
+            margin-left: -2px;
+            @include mq(sp) {
+              margin-top: -1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__service {
+    padding: 80px 10px;
+    @include mq(tab) {
+      padding: 10% 5%;
+    }
+    &:nth-child(2n) {
+      background: #f3f4f4;
+      mix-blend-mode: multiply;
+    }
+    h2 {
+      text-align: center;
+      color: #004da1;
+      @include fz(34);
+      font-weight: 700;
+      margin-bottom: 40px;
+      @include mq(tab) {
+        @include fz(26);
+        margin-bottom: 5%;
+      }
+      span {
+        display: block;
+        @include fz(16);
+        margin-top: 0.5rem;
+      }
+      &.u-poppins {
+        @include fz(37);
+        @include mq(tab) {
+          @include fz(30);
+        }
+      }
+    }
+    &__inner {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    &__links01 {
+      @include flex("", "");
+      margin-bottom: -2%;
+      li {
+        width: 23.5%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        @include mq(tab) {
+          width: 48%;
+          margin-right: 4%;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+        @include mq(sp) {
+          width: 100%;
+          margin-right: 0;
+        }
+        a {
+          display: block;
+          @include fz(15);
+          @include link-arrow_left;
+          @media screen and (min-width: 1140px) {
+            white-space: nowrap;
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            background: url("../images/common/icon-external_blue.svg") no-repeat
+              left center / contain;
+            width: 13px;
+            height: 9px;
+            margin-left: 0.5em;
+          }
+          &.u-afterNone {
+            &::after {
+              display: none;
+            }
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    &__links02 {
+      @include flex("", "");
+      margin-bottom: -2%;
+      li {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        @include mq(tab) {
+          width: 100%;
+          margin-right: 0;
+        }
+        a {
+          display: block;
+          @include fz(15);
+          @include link-arrow_left;
+          &::after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            background: url("../images/common/icon-external_blue.svg") no-repeat
+              left center / contain;
+            width: 13px;
+            height: 9px;
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+    &.service01 {
+      li {
+        width: 21.5%;
+        &:nth-child(2n + 4),
+        &:nth-child(2) {
+          width: 25.5%;
+        }
+        @include mq(tab) {
+          width: 48% !important;
+        }
+        @include mq(sp) {
+          width: 100% !important;
+        }
+      }
+    }
+    &.service02 {
+      li {
+        width: 16.5%;
+        &:nth-child(1) {
+          width: 30.5%;
+        }
+        @include mq(tab) {
+          width: 36%;
+          &:nth-child(odd) {
+            width: 60%;
+          }
+        }
+        @include mq(sp) {
+          width: 100%;
+        }
+      }
+    }
+    &.service03 {
+      li {
+        width: 44%;
+        &:nth-child(odd) {
+          width: 54%;
+        }
+        @include mq(tab) {
+          width: 100% !important;
+        }
+      }
+    }
+    &.service07 {
+      li {
+        width: 34%;
+        &:nth-child(odd) {
+          width: 64%;
+        }
+        @include mq(tab) {
+          width: 100% !important;
+        }
+      }
+    }
+    &.service08 {
+      ul + div {
+        width: 520px;
+        a br {
+          display: none;
+        }
+        @include mq(tab) {
+          width: 85%;
+        }
+        @include mq(sp) {
+          width: 100%;
+          a br {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 380px;
+    margin: 40px auto 0;
+    @include mq(tab) {
+      width: 64%;
+      margin-top: 6.66%;
+    }
+    @include mq(sp) {
+      width: 100%;
+    }
+    a {
+      @include fz(17);
+      font-feature-settings: "palt";
+      @include mq(sp) {
+        padding: 3.5% 2rem 3.5% 1rem;
+      }
+    }
+    &.link-pdf {
+      width: 540px;
+      @include mq(767) {
+        width: 100%;
+      }
+    }
+  }
+  /* 水処理製品 */
+  &__water {
+    &--txt {
+      p {
+        @include fz(16);
+        line-height: 1.8 !important;
+        margin-bottom: 40px;
+        @include mq(767) {
+          margin-bottom: 5%;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &--list {
+      margin-top: 60px;
+      @include flex("", "fs");
+      @include mq(767) {
+        margin-top: 8%;
+        margin-bottom: -2.5%;
+      }
+      > div {
+        width: 23.5%;
+        margin-right: 2%;
+        border: 1px solid #ddd;
+        padding: 15px;
+        @include mq(1080) {
+          width: 49%;
+          margin-bottom: 2%;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+        @include mq(767) {
+          width: 100%;
+          margin-bottom: 5%;
+          margin-right: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        figure {
+          margin-bottom: 20px;
+          height: 223px;
+          img {
+            display: block;
+            width: auto;
+            margin: 0 auto;
+          }
+        }
+        h3 {
+          @include fz(22);
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        p {
+          @include fz(16);
+          min-height: 80px;
+          margin-bottom: 20px;
+          @include mq(1080) {
+            min-height: inherit;
+          }
+          @include mq(900) {
+            min-height: 80px;
+          }
+          @include mq(767) {
+            min-height: inherit;
+            margin-bottom: 4%;
+          }
+        }
+        dl {
+          border-bottom: 1px dotted #7b7b7b;
+          padding-bottom: 15px;
+          min-height: 150px;
+          @include mq(767) {
+            min-height: inherit;
+          }
+          dt {
+            @include fz(16);
+            margin-bottom: 5px;
+          }
+          ul {
+            li {
+              @include fz(16);
+              line-height: 1.6;
+            }
+          }
+        }
+        .company-name {
+          font-weight: 700;
+          margin-top: 15px;
+          margin-bottom: 0;
+          min-height: inherit;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &-water {
+    .p-business-index__intro__box {
+      > div {
+        @include mq(992) {
+          margin-bottom: 0;
+        }
+
+        @include mq(767) {
+          margin-bottom: 8%;
+        }
+      }
+    }
+  }
+  &-news {
+    margin: 2em 0;
+
+    &__hr--bottom {
+      margin: 3em 0 6em;
+      border-top: 1px solid #b8bdc1 !important;
+    }
+
+    &__hr--top {
+      border-top: 1px solid #b8bdc1 !important;
+      margin: 6em 0 3em;
+    }
+
+    &__inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @include mq(tab) {
+        padding: 0 5%;
+      }
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 33px;
+      @include mq(tab) {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+      }
+    }
+    &__title {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    &__link {
+      width: 100px;
+    }
+    &__link a {
+      @include fz(16);
+      padding: 5px 10px;
+    }
+    &__body {
+      margin-top: 45px;
+      @include mq(tab) {
+        margin-top: 25px;
+      }
+    }
+    &__posts {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    &-post {
+      display: flex;
+      gap: 20px;
+      transition: opacity 0.3s;
+      @include mq(tab) {
+        flex-direction: column;
+        gap: 16px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+      &__date {
+        @include fz(16);
+        letter-spacing: 0.01em;
+      }
+      &__title {
+        @include fz(16);
+        letter-spacing: 0.01em;
+      }
+    }
+  }
+  &-category {
+    &__inner {
+      position: relative;
+      max-width: 1200px;
+      padding: 0 10px;
+      margin: 0 auto;
+      @include mq(tab) {
+        padding: 0 5%;
+      }
+    }
+    &__title {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      @include mq(tab) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      margin-top: 45px;
+      @include mq(tab) {
+        margin-top: 25px;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  &-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    &__header {
+      display: flex;
+      gap: 20px;
+      height: 100%;
+      align-items: center;
+    }
+    &__img-wrapper {
+      flex-basis: 24%;
+      flex-shrink: 0;
+      img {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      position: relative;
+      flex: 1;
+      @include fz(20);
+      font-weight: 700;
+      color: #004da1;
+      letter-spacing: 0.06em;
+      padding-right: 8px;
+      overflow-wrap: anywhere;
+      em {
+        @include fz(16);
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #004da1;
+        border-right: 1px solid #004da1;
+      }
+    }
+    &__body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__description {
+      @include fz(16);
+      letter-spacing: 0.06em;
+      line-height: 1.75;
+      max-height: calc(1.75em * 3);
+      overflow-y: scroll;
+    }
+  }
+  &-post {
+    @include fz(16);
+    &__inner {
+      // @include inner-box;
+    }
+  }
+  &-tags {
+    padding: 10px 0;
+    &__list {
+      @include inner-box;
+      @include flex("", "fs");
+      row-gap: 10px;
+      column-gap: 4px;
+    }
+    &__item {
+      a {
+        position: relative;
+        @include fz(14);
+        background-color: #ffffff;
+        color: #004da1;
+        border: 1px solid #004da1;
+        border-radius: 40px;
+        padding: 3px 13px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  &-mm {
+    position: relative;
+    margin-block: 80px 100px;
+    // padding-bottom: 60px;
+    @include mq(tab) {
+      margin-block: 60px 80px;
+      // padding-bottom: 50px;
+    }
+    // &__inner {
+    //   width: 100%;
+    //   max-width: 1200px;
+    //   margin: 0 auto;
+    //   padding: 0 10px;
+    //   @include mq(tab){
+    //     padding: 0 5%;
+    //   }
+    // }
+    &__content {
+      background: #eaf5fb;
+      border-radius: 16px;
+      padding: 50px 20px;
+      // box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      @include mq(tab) {
+        padding: 37px 20px 30px;
+      }
+    }
+    &__title {
+      @include fz(28);
+      margin-bottom: 30px;
+      color: #0085ce;
+      @include mq(tab) {
+        @include fz(22);
+        margin-bottom: 20px;
+      }
+    }
+    &__lead {
+      @include fz(16);
+    }
+    &__btn {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 33px;
+      @include mq(tab) {
+        width: 100%;
+        margin-top: 24px;
+      }
+
+      a.c-btn--type01 {
+        border-color: #0085ce;
+        background: #0085ce;
+      }
+    }
+
+    &__btn02 {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 43px;
+      @include mq(tab) {
+        width: 100%;
+        margin-top: 28px;
+      }
+
+      .u-width {
+        @include mq(tab) {
+          margin: auto;
+        }
+      }
+
+      .u-width03 {
+        width: 400px !important;
+        min-width: 400px !important;
+        max-width: 400px !important;
+
+        @include mq(tab) {
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+}

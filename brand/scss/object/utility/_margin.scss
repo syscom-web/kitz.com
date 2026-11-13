@@ -1,0 +1,7 @@
+.u-mt25 {
+  margin-top: rem(25);
+
+  @include sp {
+    margin-top: vw-sp(20);
+  }
+}

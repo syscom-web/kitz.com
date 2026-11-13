@@ -1,0 +1,238 @@
+&floatingButton {
+  position: fixed;
+  top: 28%;
+  z-index: 100;
+  right: 0;
+  height: calc(100dvh - 35%);
+  width: 70px;
+  box-shadow: 10px 0px 20px 0 rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-height: 600px) {
+    width: 60px;
+    top: 35%;
+  }
+
+  @include mq(tab) {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  @include mq(sp) {
+    height: auto;
+  }
+
+  &--pagetop-only {
+    top: auto;
+    bottom: 30px;
+    height: 110px;
+    box-shadow: none;
+
+    @include mq(tab) {
+      display: none;
+    }
+  }
+
+  .u-br {
+    display: none;
+
+    @media screen and (max-height: 780px) {
+      display: block;
+    }
+
+    @include mq(tab) {
+      display: none;
+    }
+
+    @include mq(sp) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include mq(tab) {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid white;
+
+    &:first-child {
+      border-top: 1px solid white;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid white;
+    }
+
+    &:nth-child(-n + 3) {
+      flex: 1 1 0;
+      min-height: 0;
+
+      // 3つのリンクを白い罫線で区切る
+      &:not(:nth-child(3)) {
+        border-bottom: 1px solid #fff;
+      }
+
+      @include mq(tab) {
+        flex: auto;
+
+        border-left: none;
+
+        &:not(:nth-child(3)) {
+          border-bottom: 0;
+          border-right: 1px solid #fff;
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+
+    @include mq(tab) {
+      width: 100%;
+      height: auto;
+    }
+
+    &:first-child {
+      background-color: #5ca3c4;
+      // border-top: 2px solid #99ceeb;
+      // border-left: 2px solid #99ceeb;
+    }
+
+    &:nth-of-type(2) {
+      // border: 2px solid #99ceeb;
+      // border-right: 0;
+      background-color: #74b8f3;
+    }
+
+    &:nth-of-type(3) {
+      background-color: #0085ce;
+      // border-left: 2px solid #99ceeb;
+      // border-bottom: 2px solid #99ceeb;
+    }
+
+    &:last-child {
+      flex: 0 0 110px;
+      min-height: 110px;
+      background-color: white;
+      // border-left: 2px solid #99ceeb;
+      // border-bottom: 2px solid #99ceeb;
+
+      @include mq(tab) {
+        min-height: 0;
+        flex: auto;
+        min-height: auto;
+        display: none;
+      }
+    }
+
+    &--pagetop {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    &--pagetop.is-visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 0.1em;
+    gap: 4px;
+    height: 100%;
+
+    @media screen and (max-height: 600px) {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      gap: 1px;
+      letter-spacing: 0;
+    }
+
+    @include mq(tab) {
+      font-size: 1.3rem;
+      padding: 0.5em 1em;
+    }
+
+    @include mq(sp) {
+      padding: 0.8em 1em;
+    }
+  }
+
+  span {
+    @media screen and (min-width: 769px) {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+  }
+
+  .l-footer-pagetop {
+    position: static;
+    right: auto;
+    bottom: auto;
+    z-index: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    &--pc {
+      .u-pc-none {
+        @media print, screen and (min-width: 768px) {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@at-root {
+  @media print, screen and (min-width: 768px) {
+    .l-footer-pagetop--sp {
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .l-footer-pagetop--pc {
+      display: none !important;
+    }
+  }
+}

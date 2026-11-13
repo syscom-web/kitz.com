@@ -1,0 +1,99 @@
+.p-brand-footer {
+  position: relative;
+  background-color: $white;
+
+  &__pagetop {
+    width: 138px;
+    height: 151.5px !important;
+    height: auto;
+    z-index: 100;
+    background: url('../images/common/footer_logo_02.svg') no-repeat;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    @include sp {
+      width: 70.45px;
+      height: auto !important;
+      aspect-ratio: 70.45 / 133.82;
+      background: url('../images/common/footer_logo_02_sp.svg') no-repeat;
+      right: vw-sp(10);
+      bottom: vw-sp(10);
+      background-size: contain;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.is-bottom {
+      @include sp {
+        transform:translateY(0) !important;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    margin-top: -5vw;
+    padding-bottom: rem(10);
+
+    @include sp {
+      margin-top: 0;
+    }
+  }
+
+  &__inner {
+    max-width: 1310px;
+    padding: 0 15px;
+    width: 100%;
+    margin: rem(45) auto rem(50);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include sp {
+      max-width: none;
+      padding: 0;
+      margin: vw-sp(25) auto vw-sp(35);
+      margin-bottom: 0 !important;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    max-width: 210px;
+    width: 100%;
+
+    @include sp {
+      max-width: 190px;
+      margin: auto;
+      width: 100%;
+      aspect-ratio: 212 / 31.58;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+
+    a {
+      font-size: rem(14);
+      font-weight: bold;
+      line-height: 2.28;
+
+      @include sp {
+        font-size: clamp(14px, 1vw, 16px);
+        line-height: 2;
+      }
+    }
+  }
+}

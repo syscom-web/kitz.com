@@ -1,0 +1,22 @@
+&txt {
+  &--link__external {
+    position: relative;
+    &::after {
+      content: "";
+      background: url("../images/common/icon-external_blue.svg") no-repeat left center / contain;
+      width: 13px;
+      height: 9px;
+      position: relative;
+      display: inline-block;
+      margin-left: 0.5em;
+    }
+    &.external-white {
+      &::after {
+        background: url("../images/common/icon-external_white.svg") no-repeat left center / contain;
+      }
+    }
+  }
+  &--line {
+    text-decoration: underline;
+  }
+}

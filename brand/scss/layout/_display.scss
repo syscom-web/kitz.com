@@ -1,0 +1,15 @@
+.u-spDb {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.u-pcDb {
+  display: block;
+
+  @include sp {
+    display: none;
+  }
+}

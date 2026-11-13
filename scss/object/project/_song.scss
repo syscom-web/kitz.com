@@ -1,0 +1,291 @@
+&page-song {
+  &__text {
+    letter-spacing: 0.02em;
+    color: black;
+  }
+
+  .u-mt1lh {
+    margin-top: 1lh;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 300px;
+    height: 55px;
+    margin-top: 4rem;
+  }
+
+  &__iframe {
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
+    width: 100% !important;
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    p {
+      font-size: 1.2rem !important;
+      color: #0073cc;
+      text-align: center;
+
+      @include mq(tab) {
+        text-align: left;
+      }
+    }
+  }
+
+  .p-company-history__intro__inner > div div {
+    width: auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 6rem;
+    margin: 6rem auto 10rem;
+
+    @include mq(tab) {
+      display: flex;
+      padding: 0 5%;
+      flex-direction: column;
+      margin: 4rem auto 6rem;
+      gap: 4rem;
+    }
+
+    img {
+      @include mq(tab) {
+        width: 65.6%;
+        margin: auto;
+      }
+    }
+
+    .p-page-song__text {
+      font-size: 1.6rem !important;
+      line-height: 180%;
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    letter-spacing: 0.03em;
+    line-height: 180%;
+    color: #0073cc;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  &__subTitle {
+    font-size: 1.4rem;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+    color: #0073cc;
+  }
+
+  &__message {
+    background-color: #eff9fe;
+    padding-top: 10rem;
+
+    @include mq(tab) {
+      padding: 6rem 5% 0;
+    }
+  }
+
+  &__messageTitle {
+    text-align: center;
+    font-size: 2.8rem;
+    letter-spacing: 0.02em;
+    color: #0073cc;
+    line-height: 150%;
+    font-weight: bold;
+    margin-bottom: 3rem;
+
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__messageText {
+    font-size: 1.6rem;
+    line-height: 200%;
+    font-weight: 500;
+    text-align: center;
+
+    @include mq(tab) {
+      text-align: left;
+    }
+  }
+
+  &__reason {
+    padding-bottom: 10rem;
+
+    @include mq(tab) {
+      padding-bottom: 6rem;
+      padding-right: 5%;
+      padding-left: 5%;
+    }
+
+    .p-company-history__intro__inner {
+      border: 1px solid #0073cc;
+      border-radius: 2rem;
+      padding: 5rem 6rem;
+
+      @include mq(tab) {
+        padding: 4rem 3rem;
+        border-radius: 1.6rem;
+      }
+    }
+  }
+
+  &__reasonTitle {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #0073cc;
+    line-height: 150%;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    @include mq(tab) {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__reasonText {
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+    line-height: 180%;
+    font-weight: 500;
+
+    a {
+      color: #0073cc;
+      text-decoration: underline;
+    }
+  }
+
+  &__contents {
+    background-color: #eff9fe;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 60px;
+    padding-block: 6rem;
+
+    @include mq(tab) {
+      padding: 6rem 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+    }
+  }
+
+  &__inner {
+    display: block !important;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 6rem 6rem 8rem 6rem;
+    box-shadow: 0 0 20px rgba(0, 115, 204, 0.2);
+
+    @include mq(tab) {
+      padding: 5rem 3rem 7rem;
+    }
+  }
+
+  &__subGrid {
+    width: 100% !important;
+    margin-top: 4rem;
+
+    > div {
+      width: 100% !important;
+    }
+
+    .p-page-song__text {
+      line-height: 200%;
+    }
+  }
+
+  &__fig {
+    margin-block-end: 3rem;
+  }
+
+  &__asideTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+    color: #0073cc;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #0073cc;
+    margin-bottom: 4rem;
+
+    @include mq(tab) {
+      margin-bottom: 2rem;
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.8;
+      display: block;
+    }
+  }
+
+  &__asideText {
+    font-size: 1.4rem;
+    line-height: 200%;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  &__recording {
+    margin-block: 100px;
+
+    @include mq(tab) {
+      margin-block: 6rem;
+      padding: 0 5%;
+    }
+  }
+
+  &__recordingTitle {
+    font-size: 2.8rem;
+    color: #0073cc;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 180%;
+    font-weight: bold;
+
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__recordingList {
+    margin-block-start: 40px;
+
+    @include mq(tab) {
+      margin-block-start: 2rem;
+      gap: 4rem;
+    }
+
+    > div {
+      width: 48% !important;
+
+      @include mq(tab) {
+        width: 100% !important;
+      }
+    }
+
+    img {
+      @include mq(tab) {
+        aspect-ratio: 335 / 200;
+        border-radius: 1rem;
+        object-fit: cover;
+      }
+    }
+  }
+}

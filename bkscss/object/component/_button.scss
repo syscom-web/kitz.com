@@ -1,0 +1,83 @@
+&btn--type01 {
+  position: relative;
+  display: block;
+  border: 1px solid #004DA1;
+  border-radius: 6rem;
+  color: #004DA1;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 3.5% 3rem;
+  text-align: center;
+	word-break: normal;
+  @include hov-alpha;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #004DA1;
+    border-right: 1px solid #004DA1;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+	&.link--external {
+		&::after {
+			background: url("../images/common/icon-external_blue.svg") no-repeat left center /contain;
+			width: 13px;
+			height: 9px;
+			margin-top: -4px;
+			border: none;
+			transform: none;
+		}
+	}
+	&.link--external-white {
+		&::after {
+			background: url("../images/common/icon-external_white.svg") no-repeat left center /contain;
+			width: 13px;
+			height: 9px;
+			margin-top: -4px;
+			border: none;
+			transform: none;
+		}
+	}
+	&.link--pdf {
+		&::after {
+			background: url("../images/common/icon-pdf.svg") no-repeat left center /contain;
+			width: 26px;
+			height: 26px;
+			margin-top: -13px;
+			border: none;
+			transform: none;
+		}
+	}
+  &.btn--type01--blue {
+    border: 1px solid #004DA1;
+    color: #FFFFFF;
+    background: #004DA1;
+      &::after {
+        border-top: 1px solid currentColor;
+        border-right: 1px solid currentColor;
+    }
+  }
+}
+&arrow {
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: .25em;
+  }
+}

@@ -1,0 +1,95 @@
+.p-brand-ttl {
+
+  &__h2 {
+    font-size: rem(80);
+    font-family: $outfit;
+    font-weight: $outfit_semiBold;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    color: $white;
+    position: relative;
+    z-index: 3;
+
+    @include sp {
+      font-size: clamp(28px, vw-sp(50), 50px);
+    }
+
+    &.u-color_black {
+      color: $black;
+    }
+  }
+
+  &__h3 {
+    font-size: rem(24);
+    font-family: $notoSansJp;
+    font-weight: $notoSans_semiBold;
+    line-height: 1.58;
+    letter-spacing: 0.03em;
+    margin: rem(30) 0;
+    color: $white;
+
+    @include sp {
+      font-size: clamp(18px, vw-sp(24), 24px);
+      margin: vw-sp(30) 0;
+    }
+
+    &.u-color_black {
+      color: $black;
+    }
+  }
+
+  &__h4 {
+    font-size: rem(30);
+    font-family: $outfit;
+    font-weight: $outfit_semiBold;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    color: $white;
+
+    @include sp {
+      font-size: clamp(18px, vw-sp(24), 24px);
+      line-height: 1.4;
+    }
+
+    &.u-color_black {
+      color: $black;
+    }
+  }
+
+  &__h5 {
+    font-size: rem(20);
+    font-weight: $notoSans_bold;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    position: relative;
+    margin-bottom: rem(45);
+    font-family: $notoSansJp;
+
+    @include sp {
+      font-size: clamp(16px, vw-sp(18), 18px);
+      margin-bottom: vw-sp(44);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: rem(117);
+      height: 2px;
+      background-color: $blue;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: rem(-22);
+
+      @include sp {
+        width: vw-sp(117);
+        height: 3px;
+        bottom: vw-sp(-22);
+      }
+    }
+
+    &.u-text_align_center {
+      text-align: center;
+    }
+  }
+}

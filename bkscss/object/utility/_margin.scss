@@ -1,0 +1,21 @@
+@for $i from 0 through 20 {
+  &mt#{$i * 5} {
+    margin-top: #{$i * 5}px !important;
+  }
+}
+
+@include mq(tab) {
+  @for $i from 0 through 20 {
+    &t-mt#{$i * 5} {
+      margin-top: #{$i * 5}px !important;
+    }
+  }
+}
+
+@include mq(sp) {
+  @for $i from 0 through 20 {
+    &s-mt#{$i * 5} {
+      margin-top: #{$i * 5}px !important;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// function
+$init_base_list: 1600, 767, 375;
+
+@function vwpc($value, $base: nth($init_base_list, 1)){
+  @return unquote((($value/$base)*100)+'vw');
+}
+@function vwtab($value, $base: nth($init_base_list, 2)){
+  @return unquote((($value/$base)*100)+'vw');
+}
+@function vwsp($value, $base: nth($init_base_list, 3)){
+  @return unquote((($value/$base)*100)+'vw');
+}

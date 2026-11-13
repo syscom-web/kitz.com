@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="486.652" height="275" viewBox="0 0 486.652 275">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8642d"/>
+      <stop offset="1" stop-color="#e60012"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8e12d"/>
+      <stop offset="1" stop-color="#ff9d00"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-5.181" y1="0.162" x2="-5.181" y2="-0.838" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6ca7ff"/>
+      <stop offset="1" stop-color="#1d2088"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ_681" data-name="グループ 681" transform="translate(-217 -1619.5)">
+    <g id="グループ_680" data-name="グループ 680" transform="translate(3 74.5)">
+      <circle id="楕円形_26" data-name="楕円形 26" cx="78.5" cy="78.5" r="78.5" transform="translate(244 1663)" fill="#6ca7ff" opacity="0.152"/>
+      <circle id="楕円形_27" data-name="楕円形 27" cx="78.5" cy="78.5" r="78.5" transform="translate(514 1663)" fill="#ffb06c" opacity="0.152"/>
+      <circle id="楕円形_28" data-name="楕円形 28" cx="78.5" cy="78.5" r="78.5" transform="translate(379 1555)" fill="#f4d694" opacity="0.152"/>
+      <g id="グループ_676" data-name="グループ 676" transform="translate(759.787 1612.302) rotate(90)">
+        <path id="パス_2" data-name="パス 2" d="M1645.574,1199.3h-29.208v-14.539h29.208Zm-14.6-70.472-28,29.373h13.392v20.689h29.208V1158.2h13.392Zm14.6,76.343h-29.208v9.308h29.208Z" transform="translate(-1503.195 -1069.688)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="グループ_678" data-name="グループ 678" transform="translate(386.185 1541.828)">
+        <path id="パス_1" data-name="パス 1" d="M842.465,396.187H813.256V381.648h29.208Zm-14.6-70.472-28,29.373h13.392v20.689h29.208V355.088h13.392Zm14.6,76.343H813.256v9.308h29.208Z" transform="translate(-756.049 -322.543)" fill="url(#linear-gradient-2)"/>
+      </g>
+      <g id="グループ_677" data-name="グループ 677" transform="translate(358.787 1612.301) rotate(90)">
+        <path id="パス_4" data-name="パス 4" d="M5297.911,1144h29.208v14.538h-29.208Zm14.6,70.472,28-29.373h-13.393v-20.689h-29.208V1185.1h-13.393Zm-14.6-76.343h29.208v-9.308h-29.208Z" transform="translate(-5184.74 -1069.688)" fill="url(#linear-gradient-3)"/>
+      </g>
+      <text id="超高温" transform="translate(458 1656)" fill="#ff8900" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="-25.84" y="0">超高温</tspan></text>
+      <text id="_100MPa" data-name="100MPa" transform="translate(458 1682)" fill="#ff8900" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="-41.744" y="0">100MPa</tspan></text>
+      <text id="超低温" transform="translate(348 1735)" fill="#1542d9" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="-25.84" y="0">超低温</tspan></text>
+      <text id="_-253_" data-name="-253℃" transform="translate(348 1761)" fill="#1542d9" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="-32.921" y="0">-253℃</tspan></text>
+      <text id="高温" transform="translate(553 1734)" fill="#f40000" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="0" y="0">高温</tspan></text>
+      <text id="_650_" data-name="650℃" transform="translate(543 1760)" fill="#f40000" font-size="17" font-family="HiraKakuStd-W8, Hiragino Kaku Gothic Std" letter-spacing="0.02em"><tspan x="0" y="0">650℃</tspan></text>
+    </g>
+  </g>
+</svg>

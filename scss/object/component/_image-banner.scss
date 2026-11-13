@@ -1,0 +1,73 @@
+&image-banner {
+  padding-block: 4rem;
+
+  @include mq(767) {
+    padding-block: 32px;
+  }
+
+  @include mq(592) {
+    padding-block: 28px;
+  }
+
+  > div {
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+
+    @include mq(592) {
+      min-height: 120px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &::before {
+      background: rgba(30, 94, 149, 0.1);
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+
+    &::after {
+      background: rgba(51, 116, 172, 0.7);
+      z-index: 2;
+    }
+
+    > img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    > h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      width: calc(100% - 140px);
+      color: #fff;
+      @include fz(24);
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      font-feature-settings: "palt";
+      transform: translate(-50%, -50%);
+
+      @include mq(767) {
+        width: calc(100% - 48px);
+        @include fz(20);
+      }
+
+      @include mq(592) {
+        width: calc(100% - 36px);
+        @include fz(18);
+      }
+    }
+  }
+}

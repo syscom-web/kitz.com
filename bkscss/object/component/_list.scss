@@ -1,0 +1,44 @@
+&list {
+  &--pagenavi {
+    margin-top: 60px;
+    .wp-pagenavi {
+      @include flex("c", "c");
+      > * {
+        @include fz(16);
+        padding: 5.5px 13px;
+        + * {
+          margin-left: 10px;
+        }
+      }
+      span {
+        color: #fff;
+        background: $col_main;
+        border: 1px solid $col_main;
+      }
+      a {
+        border: 1px solid #000;
+        &.previouspostslink,
+        &.nextpostslink {
+          border: none;
+        }
+      }
+    }
+  }
+  &--ol {
+    li {
+      margin-bottom: 1.5em;
+      @include fz(16);
+      line-height: 1.5;
+      text-indent: -1em;
+      margin-left: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+		&.privacy-note {
+			li {
+				margin-bottom: .5em;
+			}
+		}
+  }
+}

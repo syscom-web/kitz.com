@@ -1,0 +1,63 @@
+.p-brand {
+
+  &-footer__btn {
+    width: rem(187);
+    height: rem(40);
+    border: 2px solid $skyBlue;
+    border-radius: rem(25);
+    margin-top: 15px;
+
+    @include sp {
+      width: auto;
+      height: auto;
+      margin-top: vw-sp(20);
+      border-radius: rem(55);
+    }
+  }
+
+  &-footer__btn__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: rem(14);
+    color: $skyBlue;
+    font-weight: bold;
+    line-height: 2.28;
+    // padding-left: rem(19);
+    font-family: $notoSansJp;
+
+    @include sp {
+      font-size: min(vw-sp(16), 16px);
+      padding: vw-sp(7) vw-sp(60) vw-sp(7) vw-sp(20);
+    }
+
+    span {
+      position: absolute;
+      right: rem(15);
+
+      @include sp {
+        right: vw-sp(16);
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-footer__copyright__txt {
+    display: block;
+    font-size: rem(14);
+    font-weight: normal;
+    line-height: 3.2;
+    letter-spacing: 0.02em;
+
+    @include sp {
+      font-size: clamp(12px, vw-sp(12), 14px);
+      line-height: 2.66;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="539.332" height="311.354" viewBox="0 0 539.332 311.354">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8642d"/>
+      <stop offset="1" stop-color="#e60012"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8e12d"/>
+      <stop offset="1" stop-color="#ff9d00"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-5.181" y1="0.162" x2="-5.181" y2="-0.838" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6ca7ff"/>
+      <stop offset="1" stop-color="#1d2088"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ_704" data-name="グループ 704" transform="translate(-716 -1504.955)">
+    <g id="グループ_680" data-name="グループ 680" transform="translate(716 1504.955)">
+      <circle id="楕円形_26" data-name="楕円形 26" cx="86.998" cy="86.998" r="86.998" transform="translate(33.248 130.774)" fill="#e8f2ff"/>
+      <circle id="楕円形_27" data-name="楕円形 27" cx="86.998" cy="86.998" r="86.998" transform="translate(332.476 130.774)" fill="#fff3e8"/>
+      <path id="パス_535" data-name="パス 535" d="M87,0A87,87,0,1,1,0,87,87,87,0,0,1,87,0Z" transform="translate(182.862 11.082)" fill="#faf2e2"/>
+      <g id="グループ_676" data-name="グループ 676" transform="translate(539.332 185.166) rotate(90)">
+        <path id="パス_2" data-name="パス 2" d="M47.213,78.1H14.842V61.988h32.37ZM31.027,0,0,32.553H14.842V55.481h32.37V32.553H62.054ZM47.213,84.607H14.842V94.924h32.37Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="グループ_678" data-name="グループ 678" transform="translate(239.382 0)">
+        <path id="パス_1" data-name="パス 1" d="M847.076,403.816h-32.37V387.7h32.37Zm-16.185-78.1-31.027,32.553h14.842V381.2h32.37V358.268h14.842Zm16.185,84.607h-32.37v10.316h32.37Z" transform="translate(-799.864 -325.715)" fill="url(#linear-gradient-2)"/>
+      </g>
+      <g id="グループ_677" data-name="グループ 677" transform="translate(94.924 185.166) rotate(90)">
+        <path id="パス_4" data-name="パス 4" d="M14.842,16.823h32.37V32.935H14.842Zm16.185,78.1L62.054,62.371H47.212V39.442H14.842V62.371H0ZM14.842,10.316h32.37V0H14.842Z" transform="translate(0 0)" fill="url(#linear-gradient-3)"/>
+      </g>
+      <text id="超高温" transform="translate(265.599 120.392)" fill="#ff8900" font-size="16" font-family="YuGothicUI-Regular, Yu Gothic UI" letter-spacing="0.02em"><tspan x="-24.32" y="0">超高温</tspan></text>
+      <text id="_100MPa" data-name="100MPa" transform="translate(266.192 150.207)" fill="#ff8900" font-size="17" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-31.023" y="0">100MPa</tspan></text>
+      <text id="超低温" transform="translate(143.691 207.944)" fill="#1542d9" font-size="16" font-family="YuGothicUI-Regular, Yu Gothic UI" letter-spacing="0.02em"><tspan x="-24.32" y="0">超低温</tspan></text>
+      <text id="_-253_" data-name="-253℃" transform="translate(145.15 237.758)" fill="#1542d9" font-size="17" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-26.292" y="0">-253</tspan><tspan y="0" font-family="SegoeUISymbol, Segoe UI Symbol">℃</tspan></text>
+      <text id="高温" transform="translate(375.697 207.836)" fill="#f40000" font-size="17" font-family="YuGothicUI-Regular, Yu Gothic UI" letter-spacing="0.02em"><tspan x="0" y="0">高温</tspan></text>
+      <text id="_650_" data-name="650℃" transform="translate(364.615 236.65)" fill="#f40000" font-size="17" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="0">650</tspan><tspan y="0" font-family="SegoeUISymbol, Segoe UI Symbol">℃</tspan></text>
+    </g>
+    <text id="あらゆるニーズに適合する_90_000種類のバルブを製造" data-name="あらゆるニーズに適合する
+90,000種類のバルブを製造" transform="translate(986.492 1789.308)" fill="#222" font-size="15" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500" letter-spacing="0.04em"><tspan x="-92.925" y="0">あらゆるニーズに適合する</tspan><tspan letter-spacing="-0.036em"><tspan x="-87.33" y="23">90,000種類のバルブを製造</tspan></tspan></text>
+  </g>
+</svg>

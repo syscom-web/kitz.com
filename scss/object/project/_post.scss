@@ -1,0 +1,468 @@
+/* 投稿ページ */
+// common
+&post {
+}
+// -----------------------------------------
+
+/* よくある質問、トラブルシューティング */
+&faq {
+	padding: 30px 0 80px;
+	position: relative;
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: #f3f4f4;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -2;
+		display: block;
+	}
+	&__other {
+		background: #fff;
+		padding: 30px 0;
+
+		@include mq(sp) {
+			padding: 20px 0;
+		}
+
+		p {
+			@include inner-box;
+		}
+	}
+	&__inner {
+		@include inner-box;
+    margin-bottom: 80px;
+		article {
+			> section {
+				+ section {
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+	&__cat {
+		background: #fff;
+		border-radius: 10px;
+		padding: 35px 40px 40px;
+		margin-bottom: 80px;
+		box-shadow: 0px 3px 36px rgba(0, 0, 0, 0.04);
+
+		@include mq(sp) {
+			padding: 20px;
+			margin-bottom: 60px;
+		}
+
+		dl {
+			dt {
+				@include fz(24);
+				font-weight: bold;
+				color: #004da1;
+				position: relative;
+				// cursor: pointer;
+				// user-select: none;
+
+				@include mq(sp) {
+					@include fz(21);
+				}
+
+				// &::after {
+				// 	content: "";
+				// 	width: 12px;
+				// 	height: 12px;
+				// 	border-right: 1px solid #004da1;
+				// 	border-bottom: 1px solid #004da1;
+				// 	margin: auto 0;
+				// 	position: absolute;
+				// 	top: -9px;
+				// 	right: 3px;
+				// 	bottom: 0;
+				// 	display: inline-block;
+				// 	transform: rotate(45deg);
+				// }
+				// &.is-open {
+				// 	&::after {
+				// 		top: 9px;
+				// 		transform: rotate(-135deg);
+				// 	}
+				// }
+			}
+			dd {
+				// display: none;
+				> div {
+					border-top: 1px solid #e6e6e6;
+					padding-top: 30px;
+					margin-top: 35px;
+
+					@include mq(sp) {
+						padding-top: 20px;
+						margin-top: 20px;
+					}
+
+					p {
+						@include fz(20);
+						font-weight: bold;
+						color: #004da1;
+						margin-bottom: 15px;
+
+						@include mq(sp) {
+							@include fz(17);
+							margin-bottom: 10px;
+						}
+					}
+					ul {
+						@include flex("", "fs");
+						margin-bottom: -25px;
+
+						@include mq(sp) {
+							margin-bottom: -15px;
+						}
+
+						li {
+							@include fz(16);
+							text-align: center;
+							margin: 0 25px 25px 0;
+
+							@include mq(sp) {
+								@include fz(14);
+								margin: 0 15px 15px 0;
+							}
+
+							a {
+								width: 100%;
+								height: 100%;
+								font-weight: bold;
+								color: #004da1;
+								background: #f3f5f5;
+								border-radius: 4px;
+								padding: 8px 20px;
+								box-shadow: 0px 1px 0px #e5e5e5;
+								@include flex("c", "c");
+								flex-direction: column;
+								transition: color 0.3s, background 0.3s;
+
+								@include mq(sp) {
+									padding: 10px;
+								}
+
+								span {
+									@include fz(14);
+									font-weight: inherit;
+
+									@include mq(sp) {
+										@include fz(12);
+									}
+								}
+
+								&:hover {
+									color: #fff;
+									background: #004da1;
+								}
+							}
+							&.is-current {
+								a {
+									color: #fff;
+									background: #004da1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	h2 {
+		@include fz(30);
+		font-weight: 700;
+		text-align: center;
+		color: #004da1;
+		margin-top: 80px;
+
+		@include mq(sp) {
+			@include fz(26);
+			margin-top: 60px;
+		}
+	}
+	h3 {
+		@include fz(20);
+		color: #004da1;
+		background: linear-gradient(0deg, #c1c1c1, #c1c1c1 1px, transparent 0, transparent);
+		padding: 0 0 10px 10px;
+		margin-top: 30px;
+		position: relative;
+
+		@include mq(sp) {
+			@include fz(17);
+			padding: 0 0 5px 5px;
+			margin-top: 20px;
+		}
+
+		&::before {
+			content: "";
+			width: 250px;
+			height: 2px;
+			background: #418ac9;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: inline-block;
+
+			@include mq(sp) {
+				width: 100px;
+			}
+		}
+	}
+	h4 {
+		@include fz(20);
+		font-weight: 700;
+		color: #004da1;
+		margin-top: 30px;
+
+		@include mq(sp) {
+			@include fz(17);
+			margin-top: 20px;
+		}
+	}
+	&__list {
+		background: #fff;
+		border-radius: 10px;
+		padding: 30px 35px;
+		margin-top: 40px;
+		box-shadow: 0px 3px 36px rgba(0, 0, 0, 0.04);
+
+		@include mq(sp) {
+			padding: 20px;
+			margin-top: 30px;
+		}
+
+		> div {
+			@include flex("", "fs");
+
+			@include mq(sp) {
+				display: block;
+			}
+
+			p {
+				@include fz(14);
+				line-height: 1;
+				color: #004da1;
+				margin: 5px 15px 0 0;
+
+				@include mq(sp) {
+					@include fz(12);
+					margin: 0 0 10px 0;
+				}
+			}
+			ul {
+				flex: 1;
+				@include flex("", "fs");
+				li {
+					@include fz(14);
+					line-height: 1;
+					color: #fff;
+					background: #004da1;
+					padding: 5px 10px;
+					margin: 0 10px 10px 0;
+
+					@include mq(sp) {
+						@include fz(12);
+					}
+				}
+			}
+		}
+
+		dt {
+			@include fz(24);
+			font-weight: 700;
+			color: #004da1;
+			padding: 0 34px 0 1.3em;
+			position: relative;
+			cursor: pointer;
+			user-select: none;
+
+			@include mq(sp) {
+				@include fz(18);
+				padding-right: 30px;
+			}
+
+			&::before {
+				content: "Q.";
+				position: absolute;
+				top: -2px;
+				left: 0;
+				display: inline-block;
+			}
+			span {
+				width: 24px;
+				height: 24px;
+				margin: auto 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+
+				@include mq(sp) {
+					width: 20px;
+					height: 20px;
+				}
+
+				&::before {
+					content: "";
+					width: 100%;
+					height: 4px;
+					background: #004da1;
+					margin: auto 0;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					display: inline-block;
+
+					@include mq(sp) {
+						height: 2px;
+					}
+				}
+				&::after {
+					content: "";
+					width: 4px;
+					height: 100%;
+					background: #004da1;
+					margin: 0 auto;
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					display: inline-block;
+
+					@include mq(sp) {
+						width: 2px;
+					}
+				}
+			}
+			&.is-open {
+				span {
+					&::after {
+						content: none;
+					}
+				}
+			}
+		}
+		dd {
+			padding: 0 0 0 2.5em;
+			margin-top: 30px;
+			position: relative;
+			display: none;
+
+			@include mq(sp) {
+				margin-top: 20px;
+			}
+
+			&::before {
+				content: "A.";
+				@include fz(24);
+				font-weight: 700;
+				color: #d62626;
+				position: absolute;
+				top: -4px;
+				left: 0;
+				display: inline-block;
+
+				@include mq(sp) {
+					@include fz(21);
+				}
+			}
+			> div {
+				> div {
+					p {
+						@include fz(16);
+
+						@include mq(sp) {
+							@include fz(14);
+						}
+
+						span {
+							padding-left: 17px;
+						}
+
+						a {
+							color: #004da1;
+						}
+						+ p {
+							margin-top: 40px;
+
+							@include mq(sp) {
+								margin-top: 30px;
+							}
+						}
+					}
+					img {
+						display: block;
+						&.alignleft {
+							margin: 40px 0;
+
+							@include mq(sp) {
+								margin: 20px 0;
+							}
+						}
+						&.aligncenter {
+							margin: 40px auto;
+
+							@include mq(sp) {
+								margin: 20px auto;
+							}
+						}
+						&.alignright {
+							margin: 40px 0 40px auto;
+
+							@include mq(sp) {
+								margin: 20px 0 20px auto;
+							}
+						}
+					}
+				}
+				> figure {
+					margin-left: 35px;
+
+					@include mq(sp) {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+	&__empty {
+		@include fz(16);
+		text-align: center;
+		margin-top: 60px;
+
+		@include mq(sp) {
+			@include fz(14);
+			margin-top: 40px;
+		}
+
+		span {
+			@include fz(24);
+			font-weight: 700;
+			color: #004da1;
+
+			@include mq(sp) {
+				@include fz(18);
+			}
+		}
+
+		a {
+			color: #004da1;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	div {
+		&[id] {
+			margin-top: -80px;
+			padding-top: 80px;
+		}
+	}
+}
