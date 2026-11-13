@@ -9,8 +9,8 @@
 <?php get_header(); ?>
 
 <?php
-if (have_posts()) :
-  while (have_posts()) :
+if (have_posts()):
+  while (have_posts()):
     the_post(); ?>
 
     <main class="p-main">
@@ -25,7 +25,8 @@ if (have_posts()) :
           <ul class="c-breadcrumb__list">
             <li class="c-breadcrumb__item"><a title="Home" href="<?php echo home_url() ?>/">Home</a></li>
             <li class="c-breadcrumb__item"><a title="IR" href="<?php echo home_url() ?>/investor_ir/">IR</a></li>
-            <li class="c-breadcrumb__item"><a title="Shareholder information" href="<?php echo home_url() ?>/investor_ir/stock-information/">Shareholder information</a></li>
+            <li class="c-breadcrumb__item"><a title="Shareholder information"
+                href="<?php echo home_url() ?>/investor_ir/stock-information/">Shareholder information</a></li>
             <li class="c-breadcrumb__item">Bond / Rating / Analyst Coverage </li>
           </ul>
         </div>
@@ -42,8 +43,9 @@ if (have_posts()) :
                     <th class="three">Issue Amount</th>
                     <th class="four">Maturity Date</th>
                   </tr>
-                  <?php if (have_rows('bond')) : ?>
-                    <?php while (have_rows('bond')) : the_row(); ?>
+                  <?php if (have_rows('bond')): ?>
+                    <?php while (have_rows('bond')):
+                      the_row(); ?>
                       <tr>
                         <td><?php the_sub_field('brand'); ?></td>
                         <td><?php the_sub_field('issue'); ?></td>
@@ -54,8 +56,13 @@ if (have_posts()) :
                   <?php endif; ?>
                 </table>
                 <div class="p-company-report__container__box u-mt30">
-                  <p><a href="<?php echo get_template_directory_uri(); ?>/images/sustainability/slb/slb_pdf01.pdf" class="link--pdf__txt link--pdf__txt--mark-none" target="_blank" rel="noopener">KITZ Sustainability Linked Bond Framework [PDF 1.42MB]</a></p>
-                  <p class="u-mt10"><a href="<?php echo get_template_directory_uri(); ?>/images/sustainability/slb/slb_pdf02.pdf" class="link--pdf__txt link--pdf__txt--mark-none" target="_blank" rel="noopener">Third-Party Assessment of KITZ Sustainability Linked Bond Framework [PDF 1.58MB]</a></p>
+                  <p><a href="<?php echo get_template_directory_uri(); ?>/images/sustainability/slb/slb_pdf01.pdf"
+                      class="link--pdf__txt link--pdf__txt--mark-none" target="_blank" rel="noopener">KITZ Sustainability
+                      Linked Bond Framework [PDF 1.42MB]</a></p>
+                  <p class="u-mt10"><a
+                      href="<?php echo get_template_directory_uri(); ?>/images/sustainability/slb/slb_pdf02.pdf"
+                      class="link--pdf__txt link--pdf__txt--mark-none" target="_blank" rel="noopener">Third-Party Assessment
+                      of KITZ Sustainability Linked Bond Framework [PDF 1.58MB]</a></p>
                 </div>
               </div>
               <!--<div class="p-page-ir__debenture__pdf">
@@ -79,8 +86,9 @@ if (have_posts()) :
                     <th class="three">Rating Type</th>
                     <th class="four">Rating Date</th>
                   </tr>
-                  <?php if (have_rows('rating')) : ?>
-                    <?php while (have_rows('rating')) : the_row(); ?>
+                  <?php if (have_rows('rating')): ?>
+                    <?php while (have_rows('rating')):
+                      the_row(); ?>
                       <tr>
                         <td><?php the_sub_field('institution'); ?></td>
                         <td><?php the_sub_field('rate'); ?></td>
@@ -100,8 +108,9 @@ if (have_posts()) :
                     <th>Company</th>
                     <th>Analyst</th>
                   </tr>
-                  <?php if (have_rows('analyst')) : ?>
-                    <?php while (have_rows('analyst')) : the_row(); ?>
+                  <?php if (have_rows('analyst')): ?>
+                    <?php while (have_rows('analyst')):
+                      the_row(); ?>
                       <tr>
                         <td><?php the_sub_field('company'); ?></td>
                         <td><?php the_sub_field('name'); ?></td>
@@ -114,8 +123,9 @@ if (have_posts()) :
             <div class="p-page-ir__handling-regulations__wrap p-page-ir__debenture__wrap">
               <p>Note</p>
               <ul>
-                <?php if (have_rows('attend')) : ?>
-                  <?php while (have_rows('attend')) : the_row(); ?>
+                <?php if (have_rows('attend')): ?>
+                  <?php while (have_rows('attend')):
+                    the_row(); ?>
                     <li><?php the_sub_field('text'); ?></li>
                   <?php endwhile; ?>
                 <?php endif; ?>
@@ -125,11 +135,16 @@ if (have_posts()) :
 
           <div class="p-page-menu">
             <ul>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/meetings/">Meeting of Shareholders</a></li>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/handling-regulations/">Articles of Incorporation</a></li>
+              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/meetings/">Meeting of
+                  Shareholders</a></li>
+              <li class="is-multiline"><a
+                  href="<?php echo home_url() ?>/investor_ir/stock-information/handling-regulations/">Articles of
+                  Incorporation</a></li>
               <li><a href="<?php echo home_url() ?>/investor_ir/stock-information/status-shares/">Stock Information</a></li>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/dividend/">Dividend Policy and Dividends</a></li>
-              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/debenture/" class="current">Bond / Rating / Analyst Coverage</a></li>
+              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/dividend/">Dividend
+                  Policy and Dividends</a></li>
+              <li class="is-multiline"><a href="<?php echo home_url() ?>/investor_ir/stock-information/debenture/"
+                  class="current">Bond / Rating / Analyst Coverage</a></li>
             </ul>
           </div>
 
@@ -137,7 +152,8 @@ if (have_posts()) :
             <div class="l-contact__inner">
               <div class="l-contact__inner__product">
                 <h2 class="c-ttl--type01">Frequently Asked Questions About IR<br class="is-tab">（FAQ）</h2>
-                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/" class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
+                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/"
+                    class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
               </div><!-- /.l-contact__inner__product -->
             </div><!-- /.l-contact__inner -->
           </div><!-- /.l-contact -->
@@ -146,6 +162,6 @@ if (have_posts()) :
 
 
       <?php endwhile;
-  else : ?>
+else: ?>
     <?php endif; ?>
     <?php get_footer(); ?>

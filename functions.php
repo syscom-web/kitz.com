@@ -1555,50 +1555,82 @@ function product_attributes_column_content($column, $post_id)
 }
 add_action('manage_product_posts_custom_column', 'product_attributes_column_content', 10, 2);
 
-// リライトルールの順序を変更する関数
+// 製品詳細（product/スラッグ）より製品ニュースのアーカイブを優先する。
 function reorder_rewrite_rules($rules)
 {
-  // 特定のルールを一時的に保存する変数
-  $product_rules = [];          // 'product' が含まれるルールを保存
-  $product_news_rules = [];     // 'product/news' が含まれるルールを保存
-  $new_rules = [];              // その他のルールを保存
+  $product_news_rules = [];
+  $product_rules = [];
+  $other_rules = [];
 
-  // 各ルールをチェックし、特定のルールを見つけたら保存する
   foreach ($rules as $rule => $query) {
     if (strpos($rule, 'product/news') !== false) {
-      // 'product/news' が含まれるルールを保存
       $product_news_rules[$rule] = $query;
     } elseif (strpos($rule, 'product') !== false) {
-      // 'product' が含まれるルールを保存
       $product_rules[$rule] = $query;
     } else {
-      // それ以外のルールを保存
-      $new_rules[$rule] = $query;
+      $other_rules[$rule] = $query;
     }
   }
 
-  // 新しい順序でルールを再構築する
-  $final_rules = [];    // 最終的なルールセット
-
-  // 各ルールを再配置する
-  foreach ($rules as $rule => $query) {
-    if (strpos($rule, 'product/news') !== false) {
-      // 'product/news' が含まれるルールを先に追加
-      $final_rules = array_merge($final_rules, $product_rules);
-      $final_rules[$rule] = $query;
-    } elseif (strpos($rule, 'product') !== false) {
-      // 'product' が含まれるルールを次に追加
-      $final_rules = array_merge($final_rules, $product_news_rules);
-      $final_rules[$rule] = $query;
-    } else {
-      // その他のルールを最後に追加
-      $final_rules[$rule] = $query;
-    }
-  }
-
-  return $final_rules;    // 最終的なルールセットを返す
+  // /product/news/ を product の個別投稿ルールより先に評価する。
+  return array_merge($product_news_rules, $product_rules, $other_rules);
 }
 
 // rewrite_rules_array フィルタに関数をフック
 add_filter('rewrite_rules_array', 'reorder_rewrite_rules');
+
+// product の個別投稿ルールに競合しても、製品ニュース一覧として解決する。
+function kitz_route_product_news_archive($query_vars)
+{
+  global $wp;
+
+  $request_path = trim((string) $wp->request, '/');
+
+  if (!preg_match('#(?:^|/)product/news$#', $request_path)) {
+    return $query_vars;
+  }
+
+  unset(
+    $query_vars['name'],
+    $query_vars['pagename'],
+    $query_vars['page_id'],
+    $query_vars['product'],
+    $query_vars['error']
+  );
+  $query_vars['post_type'] = 'product-news';
+
+  return $query_vars;
+}
+add_filter('request', 'kitz_route_product_news_archive', 99);
+
+// テンプレート階層が個別投稿側になった場合も、一覧テンプレートを必ず使用する。
+function kitz_load_product_news_archive_template($template)
+{
+  global $wp;
+
+  $request_path = trim((string) $wp->request, '/');
+
+  if (!preg_match('#(?:^|/)product/news$#', $request_path)) {
+    return $template;
+  }
+
+  $archive_template = locate_template('archive-product-news.php');
+
+  return $archive_template ?: $template;
+}
+add_filter('template_include', 'kitz_load_product_news_archive_template', 99);
+
+// 上記の順序変更を既存のリライトルールにも一度だけ反映する。
+function kitz_flush_product_news_rewrite_rules()
+{
+  $version = '2';
+
+  if (get_option('kitz_product_news_rewrite_rules_version') === $version) {
+    return;
+  }
+
+  flush_rewrite_rules(false);
+  update_option('kitz_product_news_rewrite_rules_version', $version);
+}
+add_action('init', 'kitz_flush_product_news_rewrite_rules', 99);
 

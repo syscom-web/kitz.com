@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_URI'] === '/company/inquiry/product/' || $_SERVER['REQUEST
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('en'); ?>>
 
   <?php if ($_SERVER['HTTP_HOST'] === 'www.kitz.co.jp'): ?>
     <!-- Google Tag Manager (noscript) -->
@@ -4757,25 +4757,17 @@ if ($_SERVER['REQUEST_URI'] === '/company/inquiry/product/' || $_SERVER['REQUEST
     <ul class="l-floatingButton__list">
       <?php if ($show_floating_links): ?>
         <li class="l-floatingButton__item">
-          <a href="https://www.kitz-valvesearch.com/valve-search/ja/top" target="_blank" class="l-floatingButton__link">
+          <a href="https://www.kitz-valvesearch.com/valve-search/en/top" target="_blank" class="l-floatingButton__link">
             <span>
               Valve Search
             </span>
           </a>
         </li>
         <li class="l-floatingButton__item">
-          <a href="https://www.kitz-valvesearch.com/iportal/CatalogSearch.do?method=catalogSearchByAnyCategories&volumeID=KTZ00001&categoryID=4040000&designID=catalog_JPN"
+          <a href="https://www.kitz-valvesearch.com/iportal/CatalogSearch.do?method=catalogSearchByAnyCategories&volumeID=KTZ00001&categoryID=4520000&designID=catalog_ENG"
             target="_blank" class="l-floatingButton__link">
             <span>
               Catalogs
-            </span>
-          </a>
-        </li>
-        <li class="l-floatingButton__item">
-          <a href="https://www.kitz-valvesearch.com/user-management/ja/top?redirectUrl=%2Fvalve-search%2Fja%2FsecurityServices%2Fdeclaration"
-            target="_blank" class="l-floatingButton__link">
-            <span>
-              Security Trade <br class="u-br">Control Documents
             </span>
           </a>
         </li>

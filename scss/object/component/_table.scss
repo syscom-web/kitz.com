@@ -4,6 +4,13 @@
   @include mq(sp) {
     @include fz(15);
   }
+
+  &--even {
+    thead th:first-child {
+      width: auto !important;
+    }
+  }
+
   caption {
     color: #004da1;
     @include fz(18);

@@ -1,10 +1,11 @@
 &ttl--type01 {
   color: #0085ce;
   text-align: center;
-  @include fz(28);
+  @include fz(34);
   font-weight: 700;
   line-height: 1;
   margin-bottom: 40px;
+  word-break: normal;
 
   @include mq(sp) {
     @include fz(28);
@@ -31,6 +32,7 @@
     }
   }
 }
+
 &ttl--type02 {
   position: relative;
   @include fz(18);
@@ -57,6 +59,7 @@
     }
   }
 }
+
 &ttl--type03 {
   position: relative;
   text-align: center;
@@ -96,6 +99,7 @@
     top: 1px;
   }
 }
+
 &ttl--type04 {
   color: #004da1;
   @include fz(30);

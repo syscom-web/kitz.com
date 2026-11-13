@@ -81,17 +81,15 @@
     @include fz(30);
     font-weight: bold;
     line-height: 1;
-
     @include mq(767) {
       font-size: calc(21px + 4 * (100vw - 320px) / 450);
     }
-
     span {
       @include fz(24);
       font-weight: bold;
       font-feature-settings: "palt";
       @include mq(767) {
-        font-size: calc(16px + 4 * (100vw - 320px) / 450);
+        font-size: calc(14px + 4 * (100vw - 320px) / 450);
       }
     }
   }
@@ -264,7 +262,6 @@
         margin-bottom: 8%;
       }
     }
-
     .btn-wh {
       width: 290px;
       margin: 0 auto;
@@ -345,14 +342,13 @@
           margin-top: 10%;
         }
       }
-
       .btn-wh {
         width: 290px;
         margin: 0 auto 60px;
         @include mq(767) {
           margin: 8% auto;
           a {
-            font-size: calc(14px + 5 * (100vw - 320px) / 450);
+            font-size: calc(13px + 5 * (100vw - 320px) / 450);
           }
         }
         @include mq(425) {
@@ -368,7 +364,6 @@
         text-align: center;
         line-height: 1;
         margin-bottom: 40px;
-
         @include mq(767) {
           font-size: calc(16px + 5 * (100vw - 320px) / 450);
           margin-bottom: 5%;
@@ -427,24 +422,20 @@
     &__sec01 {
       &.mw1180 {
         margin-top: -30px;
-
         @include mq(767) {
           margin-top: -4%;
         }
       }
     }
-
     &__list {
       margin-top: 30px;
       @include flex("", "");
       margin-bottom: -40px;
-
       @include mq(767) {
         margin-top: 5%;
         flex-direction: column;
         margin-bottom: -5%;
       }
-
       > div {
         width: 48%;
         @include bg-container;
@@ -452,8 +443,6 @@
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
 
         @include mq(1023) {
           padding: 20px 10px;
@@ -467,6 +456,7 @@
 
         h2 {
           margin-bottom: 25px;
+
           @include mq(767) {
             margin-bottom: 4%;
           }
@@ -476,127 +466,103 @@
       &--photo {
         @include flex("", "");
         margin-bottom: 30px;
-
         @include mq(767) {
           margin-bottom: 5%;
         }
-
         figure {
           width: 40%;
           max-width: 200px;
-
           @include mq(767) {
             max-width: 100%;
             width: 30%;
           }
-
           img {
             width: 100%;
           }
         }
-
         p {
           width: 55%;
           font-feature-settings: "palt";
           letter-spacing: 1px;
-
           @include mq(767) {
             width: 65%;
           }
         }
       }
-
       .btn-wh {
         width: 100%;
         margin: 0 auto;
         margin-top: auto;
-
-        @include mq(767) {
-          a {
-            font-size: calc(14px + 4 * (100vw - 320px) / 450);
-          }
+        a {
+          padding: 3% 4rem 3% 1rem;
         }
-
-        @include mq(425) {
+        @include mq(767) {
           width: 100%;
+          a {
+            font-size: calc(13px + 4 * (100vw - 320px) / 450);
+          }
         }
       }
     }
   }
-
   /* どのような構造をしているの？ */
   &-structure {
     &__sec01 {
       &.mw1180 {
         margin-top: -30px;
-
         @include mq(767) {
           margin-top: -4%;
         }
       }
     }
-
     &__list {
       margin-top: 30px;
-
       @include mq(767) {
-        margin-top: 4%;
+        margin-top: 6%;
       }
-
       .structure__list--box {
         @include flex("", "");
         @include bg-container;
         padding: 30px 40px;
         margin-bottom: 30px;
-
         @include mq(767) {
           padding: 5% 2%;
-          margin-bottom: 4%;
+          margin-bottom: 5%;
         }
-
         &:last-child {
           margin-bottom: 0;
         }
-
         figure {
           width: 21.8%;
           max-width: 240px;
-
           @include mq(767) {
             max-width: 100%;
             width: 29%;
           }
-
           img {
             object-fit: cover;
             height: 240px;
-
             @include mq(767) {
               height: auto;
             }
           }
         }
-
         .inner {
           width: 73.6%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-
           @include mq(767) {
             width: 66.6%;
           }
-
           h2 {
             padding-bottom: 20px;
             border-bottom: 2px solid #1f4c9b;
             margin-bottom: 20px;
-
             @include mq(767) {
               padding-bottom: 3%;
               margin-bottom: 3%;
             }
-
             span {
               @include mq(767) {
                 display: block;
@@ -604,7 +570,6 @@
               }
             }
           }
-
           p {
             @include mq(1023) {
               br {
@@ -612,45 +577,48 @@
               }
             }
           }
-
           ul {
             @include flex("", "fs");
-
             @include mq(767) {
               display: none;
             }
-
             > li {
               width: 36%;
               max-width: 290px;
               margin-right: 3.7%;
-
               @include mq(1023) {
                 width: 48.5%;
                 margin-right: 3%;
               }
-
               &:last-child {
                 margin-right: 0;
               }
             }
           }
         }
-
         .sp-structure__menu {
           width: 100%;
           margin-top: 4%;
-
           ul {
             width: 100%;
             @include flex("", "");
-
+            @include mq(600) {
+              flex-direction: column;
+            }
             > li {
               width: 48%;
-
+              @include mq(600) {
+                width: 90%;
+                margin: 0 auto 3%;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
               a {
                 font-size: calc(12px + 4 * (100vw - 320px) / 450);
-
+                @include mq(600) {
+                  font-size: calc(13px + 4 * (100vw - 320px) / 450);
+                }
                 &::after {
                   right: 1em;
                 }
@@ -660,40 +628,31 @@
         }
       }
     }
-
     /* ゲートバルブ */
     &__container {
       @include bg-container;
-
       .inner {
         width: 100%;
         max-width: 960px;
         margin: 0 auto;
-
         #main-carousel {
           margin-top: 50px;
-
           @include mq(767) {
             margin-top: 4%;
           }
-
           img {
             height: 540px;
-
             @include mq(767) {
               height: 65vw;
             }
           }
         }
-
         #thumbnail-carousel {
           margin: 30px 0 40px;
-
           @include mq(767) {
             margin: 5% 0;
           }
         }
-
         .btn-wh {
           width: 290px;
           margin: 0 auto 40px;
@@ -723,8 +682,8 @@
             li {
               @include fz(16);
               line-height: 1.6;
-              text-indent: -2em;
-              margin-left: 2em;
+              text-indent: -1em;
+              margin-left: 1em;
               margin-bottom: 20px;
               @include mq(767) {
                 font-size: calc(14px + 4 * (100vw - 320px) / 450);
@@ -976,10 +935,10 @@
     }
     &__list {
       @include flex("", "fs");
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: -30px;
       @include mq(940) {
-        margin-top: 4%;
+        margin-top: 6%;
         margin-bottom: -4%;
         flex-direction: column;
       }
@@ -989,11 +948,13 @@
         padding: 30px;
         margin-right: 4%;
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
         @include mq(940) {
           width: 100%;
           padding: 5% 2%;
           margin-right: 0;
-          margin-bottom: 4%;
+          margin-bottom: 5%;
         }
         &:nth-child(2n) {
           margin-right: 0;
@@ -1038,10 +999,11 @@
         .btn-wh {
           width: 290px;
           margin: 0 auto;
+          margin-top: auto;
           @include mq(767) {
             width: 60%;
             a {
-              font-size: calc(14px + 4 * (100vw - 320px) / 450);
+              font-size: calc(13px + 4 * (100vw - 320px) / 450);
             }
           }
           @include mq(480) {
@@ -1262,6 +1224,12 @@
         }
       }
     }
+    .p-reference-training {
+      margin-top: -100px;
+      @include mq(767) {
+        margin-top: -12%;
+      }
+    }
     .c-table--scroll {
       @include mq(1023) {
         width: 100%;
@@ -1286,10 +1254,11 @@
           border-bottom: 2px solid #1f4c9b;
           margin-bottom: 40px;
           flex-wrap: nowrap;
-
-          @include mq(767) {
+          @include mq(1023) {
             flex-direction: column;
             align-items: flex-start;
+          }
+          @include mq(767) {
             padding-bottom: 3%;
             margin-bottom: 5%;
           }
@@ -1297,8 +1266,10 @@
             @include flex("c", "fs");
             flex-wrap: nowrap;
             white-space: nowrap;
-            @include mq(767) {
+            @include mq(1023) {
               order: 2;
+              flex-direction: column;
+              align-items: flex-start;
             }
             strong {
               display: block;
@@ -1317,16 +1288,21 @@
               border-radius: 5px;
               padding: 10px;
               margin-left: 15px;
+              @include mq(1023) {
+                display: block;
+                margin-left: 0;
+                margin-top: 10px;
+              }
               @include mq(767) {
-                font-size: calc(12px + 4 * (100vw - 320px) / 450);
-                margin-left: 2%;
+                font-size: calc(11px + 4 * (100vw - 320px) / 450);
                 padding: 10px 1vw;
+                margin-top: 4%;
               }
             }
           }
           ul {
             @include flex("c", "fs");
-            @include mq(767) {
+            @include mq(1023) {
               order: 1;
               margin-bottom: 5px;
             }
@@ -1388,11 +1364,9 @@
           }
           .material-txt-box {
             margin-bottom: 40px;
-
             @include mq(767) {
               margin-bottom: 6%;
             }
-
             p {
               margin-bottom: 30px;
               @include mq(767) {
@@ -1422,7 +1396,6 @@
           }
           .material-sec {
             margin-bottom: 40px;
-
             @include mq(767) {
               margin-bottom: 5%;
             }
@@ -1489,13 +1462,11 @@
           .material-sas_img01 {
             max-width: 940px;
             margin-bottom: 40px;
-
             @include mq(767) {
               max-width: 100%;
               margin-bottom: 6%;
             }
           }
-
           .material-sas_img02 {
             max-width: 1080px;
           }
@@ -1508,16 +1479,13 @@
         width: 100%;
         max-width: 1080px;
         margin: 0 auto;
-
         h2 {
           text-align: center;
           margin-bottom: 40px;
-
           @include mq(767) {
             margin-bottom: 6%;
           }
         }
-
         ul {
           max-width: 1080px;
           li {
@@ -1552,7 +1520,6 @@
         text-align: center;
         /*padding-bottom: 20px;
         border-bottom: 2px solid #1f4c9b;*/
-        font-feature-settings: "palt";
         margin-bottom: 30px;
         @include mq(767) {
           font-size: calc(20px + 4 * (100vw - 320px) / 450);
@@ -1661,6 +1628,10 @@
       }
     }
     .p-reference-training {
+      margin-top: -80px;
+      @include mq(767) {
+        margin-top: -5%;
+      }
       &.operation-feature {
         margin-top: inherit;
       }
@@ -1711,8 +1682,8 @@
         ul {
           li {
             @include fz(16);
-            text-indent: -1.5em;
-            margin-left: 1.5em;
+            text-indent: -1em;
+            margin-left: 1em;
             line-height: 1.4;
             margin-bottom: 1em;
             &:last-child {
@@ -1748,8 +1719,8 @@
         ul {
           li {
             @include fz(16);
-            text-indent: -1.5em;
-            margin-left: 1.5em;
+            text-indent: -1em;
+            margin-left: 1em;
             line-height: 1.4;
             margin-bottom: 1em;
             &:last-child {
@@ -1776,9 +1747,6 @@
           @include mq(767) {
             width: 65%;
             margin: 0 auto 5%;
-            a {
-              font-size: calc(14px + 4 * (100vw - 320px) / 450);
-            }
             &:last-child {
               margin-bottom: 0;
             }
@@ -1817,24 +1785,20 @@
           @include fz(18);
           font-weight: bold;
           margin-bottom: 40px;
-
           @include mq(767) {
             font-size: calc(15px + 4 * (100vw - 320px) / 450);
             margin-bottom: 4%;
           }
         }
-
         .feature-list {
           li {
             @include fz(16);
             text-indent: -1em;
             margin-left: 1em;
             margin-bottom: 1em;
-
             @include mq(767) {
               font-size: calc(13px + 4 * (100vw - 320px) / 450);
             }
-
             &:last-child {
               margin-bottom: 0;
             }
@@ -2027,40 +1991,50 @@
             margin-right: 4%;
           }
         }
+
         h3 {
           color: #1f4c9b;
           @include fz(26);
           font-weight: bold;
           text-align: center;
           margin-bottom: 20px;
+          overflow-wrap: break-word;
+          word-break: normal;
+
           @include mq(1024) {
             @include fz(22);
           }
+
           @include mq(767) {
             font-size: calc(17px + 4 * (100vw - 320px) / 450);
             margin-bottom: 4%;
           }
         }
+
         a {
           display: block;
           position: relative;
           overflow: hidden;
+
           figure {
             img {
               position: relative;
               width: 100%;
+
               &.on {
                 opacity: 0;
                 position: absolute;
               }
             }
           }
+
           &:hover {
             img {
               &.off {
                 opacity: 0;
                 position: absolute;
               }
+
               &.on {
                 opacity: 1;
                 position: relative;
@@ -2069,47 +2043,66 @@
           }
         }
       }
+
       & + .btn-wh {
         width: 340px;
         margin: 60px auto 0;
+
         @include mq(767) {
           width: 290px;
           margin-top: 5%;
         }
       }
     }
+
+    .p-reference-training {
+      margin-top: -80px;
+
+      @include mq(767) {
+        margin-top: -10%;
+      }
+    }
   }
+
   /* バルブの種類 */
   &-connection {
     &__intro {
       p {
         margin-bottom: 30px;
+
         @include mq(767) {
           margin-bottom: 5%;
         }
       }
     }
+
     &__box {
       @include bg-container;
       margin-top: 40px !important;
+
       @include mq(767) {
         margin-top: 5% !important;
       }
+
       &:first-of-type {
         margin-top: 0 !important;
       }
+
       h2 {
         padding-bottom: 20px;
         border-bottom: 2px solid #1f4c9b;
         margin-bottom: 20px;
+
         @include mq(767) {
           font-size: calc(21px + 4 * (100vw - 320px) / 450);
           padding-bottom: 3%;
           margin-bottom: 3%;
         }
       }
+
       .connection-box {
         @include flex("", "");
+
         @include mq(767) {
           flex-direction: column;
         }
@@ -2133,6 +2126,7 @@
               margin-bottom: 15px;
               @include fz(20);
               font-weight: bold;
+
               @include mq(767) {
                 margin-bottom: 3%;
                 font-size: calc(16px + 4 * (100vw - 320px) / 450);
@@ -2140,12 +2134,15 @@
             }
           }
         }
+
         figure {
           width: 46.29%;
+
           @include mq(767) {
             width: 100%;
             margin-top: 5%;
           }
+
           img {
             width: 100%;
           }
@@ -2153,28 +2150,35 @@
       }
     }
   }
+
   .relation-wh {
     width: 325px;
-    margin: 10px auto 30px;
+    margin: 10px auto 60px;
+
     @include mq(767) {
       width: 64%;
       margin: 10% auto;
     }
+
     @include mq(425) {
       width: 90%;
     }
+
     a {
       @include fz(16);
       padding: 15px 10px;
+
       @include mq(480) {
         @include fz(14);
       }
+
       &.as-btn {
         @include mq(480) {
           font-size: 14px;
           font-feature-settings: "palt";
         }
       }
+
       &::after {
         background: url("../images/sustainability/common/Icon-arrow_circle.svg")
           no-repeat left center/contain;
@@ -2183,6 +2187,7 @@
         border: none;
         transform: none;
         margin-top: -9px;
+
         @include mq(480) {
           right: 1rem;
         }

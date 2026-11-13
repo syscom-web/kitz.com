@@ -811,9 +811,15 @@
         }
         &.privacy02 {
           table {
-            margin-top: 40px;
+            margin: 40px 0;
+            table-layout: fixed;
+
             @include mq(tab) {
               margin-top: 5%;
+            }
+
+            thead th:not(:first-child) {
+              width: auto;
             }
           }
           p + ul,
@@ -918,9 +924,11 @@
   /* ページナビ */
   &-menu {
     padding-block: 60px;
+
     @include mq(tab) {
       padding-block: 10%;
     }
+
     &.company {
       padding-top: 0;
     }
@@ -970,24 +978,29 @@
       max-width: 900px;
       margin: 0 auto;
       @include flex("", "fs");
-      //margin-bottom: -2%;
+
       @include mq(tab) {
         flex-direction: column;
       }
+
       li {
         width: 23.5%;
         margin-right: 2%;
         margin-bottom: 2%;
+
         @include mq(tab) {
           width: 100%;
           margin-right: 0;
         }
+
         @include mq(sp) {
           margin-bottom: 4%;
         }
+
         &:nth-child(4n) {
           margin-right: 0;
         }
+
         a {
           position: relative;
           display: block;
@@ -1000,13 +1013,18 @@
           line-height: 1.5;
           @include hov-alpha;
           box-shadow: 0 2px 0 #e5e5e5;
+          overflow-wrap: break-word;
+          word-break: normal;
+
           @include mq(tab) {
             width: 100%;
             padding: 3% 4%;
           }
+
           @include mq(sp) {
             @include fz(16);
           }
+
           &::after {
             content: "";
             display: block;
@@ -1021,6 +1039,7 @@
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
           }
+
           &.current {
             color: #fff;
             background: #445aa8;
@@ -1030,19 +1049,25 @@
         }
       }
     }
+
     &.product-menu {
       ul {
         max-width: 660px;
+
         li {
           width: 32%;
+
           @include mq(767) {
             width: 100%;
           }
+
           &:nth-child(3n) {
             margin-right: 0;
           }
+
           &:nth-child(4n) {
             margin-right: 2%;
+
             @include mq(767) {
               margin-right: 0;
             }

@@ -32,11 +32,19 @@
       <section class="p-procurement__wrapper">
         <section class="p-procurement__container u-mt0" id="procurement-sec01">
           <h2 class="p-sustainability-ttl__h2">Policy on Procurement</h2>
-          <p>The KITZ Group contributes to enriching people’s lives by delivering improved products, technologies, and services to people around the world. To realize this goal, we implement procurement activities based on the following policies.</p>
+          <p>The KITZ Group contributes to enriching people’s lives by delivering improved products, technologies, and
+            services to people around the world. To realize this goal, we implement procurement activities based on the
+            following policies.</p>
           <ul class="procurement-list u-mt30">
-            <li>1. In our relationships with suppliers, we aim for joint growth and progress, as well as building relations of mutual trust, through fair and equitable transactions as equal business partners based on principles of coexistence and co-prosperity.</li>
-            <li>2. Based on a high sense of ethics and social consciousness, we comply with the laws, regulations, and social norms of each country, fulfilling our social responsibilities in areas that include respect for human rights, ensuring occupational health and safety, environmental protection, and information management and protection.</li>
-            <li>3. We deploy procurement activities with consideration not only for stable and appropriate quality, prices, and delivery times but also for reducing the environmental impact.</li>
+            <li>1. In our relationships with suppliers, we aim for joint growth and progress, as well as building
+              relations of mutual trust, through fair and equitable transactions as equal business partners based on
+              principles of coexistence and co-prosperity.</li>
+            <li>2. Based on a high sense of ethics and social consciousness, we comply with the laws, regulations, and
+              social norms of each country, fulfilling our social responsibilities in areas that include respect for
+              human rights, ensuring occupational health and safety, environmental protection, and information
+              management and protection.</li>
+            <li>3. We deploy procurement activities with consideration not only for stable and appropriate quality,
+              prices, and delivery times but also for reducing the environmental impact.</li>
           </ul>
         </section>
         <section class="p-procurement__container" id="procurement-sec02">
@@ -45,14 +53,24 @@
           <h3 class="p-sustainability-ttl__h4 u-mt30">Methods of ordering</h3>
           <ul class="procurement-list">
             <li>1. Repeat orders<br>
-              In principle, we do not employ ordering conducted periodically or in fixed quantities. While, in principle, we make tentative decisions on planned transaction volumes at least two months in advance, we employ transactions conducted irregularly in which products are ordered repeatedly in fixed volumes. Basically, we ask suppliers to maintain inventories of products ordered repeatedly. Although, in principle, we request guarantees of receipt of these inventory volumes in the amount of tentative decisions on purchase, as necessary, we will negotiate these separately.</li>
+              In principle, we do not employ ordering conducted periodically or in fixed quantities. While, in
+              principle, we make tentative decisions on planned transaction volumes at least two months in advance, we
+              employ transactions conducted irregularly in which products are ordered repeatedly in fixed volumes.
+              Basically, we ask suppliers to maintain inventories of products ordered repeatedly. Although, in
+              principle, we request guarantees of receipt of these inventory volumes in the amount of tentative
+              decisions on purchase, as necessary, we will negotiate these separately.</li>
             <li>2. One-time orders<br>
-              These orders are placed for only the materials needed when we receive an order with special specifications from a customer. In principle, we do not employ guarantee of receipt of surplus in these transactions.</li>
+              These orders are placed for only the materials needed when we receive an order with special specifications
+              from a customer. In principle, we do not employ guarantee of receipt of surplus in these transactions.
+            </li>
           </ul>
           <h3 class="p-sustainability-ttl__h4 u-mt30">Methods of delivery</h3>
           <ul class="procurement-list">
-            <li>1. Packed delivery<br>In principle, based on environmental considerations, we ask suppliers to use minimal packaging in special containers in periodic transactions and those in varying volumes (repeat orders). We negotiate separately on packing methods.</li>
-            <li>2. Procurement logistics delivery<br>We have a growing domestic logistics network. Suppliers can use this route in transactions conducted with us. We negotiate separately on details.</li>
+            <li>1. Packed delivery<br>In principle, based on environmental considerations, we ask suppliers to use
+              minimal packaging in special containers in periodic transactions and those in varying volumes (repeat
+              orders). We negotiate separately on packing methods.</li>
+            <li>2. Procurement logistics delivery<br>We have a growing domestic logistics network. Suppliers can use
+              this route in transactions conducted with us. We negotiate separately on details.</li>
           </ul>
         </section>
         <section class="p-procurement__container" id="procurement-sec03">
@@ -95,7 +113,9 @@
                 <tr>
                   <td>Investment casting products</td>
                   <td>Ductile iron, stainless steel</td>
-                  <td><a href="#procurement-sec05" class="btn-procurement">Now seeking</a></td>
+                  <td>
+                    <a href="#procurement-sec05" class="btn-procurement">Now<br>seeking</a>
+                  </td>
                 </tr>
                 <tr>
                   <td>Aluminum</td>
@@ -125,7 +145,9 @@
                   <td>O-rings</td>
                   <td></td>
                   <td>Various types (for industrial use)</td>
-                  <td><a href="#procurement-sec05" class="btn-procurement">Now seeking</a></td>
+                  <td>
+                    <a href="#procurement-sec05" class="btn-procurement">Now<br>seeking</a>
+                  </td>
                 </tr>
                 <tr>
                   <td>Plates</td>
@@ -233,7 +255,9 @@
                   <td>Others</td>
                   <td>For valve use</td>
                   <td>New materials, new construction methods</td>
-                  <td><a href="#procurement-sec05" class="btn-procurement">Now seeking</a></td>
+                  <td>
+                    <a href="#procurement-sec05" class="btn-procurement">Now<br>seeking</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -241,14 +265,19 @@
         </section>
         <section class="p-procurement__container" id="procurement-sec04">
           <h2 class="p-sustainability-ttl__h2">Procedures for new transactions</h2>
-          <figure class="u-mt60"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/procurement/procurement-sec04_img01.png" alt="Procedures for new transactions"></figure>
-          <p class="u-mt50 procurement-txt_note">Caution）<br>Note: The above flowchart represents a typical example for a product handled by KITZ.<br>
-            Steps may vary depending on the product. Contact us using the <a href="#procurement-sec05">application form</a> for more information.</p>
+          <figure class="u-mt60"><img
+              src="<?php echo esc_url(get_template_directory_uri()); ?>/images/procurement/procurement-sec04_img01.png"
+              alt="Procedures for new transactions"></figure>
+          <p class="u-mt50 procurement-txt_note">Caution）<br>Note: The above flowchart represents a typical example for
+            a product handled by KITZ.<br>
+            Steps may vary depending on the product. Contact us using the <a href="#procurement-sec05">application
+              form</a> for more information.</p>
         </section>
         <section class="p-procurement__container" id="procurement-sec05">
           <h2 class="p-sustainability-ttl__h2">For Suppliers</h2>
           <h3 class="p-sustainability-ttl__h4 u-mt30">Application form</h3>
-          <p>Below is application form for material procurement.<br>For suppliers who wish to sell products to us, kindly confirm our requirement <a href="#procurement-sec03">here</a> before making application.</p>
+          <p>Below is application form for material procurement.<br>For suppliers who wish to sell products to us,
+            kindly confirm our requirement <a href="#procurement-sec03">here</a> before making application.</p>
           <div class="c-form-body">
             <?php $page_id = 4327;
             $page = get_post($page_id);

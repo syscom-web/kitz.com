@@ -218,8 +218,8 @@
 <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/slick.min.js"></script>
 <?php if (is_home()): ?>
-  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/slick.min.js"></script>
   <script
     src="<?php echo esc_url(get_template_directory_uri()); ?>/js/top.js?v=<?php echo date('YmdHi', filemtime(get_template_directory() . '/js/top.js')) ?>"
     defer="defer"></script>
@@ -231,8 +231,9 @@
   src="<?php echo esc_url(get_template_directory_uri()); ?>/js/page.js?v=<?php echo date('YmdHi', filemtime(get_template_directory() . '/js/page.js')) ?>"
   defer="defer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.js"></script>
-<?php if (is_page(6227)): ?>
-  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/reference_location.js"></script><?php endif; ?>
+
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/reference_location.js"></script>
+
 <?php $url = $_SERVER['REQUEST_URI'];
 if (strstr($url, 'structure') == true): ?>
   <script>

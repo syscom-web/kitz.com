@@ -144,23 +144,24 @@
       color: #004da1;
       @include fz(40);
       font-weight: bold;
-      br:nth-of-type(1),
-      br:nth-of-type(3) {
-        display: none;
-      }
+
       @include mq(tab) {
         @include fz(30);
       }
+
       @include mq(sp) {
         @include fz(26);
       }
     }
+
     figure {
       display: none;
+
       @media screen and (max-width: 992px) {
         display: block;
         width: 55%;
         margin: 3% auto 0;
+
         img {
           width: 100%;
         }
@@ -466,9 +467,11 @@
       &__list {
         width: 350px;
         margin: 0 auto;
+
         @include mq(tab) {
           width: 65%;
         }
+
         @include mq(sp) {
           width: 85%;
         }
@@ -2177,34 +2180,42 @@
 /* 会社概要 */
 &company-about {
   padding: 50px 10px 100px;
+
   @include mq(tab) {
     padding: 5% 5% 10%;
   }
+
   &__inner {
     width: 100%;
     max-width: 1040px;
     margin: 0 auto;
   }
+
   &__date {
     text-align: right;
     @include fz(16);
     margin-bottom: 1rem;
+
     @include mq(sp) {
       @include fz(14);
     }
   }
+
   &__container {
     @include bg-container;
     z-index: 10;
+
     dl {
       @include flex("", "fs");
       flex-wrap: nowrap;
       @include fz(16);
       width: 100%;
       margin-bottom: 2rem;
+
       @include mq(tab) {
         flex-direction: column;
       }
+
       dt {
         font-weight: bold;
         color: #004da1;
@@ -2212,6 +2223,7 @@
         width: 18%;
         padding: 0 1rem 1em;
         text-align: center;
+
         @include mq(tab) {
           width: 100%;
           border-bottom: none;
@@ -2219,17 +2231,21 @@
           padding: 0 0 1em;
         }
       }
+
       dd {
         border-bottom: 1px solid #e6e6e6;
         width: 82%;
         padding: 0 4rem 1em;
+
         @media screen and (max-width: 992px) {
           padding: 0 2rem 1em;
         }
+
         @include mq(tab) {
           width: 100%;
           padding: 0 0 1em;
         }
+
         table {
           caption {
             color: #004da1;
@@ -2237,10 +2253,12 @@
             font-weight: 700;
             margin-bottom: 20px;
             text-align: left;
+
             @include mq(tab) {
               margin-bottom: 3%;
             }
           }
+
           th,
           td {
             border-bottom: 1px dotted #acacac;
@@ -2249,23 +2267,28 @@
             width: 50%;
             text-align: left;
             position: relative;
+
             @include mq(tab) {
               display: block;
               width: 100%;
             }
           }
+
           th {
             @media screen and (max-width: 992px) {
               width: 65%;
             }
+
             @include mq(tab) {
               width: 100%;
               border-bottom: none;
               padding-bottom: 0;
             }
+
             span {
               font-weight: bold;
             }
+
             &::before,
             &::after {
               content: "";
@@ -2274,29 +2297,36 @@
               bottom: -1px;
               width: 10px;
               height: 2px;
+
               @include mq(tab) {
                 display: none;
               }
             }
+
             &::before {
               background: #418ac9;
               left: 0;
             }
+
             &::after {
               background: #fff;
               left: 10px;
             }
           }
+
           td {
             @include mq(tab) {
               padding-top: 0.5em;
             }
           }
+
           + table {
             margin-top: 80px;
+
             @include mq(tab) {
               margin-top: 10%;
             }
+
             tr:last-child {
               th,
               td {
@@ -2368,17 +2398,16 @@
       color: #004da1;
       @include fz(40);
       font-weight: bold;
-      br:nth-of-type(1),
-      br:nth-of-type(3) {
-        display: none;
-      }
+
       @include mq(tab) {
         @include fz(30);
       }
+
       @include mq(sp) {
         @include fz(26);
       }
     }
+
     figure {
       display: none;
       @media screen and (max-width: 992px) {
@@ -2675,41 +2704,52 @@
       figure {
         width: 300px;
         margin: 0 auto 30px;
+
         @include mq(tab) {
           width: 50%;
           margin-bottom: 5%;
         }
+
         @include mq(sp) {
           width: 70%;
         }
+
         img {
           width: 100%;
         }
       }
+
       &__list {
-        width: 350px;
+        width: 400px;
         margin: 0 auto;
+
         @include mq(tab) {
           width: 65%;
         }
+
         @include mq(sp) {
           width: 85%;
         }
+
         li {
           margin-bottom: 1rem;
         }
+
         span:first-child {
           @include fz(26);
           font-weight: bold;
           margin-right: 1rem;
+
           em {
             font-weight: bold;
             color: #418ac9;
           }
         }
+
         span:last-child {
           @include fz(20);
           font-feature-settings: "palt";
+
           @include mq(tab) {
             @include fz(18);
           }
@@ -2718,6 +2758,7 @@
     }
   }
 }
+
 /* キッツグループ */
 &company-group_g {
   //padding-top: 70px;

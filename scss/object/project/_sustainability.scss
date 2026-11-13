@@ -4152,6 +4152,8 @@
       td {
         background: #fff !important;
         background-clip: padding-box;
+        overflow-wrap: break-word;
+        word-break: normal;
       }
     }
     thead {

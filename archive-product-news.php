@@ -12,7 +12,7 @@ function get_filesize($file_path)
 <main class="p-main">
   <section class="p-page-mv">
     <div class="p-page-mv__inner">
-      <h1 class="p-page-mv__ttl p-page-mv__ttl--news"> Product News event Information</h1>
+      <h1 class="p-page-mv__ttl p-page-mv__ttl--news">Product News event Information</h1>
     </div>
   </section><!-- /.p-page-mv -->
   <div class="p-page-valve valve-sub">
@@ -26,7 +26,8 @@ function get_filesize($file_path)
     <section class="p-page-news">
       <div class="p-page-news__inner">
         <div class="p-page-news__category">
-          <div class="p-page-news__category__all"><a href="<?php echo esc_url(home_url('/')); ?>product/news/" class="u-poppins">ALL</a></div>
+          <div class="p-page-news__category__all"><a href="<?php echo esc_url(home_url('/')); ?>product/news/"
+              class="u-poppins">ALL</a></div>
           <div class="p-page-news__category__year">
             <select class="u-poppins" onChange='document.location.href=this.options[this.selectedIndex].value;'>
               <option hidden>YEAR</option>
@@ -81,88 +82,79 @@ function get_filesize($file_path)
           //		'posts_per_page' => 20
           //	);
           $customPosts = query_posts($joken);
-          if ($customPosts) :
-            foreach ($customPosts as $post) : setup_postdata($post); ?>
+          if ($customPosts):
+            foreach ($customPosts as $post):
+              setup_postdata($post); ?>
               <?php if (!is_numeric(str_replace("/", "", $year_num[0]))) { ?>
                 <dl>
                   <dt><?php echo get_post_time('M. j, Y') ?></dt>
                   <dd>
                     <?php
-                      $blankLink = get_field('blank_link');
-                      $pdfLink = get_field('pdf_link');
+                    $blankLink = get_field('blank_link');
+                    $pdfLink = get_field('pdf_link');
 
-                      if($blankLink){
-                        echo '<a href="' . get_field('blank_link') . '" target="_blank">';
-                      }
-                      else if($pdfLink){
-                        echo '<a href="' . get_field('pdf_link') . '" target="_blank">';
-                      }
-                      else{
-                        echo '<a href="' . get_permalink($post->ID) . '">';
-                      }
+                    if ($blankLink) {
+                      echo '<a href="' . get_field('blank_link') . '" target="_blank">';
+                    } else if ($pdfLink) {
+                      echo '<a href="' . get_field('pdf_link') . '" target="_blank">';
+                    } else {
+                      echo '<a href="' . get_permalink($post->ID) . '">';
+                    }
                     ?>
                     <?php the_title(); ?>
 
                     <?php
-                      if($blankLink){
-                        // echo '<img src="/img/icon_blank_black.svg">';
-                      }
-                      else if($pdfLink){
-                        echo '<img src="' . esc_url(get_template_directory_uri()) . '/images/common/icon-pdf.svg">';
-                      }
+                    if ($blankLink) {
+                      // echo '<img src="/img/icon_blank_black.svg">';
+                    } else if ($pdfLink) {
+                      echo '<img src="' . esc_url(get_template_directory_uri()) . '/images/common/icon-pdf.svg">';
+                    }
                     ?>
                     </a>
                   </dd>
                 </dl>
 
-                <?php } else {
-                if (get_the_date('Y')  == str_replace("/", "", $year_num[0])) { ?>
+              <?php } else {
+                if (get_the_date('Y') == str_replace("/", "", $year_num[0])) { ?>
 
                   <dl>
                     <dt><?php echo get_post_time('M. j, Y') ?></dt>
                     <dd>
-                    <?php
+                      <?php
                       $blankLink = get_field('blank_link');
                       $pdfLink = get_field('pdf_link');
 
-                      if($blankLink){
+                      if ($blankLink) {
                         echo '<a href="' . get_field('blank_link') . '" target="_blank">';
-                      }
-                      else if($pdfLink){
+                      } else if ($pdfLink) {
                         echo '<a href="' . get_field('pdf_link') . '" target="_blank">';
-                      }
-                      else{
+                      } else {
                         echo '<a href="' . get_permalink($post->ID) . '">';
                       }
-                    ?>
-                    <?php the_title(); ?>
+                      ?>
+                      <?php the_title(); ?>
 
-                    <?php
-                      if($blankLink){
+                      <?php
+                      if ($blankLink) {
                         // echo '<img src="/img/icon_blank_black.svg">';
-                      }
-                      else if($pdfLink){
+                      } else if ($pdfLink) {
                         echo '<img src="' . esc_url(get_template_directory_uri()) . '/images/common/icon-pdf.svg">';
                       }
-                    ?>
-                    </a>
-                  </dd>
+                      ?>
+                      </a>
+                    </dd>
                   </dl>
 
 
-              <?php }
+                <?php }
               }
 
               ?>
 
-
-              <?php endforeach; ?><?php endif; ?>
-              <?php $i = $i - 1; ?>
-
-              <?php if (function_exists('wp_pagenavi')) {
-                wp_pagenavi();
-              } ?><?php wp_reset_query(); ?>
-
+            <?php endforeach; ?><?php endif; ?>
+          <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi();
+          } ?><?php wp_reset_query(); ?>
 
         </div><!-- /.p-page-news__container--product-news -->
       </div><!-- /.p-page-news__inner -->

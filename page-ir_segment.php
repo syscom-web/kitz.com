@@ -9,8 +9,8 @@
 <?php get_header(); ?>
 
 <?php
-if (have_posts()) :
-  while (have_posts()) :
+if (have_posts()):
+  while (have_posts()):
     the_post(); ?>
 
     <main class="p-main">
@@ -26,7 +26,9 @@ if (have_posts()) :
           <ul class="c-breadcrumb__list">
             <li class="c-breadcrumb__item"><a title="HOME" href="/">HOME</a></li>
             <li class="c-breadcrumb__item"><a title="IR data" href="<?php echo home_url() ?>/investor_ir/">IR data</a></li>
-            <li class="c-breadcrumb__item"><a title="Business activities and financial highlights" href="<?php echo home_url() ?>/investor_ir/financial-highlights/">Business activities and financial highlights</a></li>
+            <li class="c-breadcrumb__item"><a title="Business activities and financial highlights"
+                href="<?php echo home_url() ?>/investor_ir/financial-highlights/">Business activities and financial
+                highlights</a></li>
             <li class="c-breadcrumb__item">By segment</li>
           </ul>
         </div>
@@ -55,7 +57,7 @@ if (have_posts()) :
                 <script src="/en/cms/wp-content/themes/kitz/js/eire_v5.js"></script>
                 <script type="text/javascript">
                   scriptLoader.setSrc('https://ssl4.eir-parts.net/Custom/public/material/v5qir/1.5.0/common.js');
-                  scriptLoader.load(function() {
+                  scriptLoader.load(function () {
                     qir.load();
                   });
                 </script>
@@ -79,11 +81,13 @@ if (have_posts()) :
             <div class="l-contact__inner">
               <div class="l-contact__inner__product">
                 <h2 class="c-ttl--type01">Frequently Asked Questions About IR<br class="is-tab">（FAQ）</h2>
-                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/" class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
+                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/investor_ir/faq/"
+                    class="c-btn--type01" rel="noopener">FAQ on IR</a></div>
               </div><!-- /.l-contact__inner__product -->
               <div class="l-contact__inner__company">
                 <h2 class="c-ttl--type01">IR inquiries</h2>
-                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/company/inquiry/?content=2" class="c-btn--type01">Contact Us</a>
+                <div class="l-contact__inner__link"><a href="<?php echo home_url() ?>/company/inquiry/?content=2"
+                    class="c-btn--type01">Contact Us</a>
                 </div>
               </div><!-- /.l-contact__inner__company -->
             </div><!-- /.l-contact__inner -->
@@ -93,6 +97,6 @@ if (have_posts()) :
 
 
       <?php endwhile;
-  else : ?>
+else: ?>
     <?php endif; ?>
     <?php get_footer(); ?>

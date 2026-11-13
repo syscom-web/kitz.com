@@ -6,10 +6,12 @@ body {
   font-family:
     "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", sans-serif;
-  @include fz(16);
+  @include fz(12);
   font-weight: 500;
   -webkit-text-size-adjust: 100%;
   color: #333;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
   line-height: 1.5;
 }
 

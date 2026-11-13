@@ -272,8 +272,8 @@ $(function () {
     $(this).toggleClass("is-open").next().stop().slideToggle();
   });
   $(".p-calculator dl dt button").on("click", function () {
-    let open_text = `<span></span>説明を開く`;
-    let close_text = `<span></span>説明を閉じる`;
+    let open_text = `<span></span>Open description`;
+    let close_text = `<span></span>Close description`;
 
     $(this).parent().toggleClass("is-open").next().stop().slideToggle();
     if ($(this).parent().hasClass("is-open")) {

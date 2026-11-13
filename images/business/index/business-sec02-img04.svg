@@ -1,32 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361.298" height="363.685" viewBox="0 0 361.298 363.685">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361.298" height="361.298" viewBox="0 0 361.298 361.298">
   <defs>
     <clipPath id="clip-path">
       <rect id="長方形_519" data-name="長方形 519" width="361.298" height="361.298" fill="none"/>
     </clipPath>
-    <filter id="バルブ事業" x="124" y="229" width="112" height="44" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
+    <filter id="METAL_SOLUTIONS_BUSINESS" x="44.587" y="57.113" width="107" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#4a6e6c"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="メタル_ソリューション_事業" x="25" y="54" width="148" height="84" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-2"/>
-      <feFlood flood-opacity="0.161"/>
+    <filter id="Hotel_Business" x="115.587" y="8.113" width="93" height="53" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-color="#6e6e6e"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="ホ_テ_ル_事_業" x="155" y="0" width="36" height="124" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-3"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-3"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
   </defs>
-  <g id="グループ_779" data-name="グループ 779" transform="translate(-877.613 -1053.613)">
-    <g id="グループ_778" data-name="グループ 778" transform="translate(877.613 1056)">
+  <g id="グループ_779" data-name="グループ 779" transform="translate(-875.526 -1056)">
+    <g id="グループ_956" data-name="グループ 956" transform="translate(875.526 1056)">
       <g id="グループ_927" data-name="グループ 927" transform="translate(20)">
         <g id="グループ_926" data-name="グループ 926" transform="translate(-20)" clip-path="url(#clip-path)">
           <path id="パス_2141" data-name="パス 2141" d="M180.649,180.649,161.923,2.481c5.9-.62,12.79-.981,18.726-.981Z" fill="#c8c9cb"/>
@@ -38,18 +31,16 @@
         </g>
       </g>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 877.61, 1053.61)" filter="url(#バルブ事業)">
-      <text id="バルブ事業-2" data-name="バルブ事業" transform="translate(180 256)" fill="#fff" font-size="18" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-46.44" y="0">バルブ</tspan><tspan y="0">事業</tspan></text>
+    <text id="Valve_Manufacturing_Business" data-name="Valve Manufacturing
+Business" transform="translate(1057.613 1309.613)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-100.296" y="0">VALVE MANUFACTURING</tspan><tspan x="-41.864" y="20">BUSINESS</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 875.53, 1056)" filter="url(#METAL_SOLUTIONS_BUSINESS)">
+      <text id="METAL_SOLUTIONS_BUSINESS-2" data-name="METAL
+SOLUTIONS
+BUSINESS" transform="translate(98.09 79.61)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-27.368" y="0">METAL</tspan><tspan x="-48.752" y="20">SOLUTIONS</tspan><tspan x="-41.864" y="40">BUSINESS</tspan></text>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 877.61, 1053.61)" filter="url(#メタル_ソリューション_事業)">
-      <text id="メタル_ソリューション_事業-2" data-name="メタルソリューション事業" transform="translate(99 81)" fill="#fff" font-size="18" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-27.72" y="0">メタル</tspan><tspan x="-64.98" y="20">ソリューション</tspan><tspan x="-18.36" y="40">事業</tspan></text>
-    </g>
-    <g transform="matrix(1, 0, 0, 1, 877.61, 1053.61)" filter="url(#ホ_テ_ル_事_業)">
-      <text id="ホ_テ_ル_事_業-2" data-name="ホ
-テ
-ル
-事
-業" transform="translate(173 27)" fill="#fff" font-size="18" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-9" y="0">ホ</tspan><tspan x="-9" y="20">テ</tspan><tspan x="-9" y="40">ル</tspan><tspan x="-9" y="60">事</tspan><tspan x="-9" y="80">業</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 875.53, 1056)" filter="url(#Hotel_Business)">
+      <text id="Hotel_Business-2" data-name="Hotel
+Business" transform="translate(162.09 30.61)" fill="#fff" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700" letter-spacing="0.04em"><tspan x="-27.752" y="0">HOTEL</tspan><tspan x="-41.864" y="20">BUSINESS</tspan></text>
     </g>
   </g>
 </svg>

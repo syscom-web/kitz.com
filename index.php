@@ -174,7 +174,7 @@ function get_filesize($file_path)
           <h2 class="c-ttl--type01">About Us</h2>
         </div>
         <div class="p-top-about__grid">
-          <a href="https://www.kitz.com/en/company/">
+          <a href="/en/company/">
             <img src="<?php echo get_template_directory_uri(); ?>/images/top/about-img-01.jpg" alt="Corporate Profile">
             <p class="p-top-product__gridTitle">Corporate Profile</p>
           </a>
