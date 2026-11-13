@@ -10,16 +10,16 @@
 <main class="p-main">
   <section class="p-page-mv">
     <div class="p-page-mv__inner">
-      <h1 class="p-page-mv__ttl p-page-mv__ttl--business">ピックアップ</h1>
+      <h1 class="p-page-mv__ttl p-page-mv__ttl--business">Sustainability Pick up</h1>
     </div>
   </section><!-- /.p-page-mv -->
   <div class="p-page-valve valve-sub">
     <div class="c-breadcrumb">
       <ul class="c-breadcrumb__list">
-        <li class="c-breadcrumb__item"><a title="ホーム" href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></li>
-        <li class="c-breadcrumb__item"><a title="サステナビリティ"
-            href="<?php echo esc_url(home_url('/')); ?>sustainability/">サステナビリティ</a></li>
-        <li class="c-breadcrumb__item">ピックアップ</li>
+        <li class="c-breadcrumb__item"><a title="HOME" href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
+        <li class="c-breadcrumb__item"><a title="Sustainability"
+            href="<?php echo esc_url(home_url('/')); ?>sustainability/">Sustainability</a></li>
+        <li class="c-breadcrumb__item">Pick up</li>
       </ul>
     </div>
     <section class="p-sustainability p-sustainability-social p-sustainability-top p-sustainability-news">
